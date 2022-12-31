@@ -1,4 +1,3 @@
-// export type BaseVariant = "base-100" | "base-200" | "base-300"
 export type Variant = "primary"|"secondary"|"accent"|"neutral"|"info"|"success"|"error"|"warning" | "base-100" | "base-200" | "base-300"
 export type BaselessVariant = Exclude<Variant, "base-100"|"base-200"|"base-300">
 
