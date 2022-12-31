@@ -1,0 +1,525 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleCollapse Should render as expected 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="w-100 collapse "
+        tabindex="0"
+      >
+        <div
+          class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-neutral-content bg-neutral "
+        >
+          <div
+            class="w-full"
+          >
+            test
+          </div>
+          <div
+            class="items-end transition ease-in-out -rotate-90"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0"
+        >
+          <div
+            class="text-neutral-content bg-neutral "
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="w-100 collapse "
+      tabindex="0"
+    >
+      <div
+        class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-neutral-content bg-neutral "
+      >
+        <div
+          class="w-full"
+        >
+          test
+        </div>
+        <div
+          class="items-end transition ease-in-out -rotate-90"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-4 h-4"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0"
+      >
+        <div
+          class="text-neutral-content bg-neutral "
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`SimpleCollapse Variants Respects accent variant 1`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-accent-content bg-accent "
+>
+  <div
+    class="w-full"
+  >
+    testing accent variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects accent variant 2`] = `
+<div
+  class="text-accent-content bg-accent "
+/>
+`;
+
+exports[`SimpleCollapse Variants Respects base-100 variant 1`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-base-content bg-base-100 "
+>
+  <div
+    class="w-full"
+  >
+    testing base-100 variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects base-100 variant 2`] = `
+<div
+  class="text-base-content bg-base-100 "
+/>
+`;
+
+exports[`SimpleCollapse Variants Respects base-200 variant 1`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-base-content bg-base-200 "
+>
+  <div
+    class="w-full"
+  >
+    testing base-200 variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects base-200 variant 2`] = `
+<div
+  class="text-base-content bg-base-200 "
+/>
+`;
+
+exports[`SimpleCollapse Variants Respects base-300 variant 1`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-base-content bg-base-300 "
+>
+  <div
+    class="w-full"
+  >
+    testing base-300 variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects base-300 variant 2`] = `
+<div
+  class="text-base-content bg-base-300 "
+/>
+`;
+
+exports[`SimpleCollapse Variants Respects error variant 1`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-error-content bg-error "
+>
+  <div
+    class="w-full"
+  >
+    testing error variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects error variant 2`] = `
+<div
+  class="text-error-content bg-error "
+/>
+`;
+
+exports[`SimpleCollapse Variants Respects info variant 1`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-info-content bg-info "
+>
+  <div
+    class="w-full"
+  >
+    testing info variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects info variant 2`] = `
+<div
+  class="text-info-content bg-info "
+/>
+`;
+
+exports[`SimpleCollapse Variants Respects neutral variant 1`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-neutral-content bg-neutral "
+>
+  <div
+    class="w-full"
+  >
+    testing neutral variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects neutral variant 2`] = `
+<div
+  class="text-neutral-content bg-neutral "
+/>
+`;
+
+exports[`SimpleCollapse Variants Respects primary variant 1`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-primary-content bg-primary "
+>
+  <div
+    class="w-full"
+  >
+    testing primary variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects primary variant 2`] = `
+<div
+  class="text-primary-content bg-primary "
+/>
+`;
+
+exports[`SimpleCollapse Variants Respects secondary variant 1`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-secondary-content bg-secondary "
+>
+  <div
+    class="w-full"
+  >
+    testing secondary variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects secondary variant 2`] = `
+<div
+  class="text-secondary-content bg-secondary "
+/>
+`;
+
+exports[`SimpleCollapse Variants Respects success variant 1`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-success-content bg-success "
+>
+  <div
+    class="w-full"
+  >
+    testing success variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects success variant 2`] = `
+<div
+  class="text-success-content bg-success "
+/>
+`;
+
+exports[`SimpleCollapse Variants Respects warning variant 1`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-warning-content bg-warning "
+>
+  <div
+    class="w-full"
+  >
+    testing warning variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects warning variant 2`] = `
+<div
+  class="text-warning-content bg-warning "
+/>
+`;
