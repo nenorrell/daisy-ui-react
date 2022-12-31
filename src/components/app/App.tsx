@@ -1,7 +1,7 @@
 import { ArrowDownIcon, HomeIcon } from "@heroicons/react/24/solid";
-import { Button } from "../generic/buttons/Button";
-import { Collapse } from "../generic/collapses/Collapse";
-import { SimpleCollapse } from "../generic/collapses/SimpleCollapse";
+import { Button } from "../buttons/Button";
+import { Collapse } from "../collapses/Collapse";
+import { SimpleCollapse } from "../collapses/SimpleCollapse";
 
 export const App = () => {
     return (

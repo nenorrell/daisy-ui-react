@@ -1,7 +1,7 @@
 // import { HomeIcon } from "@heroicons/react/24/solid";
 import { render } from "@testing-library/react";
-import ColorMap from "../../../../modules/ColorMap";
-import { VariantOptions } from "../../../../modules/testUtils";
+import ColorMap from "../../../modules/ColorMap";
+import { VariantOptions } from "../../../modules/testUtils";
 import { SimpleCollapse } from "../SimpleCollapse";
 
 describe("SimpleCollapse", ()=>{

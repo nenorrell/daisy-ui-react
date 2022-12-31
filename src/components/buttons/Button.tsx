@@ -1,7 +1,7 @@
 import { MouseEventHandler } from "react";
-import { BaselessVariant, ButtonSize } from "../../../@types/Daisy";
-import ColorMap from "../../../modules/ColorMap";
-import { getButtonSize } from "../../../modules/utility";
+import { BaselessVariant, ButtonSize } from "../../@types/Daisy";
+import ColorMap from "../../modules/ColorMap";
+import { getButtonSize } from "../../modules/utility";
 
 interface IButton {
     buttonText ?:string

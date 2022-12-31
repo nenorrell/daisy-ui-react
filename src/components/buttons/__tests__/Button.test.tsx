@@ -1,8 +1,8 @@
 // import { HomeIcon } from "@heroicons/react/24/solid";
 import { fireEvent, render } from "@testing-library/react";
-import ColorMap from "../../../../modules/ColorMap";
-import { BaselessVariantOptions, ButtonSizes } from "../../../../modules/testUtils";
-import { getButtonSize } from "../../../../modules/utility";
+import ColorMap from "../../../modules/ColorMap";
+import { BaselessVariantOptions, ButtonSizes } from "../../../modules/testUtils";
+import { getButtonSize } from "../../../modules/utility";
 import { Button } from "../Button";
 
 describe("SimpleCollapse", ()=>{

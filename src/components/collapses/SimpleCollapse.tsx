@@ -1,6 +1,6 @@
-import { Variant } from "../../../@types/Daisy";
-import ColorMap from "../../../modules/ColorMap";
-import { useToggle } from "../../../modules/hooks";
+import { Variant } from "../../@types/Daisy";
+import ColorMap from "../../modules/ColorMap";
+import { useToggle } from "../../modules/hooks";
 import { Collapse } from "./Collapse";
 
 interface ISimpleCollapse {
