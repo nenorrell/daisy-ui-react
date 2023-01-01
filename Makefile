@@ -5,11 +5,7 @@ compile: install
 	-e NODE_ENV=production \
 	-e PUBLIC_URL="/daisy-ui-static" \
 	-v `pwd`:/usr/src/app \
-	-w /usr/src/app node:${NODE} npm run-script build
-
-compile-generator: install
-	docker run --user node -i --rm --name compile-daisy -e NODE_ENV=production \
-	-v `pwd`:/usr/src/app -w /usr/src/app node:${NODE} npm run-script build-ts
+	-w /usr/src/app node:${NODE} npm run-script build-ts
 
 install:
 	docker run -i --rm --name install-daisy -v `pwd`:/usr/src/app -w /usr/src/app node:${NODE} npm install ${PCKG}
@@ -57,8 +53,8 @@ run-linting-fix:
 	-w /usr/src/app node:${NODE} \
 	npm run lint:fix
 
-package:
-	/bin/sh ./bin/package.sh
+package: compile
+	/bin/sh .bin/package.sh
 
 publish-ci: install
 	docker run -i --rm -p "9198:1337" \
