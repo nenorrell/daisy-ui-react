@@ -1,4 +1,3 @@
-// import { HomeIcon } from "@heroicons/react/24/solid";
 import { render } from "@testing-library/react";
 import ColorMap from "../../../modules/ColorMap";
 import { VariantOptions } from "../../../modules/testUtils";
@@ -18,8 +17,10 @@ describe("SimpleCollapse", ()=>{
                 const bodyContainer = component.container.querySelector("div.collapse-body")?.firstChild as HTMLElement;
                 const colors = ColorMap.get(variant);
 
-                expect(headerContainer?.classList.contains(colors.bg) && headerContainer?.classList.contains(colors.text)).toBe(true);
-                expect(bodyContainer?.classList.contains(colors.bg) && bodyContainer?.classList.contains(colors.text)).toBe(true);
+                expect(headerContainer?.classList.contains(colors.bg)).toBe(true);
+                expect(headerContainer?.classList.contains(colors.text)).toBe(true);
+                expect(bodyContainer?.classList.contains(colors.bg)).toBe(true);
+                expect(bodyContainer?.classList.contains(colors.text)).toBe(true);
                 expect(headerContainer).toMatchSnapshot();
                 expect(bodyContainer).toMatchSnapshot();
             });

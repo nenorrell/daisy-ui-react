@@ -1,4 +1,5 @@
 import { ArrowDownIcon, HomeIcon } from "@heroicons/react/24/solid";
+import { Avatar } from "../avatar/Avatar";
 import { Button } from "../buttons/Button";
 import { Collapse } from "../collapses/Collapse";
 import { SimpleCollapse } from "../collapses/SimpleCollapse";
@@ -26,6 +27,15 @@ export const App = () => {
                 <Button variant="primary" buttonText="Hello" onClick={(e)=>{
                     console.log(e);
                 }}/>
+
+                <Avatar
+                    className="m-5"
+                    contentClasses="w-24 rounded-full text-3xl"
+                    variant="base-300"
+                    status="offline"
+                >
+                    <span>NN</span>
+                </Avatar>
             </div>
         </>
     );

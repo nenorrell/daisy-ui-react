@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SimpleCollapse Sizes Respects lg size 1`] = `
+exports[`Button Sizes Respects lg size 1`] = `
 <button
   class="btn btn-lg btn-neutral "
 >
@@ -8,7 +8,7 @@ exports[`SimpleCollapse Sizes Respects lg size 1`] = `
 </button>
 `;
 
-exports[`SimpleCollapse Sizes Respects md size 1`] = `
+exports[`Button Sizes Respects md size 1`] = `
 <button
   class="btn btn-md btn-neutral "
 >
@@ -16,7 +16,7 @@ exports[`SimpleCollapse Sizes Respects md size 1`] = `
 </button>
 `;
 
-exports[`SimpleCollapse Sizes Respects sm size 1`] = `
+exports[`Button Sizes Respects sm size 1`] = `
 <button
   class="btn btn-sm btn-neutral "
 >
@@ -24,7 +24,7 @@ exports[`SimpleCollapse Sizes Respects sm size 1`] = `
 </button>
 `;
 
-exports[`SimpleCollapse Sizes Respects xs size 1`] = `
+exports[`Button Sizes Respects xs size 1`] = `
 <button
   class="btn btn-xs btn-neutral "
 >
@@ -32,7 +32,7 @@ exports[`SimpleCollapse Sizes Respects xs size 1`] = `
 </button>
 `;
 
-exports[`SimpleCollapse Variants Respects accent variant 1`] = `
+exports[`Button Variants Respects accent variant 1`] = `
 <button
   class="btn btn-md btn-accent "
 >
@@ -40,7 +40,7 @@ exports[`SimpleCollapse Variants Respects accent variant 1`] = `
 </button>
 `;
 
-exports[`SimpleCollapse Variants Respects error variant 1`] = `
+exports[`Button Variants Respects error variant 1`] = `
 <button
   class="btn btn-md btn-error "
 >
@@ -48,7 +48,7 @@ exports[`SimpleCollapse Variants Respects error variant 1`] = `
 </button>
 `;
 
-exports[`SimpleCollapse Variants Respects info variant 1`] = `
+exports[`Button Variants Respects info variant 1`] = `
 <button
   class="btn btn-md btn-info "
 >
@@ -56,7 +56,7 @@ exports[`SimpleCollapse Variants Respects info variant 1`] = `
 </button>
 `;
 
-exports[`SimpleCollapse Variants Respects neutral variant 1`] = `
+exports[`Button Variants Respects neutral variant 1`] = `
 <button
   class="btn btn-md btn-neutral "
 >
@@ -64,7 +64,7 @@ exports[`SimpleCollapse Variants Respects neutral variant 1`] = `
 </button>
 `;
 
-exports[`SimpleCollapse Variants Respects primary variant 1`] = `
+exports[`Button Variants Respects primary variant 1`] = `
 <button
   class="btn btn-md btn-primary "
 >
@@ -72,7 +72,7 @@ exports[`SimpleCollapse Variants Respects primary variant 1`] = `
 </button>
 `;
 
-exports[`SimpleCollapse Variants Respects secondary variant 1`] = `
+exports[`Button Variants Respects secondary variant 1`] = `
 <button
   class="btn btn-md btn-secondary "
 >
@@ -80,7 +80,7 @@ exports[`SimpleCollapse Variants Respects secondary variant 1`] = `
 </button>
 `;
 
-exports[`SimpleCollapse Variants Respects success variant 1`] = `
+exports[`Button Variants Respects success variant 1`] = `
 <button
   class="btn btn-md btn-success "
 >
@@ -88,7 +88,7 @@ exports[`SimpleCollapse Variants Respects success variant 1`] = `
 </button>
 `;
 
-exports[`SimpleCollapse Variants Respects warning variant 1`] = `
+exports[`Button Variants Respects warning variant 1`] = `
 <button
   class="btn btn-md btn-warning "
 >
