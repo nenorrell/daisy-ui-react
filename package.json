@@ -1,12 +1,28 @@
 {
-  "name": "daisy-ui-react",
-  "version": "0.0.1",
+  "name": "daisy-ui-react-components",
+  "version": "0.0.2",
   "private": false,
   "main": "dist/exports.js",
   "types": "dist/exports.d.ts",
   "files": [
     "dist/**/*"
   ],
+  "keywords": [
+    "DaisyUI",
+    "TailwindCSS",
+    "Tailwind"
+  ],
+  "author": "royalewcheese",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nenorrell/daisy-ui-react"
+  },
+  "bugs": {
+    "url": "https://github.com/nenorrell/daisy-ui-react/issues"
+  },
+  "homepage": "https://gitlab.com/apollo-api/visualizer-ui",
+  "description": "A collection of React components for DaisyUI",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
