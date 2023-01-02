@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run tests
+      if: github.event_name == 'pull_request'
+      uses: docker://node:lts
+      with:
+        args: sh -c "cd /github/workspace && make run-tests"
+    - name: Publish
+      if: github.event_name == 'push'
+      uses: docker://node:lts
+      with:
+        args: sh -c "cd /github/workspace && make publish-ci"
