@@ -28,8 +28,8 @@ analyze-bundle:
 	-w /usr/src/app node:${NODE} \
 	./node_modules/.bin/webpack-bundle-analyzer ./ui/stats.json ./ui -h 0.0.0.0
 
-run-tests: install unit-tests run-linting
-run-tests-fast: unit-tests run-linting
+test: install unit-tests run-linting
+test-fast: unit-tests run-linting
 
 unit-tests:
 	docker run -i --rm \

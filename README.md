@@ -14,8 +14,8 @@ _**Comands below require Docker**_
 `make run`
 
 ### Testing
-`make run-tests`
+`make test`
 
 or to skip the install step:
 
-`make run-tests-fast`
+`make test-fast`
