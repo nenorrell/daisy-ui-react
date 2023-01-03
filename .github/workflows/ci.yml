@@ -14,9 +14,13 @@ jobs:
     container: node:lts
     steps:
     - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: npm install
     - name: Run tests
       if: github.event_name == 'pull_request' || github.ref == 'refs/heads/master'
-      run: npm install && npm test && npm run-script lint
+      run: npm test
+    - name: Run linting
+      run: npm run-script lint
 
   publish:
     runs-on: ubuntu-latest
@@ -24,8 +28,10 @@ jobs:
     needs: test
     steps:
     - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: npm install
     - name: Publish
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: npm install && node publish-ci.js
+      run: node publish-ci.js
