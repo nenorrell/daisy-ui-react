@@ -20,7 +20,7 @@ jobs:
     - name: Run linting
       run: npm run-script lint
     - name: Run tests
-      run: npm test
+      run: npm test -- --coverage
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
 
