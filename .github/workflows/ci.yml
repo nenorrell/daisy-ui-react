@@ -2,6 +2,8 @@ name: CI
 
 on:
   pull_request:
+    branches:
+      - master
   push:
     branches:
       - master
@@ -12,12 +14,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run tests
-      if: github.event_name == 'pull_request'
+      if: github.event_name == 'pull_request' || github.ref == 'refs/heads/master'
       uses: docker://node:lts
       with:
-        args: sh -c "cd /github/workspace && make run-tests"
+        args: sh -c "cd /github/workspace && make test"
+
     - name: Publish
-      if: github.event_name == 'push'
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
       uses: docker://node:lts
       with:
-        args: sh -c "cd /github/workspace && make publish-ci"
+        args: sh -c "cd /github/workspace && make publish-ci NPM_TOKEN=${{ secrets.NPM_TOKEN }}"
