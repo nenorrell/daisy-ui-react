@@ -15,10 +15,10 @@ jobs:
     container: node:lts
     steps:
     - uses: actions/checkout@v3
-    - name: Run linting
-      run: npm run-script lint
     - name: Install dependencies
       run: npm install
+    - name: Run linting
+      run: npm run-script lint
     - name: Run tests
       run: npm test
     - name: Upload coverage to Codecov
