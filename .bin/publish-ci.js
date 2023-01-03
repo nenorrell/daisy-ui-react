@@ -28,4 +28,5 @@ publish()
     })
     .catch((err)=>{
         console.error("Failed to publish: ", err);
+        process.exit(1);
     });
