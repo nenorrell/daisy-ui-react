@@ -1,4 +1,6 @@
 # Daisy UI React components
+[![codecov](https://codecov.io/gh/nenorrell/daisy-ui-react/branch/master/graph/badge.svg?token=5BVSFNKS43)](https://codecov.io/gh/nenorrell/daisy-ui-react)
+
 Influenced by packages like [React Bootstrap](https://react-bootstrap.github.io/)
 
 
