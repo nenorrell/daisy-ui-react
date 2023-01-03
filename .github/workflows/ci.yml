@@ -10,19 +10,22 @@ on:
 
 jobs:
   test:
+    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     container: node:lts
     steps:
     - uses: actions/checkout@v2
+    - name: Run linting
+      run: npm run-script lint
     - name: Install dependencies
       run: npm install
     - name: Run tests
-      if: github.event_name == 'pull_request' || github.ref == 'refs/heads/master'
       run: npm test
-    - name: Run linting
-      run: npm run-script lint
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
 
   publish:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     container: node:lts
     needs: test
@@ -31,7 +34,6 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Publish
-      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: node publish-ci.js
