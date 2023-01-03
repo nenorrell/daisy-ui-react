@@ -9,18 +9,24 @@ on:
       - master
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+    services:
+      - docker:dind
     steps:
     - uses: actions/checkout@v2
     - name: Run tests
       if: github.event_name == 'pull_request' || github.ref == 'refs/heads/master'
-      uses: docker://node:lts
       with:
         args: sh -c "cd /github/workspace && make test"
 
+  publish:
+    runs-on: ubuntu-latest
+    services:
+      - docker:dind
+    steps:
+    - uses: actions/checkout@v2
     - name: Publish
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-      uses: docker://node:lts
       with:
         args: sh -c "cd /github/workspace && make publish-ci NPM_TOKEN=${{ secrets.NPM_TOKEN }}"
