@@ -36,4 +36,4 @@ jobs:
     - name: Publish
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: node publish-ci.js
+      run: node ./.bin/publish-ci.js
