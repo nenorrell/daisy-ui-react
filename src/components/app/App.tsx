@@ -1,4 +1,5 @@
 import { ArrowDownIcon, HomeIcon } from "@heroicons/react/24/solid";
+import { Alert } from "../alert/Alert";
 import { Avatar } from "../avatar/Avatar";
 import { Button } from "../buttons/Button";
 import { Collapse } from "../collapses/Collapse";
@@ -36,6 +37,8 @@ export const App = () => {
                 >
                     <span>NN</span>
                 </Avatar>
+
+                <Alert variant="warning" />
             </div>
         </>
     );
