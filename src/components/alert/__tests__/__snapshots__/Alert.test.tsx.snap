@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert Variants Respects error variant 1`] = `
+<div
+  class="alert shadow-lg alert-error "
+>
+  <p>
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Alert Variants Respects info variant 1`] = `
+<div
+  class="alert shadow-lg alert-info "
+>
+  <p>
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Alert Variants Respects success variant 1`] = `
+<div
+  class="alert shadow-lg alert-success "
+>
+  <p>
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Alert Variants Respects warning variant 1`] = `
+<div
+  class="alert shadow-lg alert-warning "
+>
+  <p>
+    Hello
+  </p>
+</div>
+`;

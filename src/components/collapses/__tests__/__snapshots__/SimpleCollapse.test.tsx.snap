@@ -314,6 +314,41 @@ exports[`SimpleCollapse Variants Respects error variant 2`] = `
 />
 `;
 
+exports[`SimpleCollapse Variants Respects error variant 3`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-error-content bg-error "
+>
+  <div
+    class="w-full"
+  >
+    testing error variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects error variant 4`] = `
+<div
+  class="text-error-content bg-error "
+/>
+`;
+
 exports[`SimpleCollapse Variants Respects info variant 1`] = `
 <div
   class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-info-content bg-info "
@@ -344,6 +379,41 @@ exports[`SimpleCollapse Variants Respects info variant 1`] = `
 `;
 
 exports[`SimpleCollapse Variants Respects info variant 2`] = `
+<div
+  class="text-info-content bg-info "
+/>
+`;
+
+exports[`SimpleCollapse Variants Respects info variant 3`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-info-content bg-info "
+>
+  <div
+    class="w-full"
+  >
+    testing info variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects info variant 4`] = `
 <div
   class="text-info-content bg-info "
 />
@@ -489,6 +559,41 @@ exports[`SimpleCollapse Variants Respects success variant 2`] = `
 />
 `;
 
+exports[`SimpleCollapse Variants Respects success variant 3`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-success-content bg-success "
+>
+  <div
+    class="w-full"
+  >
+    testing success variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects success variant 4`] = `
+<div
+  class="text-success-content bg-success "
+/>
+`;
+
 exports[`SimpleCollapse Variants Respects warning variant 1`] = `
 <div
   class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-warning-content bg-warning "
@@ -519,6 +624,41 @@ exports[`SimpleCollapse Variants Respects warning variant 1`] = `
 `;
 
 exports[`SimpleCollapse Variants Respects warning variant 2`] = `
+<div
+  class="text-warning-content bg-warning "
+/>
+`;
+
+exports[`SimpleCollapse Variants Respects warning variant 3`] = `
+<div
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-warning-content bg-warning "
+>
+  <div
+    class="w-full"
+  >
+    testing warning variant
+  </div>
+  <div
+    class="items-end transition ease-in-out -rotate-90"
+  >
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SimpleCollapse Variants Respects warning variant 4`] = `
 <div
   class="text-warning-content bg-warning "
 />
