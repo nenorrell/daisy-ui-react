@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { RefObject, useEffect, useRef, useState } from "react";
+import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, RefObject, useEffect, useRef, useState } from "react";
 import { ComponentOrJSX } from "../../@types/Generic";
 import { processComponentOrJSX } from "../../modules/utility";
 
@@ -18,7 +18,7 @@ const toggleExpand = (ref :RefObject<HTMLDivElement>, isExpanded :boolean, rootC
 interface ICollapse {
     className ?:string;
     defaultExpand ?:boolean
-    headerContent :string | React.ReactNode
+    headerContent :string | ReactNode
     headerClasses ?:string
     leftIcon ?:ComponentOrJSX
     leftIconClasses ?:string
@@ -28,7 +28,10 @@ interface ICollapse {
     rounded ?:boolean
     onClick ?:Function
 }
-export const Collapse = (props :React.PropsWithChildren<ICollapse>) => {
+export const Collapse = forwardRef((
+    props :PropsWithChildren<ICollapse>,
+    ref ?:ForwardedRef<HTMLDivElement>
+) => {
     const expandableContent = useRef<HTMLDivElement>(null);
     const [isExpanded, setIsExpanded] = useState<boolean>(props.defaultExpand || false);
     const RightIcon = props.rightIcon && processComponentOrJSX(props.rightIcon);
@@ -39,7 +42,7 @@ export const Collapse = (props :React.PropsWithChildren<ICollapse>) => {
     }, [isExpanded]); // eslint-disable-line
 
     return (
-        <div tabIndex={0} className={`w-100 collapse ${props.className || ""}`}>
+        <div ref={ref} tabIndex={0} className={`w-100 collapse ${props.className || ""}`}>
             <div className={`collapse-title cursor-pointer flex items-center justify-center px-4 ${props.headerClasses || ""}`}
                 onClick={(e)=>{
                     setIsExpanded(!isExpanded);
@@ -66,4 +69,4 @@ export const Collapse = (props :React.PropsWithChildren<ICollapse>) => {
             </div>
         </div>
     );
-};
+});
