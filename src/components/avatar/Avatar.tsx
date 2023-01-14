@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren } from "react";
 import { Variant } from "../../@types/Daisy";
 import ColorMap from "../../modules/ColorMap";
 
@@ -10,11 +10,15 @@ interface IAvatar {
     variant ?:Variant
     onClick ?:MouseEventHandler
 }
-export const Avatar = (props:React.PropsWithChildren<IAvatar>)=>{
+export const Avatar = forwardRef((
+    props :PropsWithChildren<IAvatar>,
+    ref ?:ForwardedRef<HTMLDivElement>
+) =>{
     const variantColors = ColorMap.get(props?.variant || "neutral");
 
     return (
         <div
+            ref={ref}
             className={`avatar ${props.className || ""} ${!props.isPlaceholder ? "placeholder" :""} ${props.status || ""}`}
             {...(props.onClick && { onClick: props.onClick })}
         >
@@ -23,4 +27,4 @@ export const Avatar = (props:React.PropsWithChildren<IAvatar>)=>{
             </div>
         </div>
     );
-};
+});

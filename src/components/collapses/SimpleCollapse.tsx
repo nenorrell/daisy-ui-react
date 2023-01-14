@@ -3,6 +3,7 @@ import { ComponentOrJSX } from "../../@types/Generic";
 import ColorMap from "../../modules/ColorMap";
 import { useToggle } from "../../modules/hooks";
 import { Collapse } from "./Collapse";
+import { ForwardedRef, forwardRef, PropsWithChildren } from "react";
 
 interface ISimpleCollapse {
     headerContent :string
@@ -12,7 +13,10 @@ interface ISimpleCollapse {
     rounded ?:boolean
     defaultExpand ?:boolean
 }
-export const SimpleCollapse :React.FC<React.PropsWithChildren<ISimpleCollapse>>= (props)=>{
+export const SimpleCollapse = forwardRef((
+    props :PropsWithChildren<ISimpleCollapse>,
+    ref ?:ForwardedRef<HTMLDivElement>
+)=>{
     const variant = ColorMap.get(props.variant || "neutral");
     const [isExpanded, toggle] = useToggle(props.defaultExpand || false);
     const roundedClasses = !isExpanded ? "rounded-md" : "rounded-t-md";
@@ -25,10 +29,11 @@ export const SimpleCollapse :React.FC<React.PropsWithChildren<ISimpleCollapse>>=
             className={props.className}
             headerClasses={`${transitionClasses} ${variant.text} ${variant.bg} ${props.rounded ? roundedClasses : ""}`}
             onClick={toggle}
+            ref={ref}
         >
             <div className={`${variant.text} ${variant.bg} ${props.rounded ? "rounded-b-md":""}`}>
                 {props.children}
             </div>
         </Collapse>
     );
-};
+});
