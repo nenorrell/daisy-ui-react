@@ -44,6 +44,28 @@ describe("Button", ()=>{
         expect(stub).toHaveBeenCalled();
     });
 
+    it("Disables button when passed in", ()=>{
+        const component = render(
+            <Button
+                buttonText="testing"
+                disabled={true}
+            />
+        );
+        const container = component.container.querySelector("button.btn");
+        expect(container).toBeDisabled();
+    });
+
+    it("Does not disable button when disabled is false", ()=>{
+        const component = render(
+            <Button
+                buttonText="testing"
+                disabled={false}
+            />
+        );
+        const container = component.container.querySelector("button.btn");
+        expect(container).not.toBeDisabled();
+    });
+
     it("Renders buttonText instead of children when both are present", ()=>{
         const component = render(
             <Button
