@@ -1,17 +1,18 @@
 import { Variant } from "../../@types/Daisy";
+import { ComponentOrJSX } from "../../@types/Generic";
 import ColorMap from "../../modules/ColorMap";
 import { useToggle } from "../../modules/hooks";
 import { Collapse } from "./Collapse";
 
 interface ISimpleCollapse {
     headerContent :string
-    LeftIcon ?:React.FunctionComponent<any>
+    leftIcon ?:ComponentOrJSX
     className ?:string
     variant ?:Variant
     rounded ?:boolean
     defaultExpand ?:boolean
 }
-export const SimpleCollapse = (props :React.PropsWithChildren<ISimpleCollapse>)=>{
+export const SimpleCollapse :React.FC<React.PropsWithChildren<ISimpleCollapse>>= (props)=>{
     const variant = ColorMap.get(props.variant || "neutral");
     const [isExpanded, toggle] = useToggle(props.defaultExpand || false);
     const roundedClasses = !isExpanded ? "rounded-md" : "rounded-t-md";
@@ -20,7 +21,7 @@ export const SimpleCollapse = (props :React.PropsWithChildren<ISimpleCollapse>)=
     return (
         <Collapse
             headerContent={props.headerContent}
-            LeftIcon={props.LeftIcon}
+            leftIcon={props.leftIcon}
             className={props.className}
             headerClasses={`${transitionClasses} ${variant.text} ${variant.bg} ${props.rounded ? roundedClasses : ""}`}
             onClick={toggle}

@@ -1,9 +1,11 @@
-import { ArrowDownIcon, HomeIcon } from "@heroicons/react/24/solid";
+import { ArrowDownIcon } from "@heroicons/react/24/solid";
 import { Alert } from "../alert/Alert";
 import { Avatar } from "../avatar/Avatar";
 import { Button } from "../buttons/Button";
 import { Collapse } from "../collapses/Collapse";
 import { SimpleCollapse } from "../collapses/SimpleCollapse";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGitlab } from "@fortawesome/free-brands-svg-icons";
 
 export const App = () => {
     return (
@@ -14,8 +16,8 @@ export const App = () => {
                     className="w-1/2"
                     headerContent="Hello"
                     headerClasses="bg-base-200 rounded-t-md"
-                    LeftIcon={HomeIcon}
-                    RightIcon={ArrowDownIcon}
+                    leftIcon={<FontAwesomeIcon icon={faGitlab} />}
+                    rightIcon={ArrowDownIcon}
                 >
                     <div className="bg-base-300">
                         <p className="p-4">Hey everyone</p>
@@ -25,6 +27,7 @@ export const App = () => {
                 <SimpleCollapse headerContent="Testing" variant="info" className="w-1/2" rounded={true}>
                     <p className="p-4">Hey everyone</p>
                 </SimpleCollapse>
+
                 <Button variant="primary" buttonText="Hello" onClick={(e)=>{
                     console.log(e);
                 }}/>
@@ -38,7 +41,9 @@ export const App = () => {
                     <span>NN</span>
                 </Avatar>
 
-                <Alert variant="warning" />
+                <Alert className="w-1/4" variant="error">
+                    WARNING
+                </Alert>
             </div>
         </>
     );

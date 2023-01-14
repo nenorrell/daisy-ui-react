@@ -153,11 +153,11 @@ describe("Collapse Component", () => {
         expect(headerContainer).toMatchSnapshot();
     });
 
-    it("Respects leftIcon prop", () => {
+    it("Respects leftIcon prop as a functional component", () => {
         const {container} = render(
             <Collapse
                 headerContent='My Collapse'
-                LeftIcon={HomeIcon}
+                leftIcon={HomeIcon}
             >
                 <p className="test-element">Hi everyone</p>
             </Collapse>
@@ -168,7 +168,52 @@ describe("Collapse Component", () => {
         expect(collapseTitleEl).toMatchSnapshot();
     });
 
-    it("Does not render LeftIcon when prop is undefined", () => {
+    it("Respects leftIcon prop as a JSX element", () => {
+        const {container} = render(
+            <Collapse
+                headerContent='My Collapse'
+                leftIcon={<HomeIcon />}
+            >
+                <p className="test-element">Hi everyone</p>
+            </Collapse>
+        );
+
+        const collapseTitleEl = container.querySelector("div.collapse-title");
+        expect(collapseTitleEl?.querySelector("svg")).toEqual(collapseTitleEl?.firstElementChild);
+        expect(collapseTitleEl).toMatchSnapshot();
+    });
+
+    it("Respects rightIcon prop as a functional component", () => {
+        const {container} = render(
+            <Collapse
+                headerContent='My Collapse'
+                rightIcon={HomeIcon}
+            >
+                <p className="test-element">Hi everyone</p>
+            </Collapse>
+        );
+
+        const rightIconContainer = container.querySelector("div.items-end");
+        expect(rightIconContainer?.querySelector("svg")).toEqual(rightIconContainer?.firstElementChild);
+        expect(rightIconContainer).toMatchSnapshot();
+    });
+
+    it("Respects rightIcon prop as a JSX element", () => {
+        const {container} = render(
+            <Collapse
+                headerContent='My Collapse'
+                rightIcon={<HomeIcon />}
+            >
+                <p className="test-element">Hi everyone</p>
+            </Collapse>
+        );
+
+        const rightIconContainer = container.querySelector("div.items-end");
+        expect(rightIconContainer?.querySelector("svg")).toEqual(rightIconContainer?.firstElementChild);
+        expect(rightIconContainer).toMatchSnapshot();
+    });
+
+    it("Does not render leftIcon when prop is undefined", () => {
         const {container} = render(
             <Collapse
                 headerContent='My Collapse'
@@ -186,7 +231,7 @@ describe("Collapse Component", () => {
         const {container} = render(
             <Collapse
                 headerContent='My Collapse'
-                LeftIcon={HomeIcon}
+                leftIcon={HomeIcon}
                 leftIconClasses='some-icon-class'
             >
                 <p className="test-element">Hi everyone</p>
