@@ -1,5 +1,7 @@
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { RefObject, useEffect, useRef, useState } from "react";
+import { ComponentOrJSX } from "../../@types/Generic";
+import { processComponentOrJSX } from "../../modules/utility";
 
 const toggleExpand = (ref :RefObject<HTMLDivElement>, isExpanded :boolean, rootCollapse ?:boolean)=>{
     if(ref.current?.clientHeight && !isExpanded) {
@@ -18,9 +20,9 @@ interface ICollapse {
     defaultExpand ?:boolean
     headerContent :string | React.ReactNode
     headerClasses ?:string
-    LeftIcon ?:React.FunctionComponent<any>
+    leftIcon ?:ComponentOrJSX
     leftIconClasses ?:string
-    RightIcon ?:React.FunctionComponent<any>
+    rightIcon ?:ComponentOrJSX
     rightIconClasses ?:string
     rootCollapse ?:boolean
     rounded ?:boolean
@@ -29,6 +31,9 @@ interface ICollapse {
 export const Collapse = (props :React.PropsWithChildren<ICollapse>) => {
     const expandableContent = useRef<HTMLDivElement>(null);
     const [isExpanded, setIsExpanded] = useState<boolean>(props.defaultExpand || false);
+    const RightIcon = props.rightIcon && processComponentOrJSX(props.rightIcon);
+    const LeftIcon = props.leftIcon && processComponentOrJSX(props.leftIcon);
+
     useEffect(()=>{
         toggleExpand(expandableContent, isExpanded, props.rootCollapse);
     }, [isExpanded]); // eslint-disable-line
@@ -41,14 +46,14 @@ export const Collapse = (props :React.PropsWithChildren<ICollapse>) => {
                     props.onClick && props.onClick(e);
                 } }>
                 {
-                    props.LeftIcon && <props.LeftIcon className={props.leftIconClasses || "w-6 h-6 mr-3"} />
+                    LeftIcon && <LeftIcon className={props.leftIconClasses || "w-6 h-6 mr-3"} />
                 }
                 <div className="w-full">{props.headerContent}</div>
                 <div className={`items-end transition ease-in-out ${isExpanded ? "" : "-rotate-90"}`}>
                     {
-                        props.RightIcon &&
-                        <props.RightIcon className={props.rightIconClasses || "w-4 h-4"} /> ||
-                        <ChevronDownIcon className={props.rightIconClasses || "w-4 h-4"}/>
+                        RightIcon ?
+                            <RightIcon className={props.rightIconClasses || "w-4 h-4"} /> :
+                            <ChevronDownIcon className={props.rightIconClasses || "w-4 h-4"}/>
                     }
                 </div>
             </div>
