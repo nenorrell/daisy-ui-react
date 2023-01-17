@@ -15,10 +15,12 @@ export const Alert = forwardRef((
     const variantColors = variant ? ColorMap.get(variant) : null;
 
     return (
-        <div ref={ref} className={`alert shadow-lg ${clsx(
+        <div ref={ref} className={clsx(
+            "alert",
+            "shadow-lg",
             variantColors?.alert && variantColors.alert,
             className && className
-        )}`}
+        )}
         onClick={onClick || undefined}
         >
             {children}

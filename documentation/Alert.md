@@ -1,3 +1,5 @@
+⬅️ [Back to component index](README.md)
+
 ## Alert
 
 Use the alert component to give users feedback on their actions in context with a variety of options.

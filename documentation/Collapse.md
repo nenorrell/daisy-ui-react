@@ -1,3 +1,5 @@
+⬅️ [Back to component index](README.md)
+
 ## Collapse
 
 A collapsible container used for showing and hiding content.

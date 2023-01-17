@@ -1,3 +1,5 @@
+⬅️ [Back to component index](README.md)
+
 ## SimpleCollapse
 
 A simpler version of the Collapse component that provides an easy way to create collapsible content with a header.

@@ -1,3 +1,5 @@
+⬅️ [Back to component index](README.md)
+
 ## Button
 
 Use Daisy's custom button styles with support for multiple sizes, states, and more.
