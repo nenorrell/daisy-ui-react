@@ -29,7 +29,7 @@ export const Button :FC<PropsWithChildren<IButton>> = forwardRef((
     return (
         <button
             ref={ref}
-            onClick={props.onClick ? props.onClick : undefined}
+            onClick={props.onClick || undefined}
             className={
                 `btn ${btnSize} ${variantColors?.btn} ${clsx(
                     props.className && props.className,
