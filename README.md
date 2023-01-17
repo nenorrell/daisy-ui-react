@@ -24,16 +24,9 @@ module.exports = {
 };
 ```
 
-## Currently Supported Components
+## Component Documentation
 
-- Alert
-- Avatar
-- Button
-- Collapses
-  - SimpleCollapse
-    - Less customizable, simple to consume
-  - Collapse
-    - More config options & robustness
+Please see [Daisy UI React Component Documentation](https://github.com/nenorrell/daisy-ui-react/blob/master/documentation/README.md) for component specific documentation
 
 ## Development
 ### Starting dev env
