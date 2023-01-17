@@ -3,12 +3,12 @@ import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, RefObject, useE
 import { ComponentOrJSX } from "../../@types/Generic";
 import { processComponentOrJSX } from "../../modules/utility";
 
-const toggleExpand = (ref :RefObject<HTMLDivElement>, isExpanded :boolean, rootCollapse ?:boolean)=>{
+const toggleExpand = (ref :RefObject<HTMLDivElement>, isExpanded :boolean, parentCollapse ?:boolean)=>{
     if(ref.current?.clientHeight && !isExpanded) {
         ref.current.style.height = "0px";
     }
     else if(ref.current && isExpanded) {
-        if(!rootCollapse) {
+        if(!parentCollapse) {
             ref.current.style.height = "0px";
             ref.current.style.height = `${ref.current.scrollHeight}px`;
         }
@@ -24,8 +24,7 @@ interface ICollapse {
     leftIconClasses ?:string
     rightIcon ?:ComponentOrJSX
     rightIconClasses ?:string
-    rootCollapse ?:boolean
-    rounded ?:boolean
+    parentCollapse ?:boolean
     onClick ?:Function
 }
 export const Collapse = forwardRef((
@@ -38,7 +37,7 @@ export const Collapse = forwardRef((
     const LeftIcon = props.leftIcon && processComponentOrJSX(props.leftIcon);
 
     useEffect(()=>{
-        toggleExpand(expandableContent, isExpanded, props.rootCollapse);
+        toggleExpand(expandableContent, isExpanded, props.parentCollapse);
     }, [isExpanded]); // eslint-disable-line
 
     return (

@@ -1,6 +1,8 @@
 ## Button
 
-A customizable button component. For styling specifics, see: https://daisyui.com/components/button/
+Use Daisy's custom button styles with support for multiple sizes, states, and more.
+
+For styling specifics, see: https://daisyui.com/components/button/
 
 ### Props
 
@@ -8,7 +10,7 @@ A customizable button component. For styling specifics, see: https://daisyui.com
 |-------------|-------------------------------------------------|---------|---------------------------------------------------------------------------------------------------------|
 | `buttonText`| `string`                                        | `""`    | The text to be displayed on the button.                                                                  |
 | `size`      | `"small"`, `"medium"`, `"large"`                | `"medium"` | The size of the button.                                                                                 |
-| `className` | `string`                                        | `""`    | Custom classname to apply to the button.                                                                |
+| `className` | `string`                                        | `""`    | Custom classes to apply to the button.                                                                |
 | `variant`   | `"neutral"`, `"primary"`, `"secondary"`, `"danger"`| `"neutral"` | The color variant of the button.                                                                        |
 | `onClick`   | `MouseEventHandler`                             | `undefined`| Function to be executed when the button is clicked.                                                      |
 | `isGhost`   | `boolean`                                       | `false` | If true, the button will have a ghost style.                                                           |
@@ -23,7 +25,7 @@ A customizable button component. For styling specifics, see: https://daisyui.com
 ### Examples
 
 ```javascript
-import { Button } from './Button';
+import { Button } from 'daisy-ui-react-components';
 import { IconArrowRight } from '@heroicons/react';
 
 <Button buttonText="Click me" />
