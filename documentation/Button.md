@@ -1,6 +1,6 @@
 ## Button
 
-A customizable button component.
+A customizable button component. For styling specifics, see: https://daisyui.com/components/button/
 
 ### Props
 
