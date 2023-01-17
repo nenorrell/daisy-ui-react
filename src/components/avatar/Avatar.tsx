@@ -1,6 +1,7 @@
 import { ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren } from "react";
 import { Variant } from "../../@types/Daisy";
 import ColorMap from "../../modules/ColorMap";
+import clsx from "clsx";
 
 interface IAvatar {
     isPlaceholder ?:boolean
@@ -19,8 +20,12 @@ export const Avatar = forwardRef((
     return (
         <div
             ref={ref}
-            className={`avatar ${props.className || ""} ${!props.isPlaceholder ? "placeholder" :""} ${props.status || ""}`}
-            {...(props.onClick && { onClick: props.onClick })}
+            className={`avatar ${clsx(
+                props.className && props.className,
+                !props.isPlaceholder && "placeholder",
+                props.status && props.status
+            )}`}
+            onClick={props.onClick || undefined}
         >
             <div className={`${variantColors.bg} ${variantColors.text} ${props.contentClasses || "w-12"}`}>
                 {props.children}

@@ -2,7 +2,7 @@
 
 exports[`Alert Variants Respects error variant 1`] = `
 <div
-  class="alert shadow-lg alert-error "
+  class="alert shadow-lg alert-error"
 >
   <p>
     Hello
@@ -12,7 +12,7 @@ exports[`Alert Variants Respects error variant 1`] = `
 
 exports[`Alert Variants Respects info variant 1`] = `
 <div
-  class="alert shadow-lg alert-info "
+  class="alert shadow-lg alert-info"
 >
   <p>
     Hello
@@ -22,7 +22,7 @@ exports[`Alert Variants Respects info variant 1`] = `
 
 exports[`Alert Variants Respects success variant 1`] = `
 <div
-  class="alert shadow-lg alert-success "
+  class="alert shadow-lg alert-success"
 >
   <p>
     Hello
@@ -32,7 +32,7 @@ exports[`Alert Variants Respects success variant 1`] = `
 
 exports[`Alert Variants Respects warning variant 1`] = `
 <div
-  class="alert shadow-lg alert-warning "
+  class="alert shadow-lg alert-warning"
 >
   <p>
     Hello

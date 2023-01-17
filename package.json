@@ -1,6 +1,6 @@
 {
   "name": "daisy-ui-react-components",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "private": false,
   "main": "dist/exports.js",
   "types": "dist/exports.d.ts",
@@ -36,6 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
     "eslint-config-google": "^0.14.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.4",
     "web-vitals": "^2.1.4"
@@ -77,6 +78,7 @@
   "dependencies": {
     "@heroicons/react": "^2.0.13",
     "@types/react-is": "^17.0.3",
+    "clsx": "^1.2.1",
     "react-is": "^18.2.0"
   },
   "jest": {

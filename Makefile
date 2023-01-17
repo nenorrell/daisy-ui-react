@@ -53,9 +53,6 @@ run-linting-fix:
 	-w /usr/src/app node:${NODE} \
 	npm run lint:fix
 
-package: compile
-	/bin/sh .bin/package.sh
-
 publish-ci: install
 	docker run -i --rm -p "9198:1337" \
 	-v `pwd`:/usr/src/app -w /usr/src/app \

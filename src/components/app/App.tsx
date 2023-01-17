@@ -28,9 +28,12 @@ export const App = () => {
                     <p className="p-4">Hey everyone</p>
                 </SimpleCollapse>
 
-                <Button variant="primary" buttonText="Hello" onClick={(e)=>{
-                    console.log(e);
-                }}/>
+                <Button variant="primary"
+                    buttonText="Hello"
+                    onClick={(e)=>{
+                        console.log(e);
+                    }}
+                />
 
                 <Avatar
                     className="m-5"

@@ -1,17 +1,20 @@
 # Daisy UI React components
+
 [![codecov](https://codecov.io/gh/nenorrell/daisy-ui-react/branch/master/graph/badge.svg?token=5BVSFNKS43)](https://codecov.io/gh/nenorrell/daisy-ui-react)
 
-Influenced by packages like [React Bootstrap](https://react-bootstrap.github.io/)
+<img src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui/card-3.png" />
 
+This library is designed to simplify the integration of Daisy UI into React projects by providing a set of pre-built React components. The API and functionality of these components are heavily influenced by popular libraries such as React Bootstrap, making it easy for developers familiar with those libraries to work with Daisy UI.
 
-Improving the experience of using DaisyUI & React together. The goal of this package is to supply easy to consume Daisy UI out of the box React components. 
+## Component Documentation
 
-There are still no great docs for component usage, but they will be coming soon. In the meantime, these comonents are written entirely in TS and should be fairly intuitive to consume.
+Please see [Daisy UI React Component Documentation](https://github.com/nenorrell/daisy-ui-react/blob/master/documentation/README.md) for component specific documentation
 
 ## Installation & Setup
 
-- First install the package: `npm install daisy-ui-react-components`
-- Next we need to wire the components up with Tailwind by modifying the [content](https://tailwindcss.com/docs/content-configuration) config object like below:
+- First thing's first, you'll need to follow Daisy UI's install directions here: https://daisyui.com/docs/install/
+- Next install the components package: `npm install daisy-ui-react-components`
+- Then we just need to wire the components up with Tailwind by modifying the [content](https://tailwindcss.com/docs/content-configuration) config object like below, and we should be in business:
 
 ```javascript
 module.exports = {
@@ -23,17 +26,6 @@ module.exports = {
     daisyui: {...}
 };
 ```
-
-## Currently Supported Components
-
-- Alert
-- Avatar
-- Button
-- Collapses
-  - SimpleCollapse
-    - Less customizable, simple to consume
-  - Collapse
-    - More config options & robustness
 
 ## Development
 ### Starting dev env

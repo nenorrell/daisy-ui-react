@@ -6,9 +6,9 @@ export type BaselessVariant = Exclude<Variant, BaseVariant>
 export interface VariantColors {
     bg :`bg-${Variant}`
     text :`text-${Variant | "base"}-content`
-    focus ?:`${BaselessVariant}-focus`,
+    focus ?:`${BaselessVariant}-focus`
     btn ?:`btn-${BaselessVariant}`
     alert ?:`alert-${StatusVariant}`
 }
 
-export type ButtonSize = "lg" | "md" | "sm" | "xs";
+export type ButtonSize = "lg" | "md" | "sm" | "xs" | "wide" | "block";
