@@ -48,7 +48,7 @@ describe("Button", ()=>{
         const component = render(
             <Button
                 buttonText="testing"
-                disabled={true}
+                isDisabled={true}
             />
         );
         const container = component.container.querySelector("button.btn");
@@ -59,7 +59,7 @@ describe("Button", ()=>{
         const component = render(
             <Button
                 buttonText="testing"
-                disabled={false}
+                isDisabled={false}
             />
         );
         const container = component.container.querySelector("button.btn");
@@ -85,5 +85,61 @@ describe("Button", ()=>{
         );
         const container = component.container.querySelector("p.find-me");
         expect(container).toBeInTheDocument();
+    });
+
+    it("applies ghost class", () => {
+        const { container } = render(<Button isGhost={true} />);
+        const button = container.firstChild;
+
+        expect(button).toHaveClass("btn-ghost");
+    });
+
+    it("applies link class", () => {
+        const { container } = render(<Button isLink={true} />);
+        const button = container.firstChild;
+
+        expect(button).toHaveClass("btn-link");
+    });
+
+    it("applies outline class", () => {
+        const { container } = render(<Button isOutline={true} />);
+        const button = container.firstChild;
+
+        expect(button).toHaveClass("btn-outline");
+    });
+
+    it("applies glass class", () => {
+        const { container } = render(<Button isGlass={true} />);
+        const button = container.firstChild;
+
+        expect(button).toHaveClass("glass");
+    });
+
+    it("applies loading class", () => {
+        const { container } = render(<Button isLoading={true} />);
+        const button = container.firstChild;
+
+        expect(button).toHaveClass("loading");
+    });
+
+    it("applies no-animation class", () => {
+        const { container } = render(<Button noAnimation={true} />);
+        const button = container.firstChild;
+
+        expect(button).toHaveClass("no-animation");
+    });
+
+    it("applies circle shape class", () => {
+        const { container } = render(<Button shape="circle" />);
+        const button = container.firstChild;
+
+        expect(button).toHaveClass("btn-circle");
+    });
+
+    it("applies square shape class", () => {
+        const { container } = render(<Button shape="square" />);
+        const button = container.firstChild;
+
+        expect(button).toHaveClass("btn-square");
     });
 });

@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button Sizes Respects block size 1`] = `
+<button
+  class="btn btn-block btn-neutral "
+>
+  testing block button size
+</button>
+`;
+
 exports[`Button Sizes Respects lg size 1`] = `
 <button
   class="btn btn-lg btn-neutral "
@@ -21,6 +29,14 @@ exports[`Button Sizes Respects sm size 1`] = `
   class="btn btn-sm btn-neutral "
 >
   testing sm button size
+</button>
+`;
+
+exports[`Button Sizes Respects wide size 1`] = `
+<button
+  class="btn btn-lg btn-neutral "
+>
+  testing wide button size
 </button>
 `;
 

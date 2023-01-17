@@ -3,7 +3,7 @@ import { ButtonSize } from "../@types/Daisy";
 import { ComponentOrJSX } from "../@types/Generic";
 import ReactIs from "react-is";
 
-export const getButtonSize = (size ?:ButtonSize)=>{
+export const getButtonSize = (size ?:ButtonSize) :`btn-${ButtonSize}`=>{
     switch(size) {
         case "xs":
             return "btn-xs";
@@ -13,6 +13,10 @@ export const getButtonSize = (size ?:ButtonSize)=>{
             return "btn-md";
         case "lg":
             return "btn-lg";
+        case "wide":
+            return "btn-lg";
+        case "block":
+            return "btn-block";
         default:
             return "btn-md";
     }
