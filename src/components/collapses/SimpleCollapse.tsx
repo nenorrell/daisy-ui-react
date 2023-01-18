@@ -28,7 +28,7 @@ export const SimpleCollapse = forwardRef((
             leftIcon={props.leftIcon}
             className={props.className}
             headerClasses={`${transitionClasses} ${variant.text} ${variant.bg} ${props.rounded ? roundedClasses : ""}`}
-            onClick={toggle}
+            onClick={()=>toggle()}
             ref={ref}
         >
             <div className={`${variant.text} ${variant.bg} ${props.rounded ? "rounded-b-md":""}`}>

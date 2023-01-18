@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmModal should render with default values 1`] = `
+<div>
+  <div
+    class="modal modal-open"
+  >
+    <div
+      class="modal-box bg-neutral text-neutral-content"
+    >
+      <div
+        class="modal-action"
+      >
+        <div
+          class="modal-action"
+        >
+          <button
+            class="btn btn-md btn-neutral"
+          >
+            Close
+          </button>
+          <button
+            class="btn btn-md btn-neutral"
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

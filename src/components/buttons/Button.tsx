@@ -8,7 +8,7 @@ interface IButton {
     size ?:ButtonSize
     className ?:string
     variant ?:BaselessVariant
-    onClick ?:MouseEventHandler
+    onClick ?:MouseEventHandler<HTMLButtonElement>
     isGhost ?:boolean
     isLink ?:boolean
     isOutline ?:boolean

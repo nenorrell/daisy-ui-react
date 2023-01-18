@@ -1,3 +1,4 @@
+export { Badge } from "./components/badge/Badge";
 export { Button } from "./components/buttons/Button";
 export { Collapse } from "./components/collapses/Collapse";
 export { SimpleCollapse } from "./components/collapses/SimpleCollapse";

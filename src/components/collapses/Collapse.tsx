@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, RefObject, useEffect, useRef, useState } from "react";
+import { ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren, ReactNode, RefObject, useEffect, useRef, useState } from "react";
 import { ComponentOrJSX } from "../../@types/Generic";
 import { processComponentOrJSX } from "../../modules/utility";
 
@@ -25,7 +25,7 @@ interface ICollapse {
     rightIcon ?:ComponentOrJSX
     rightIconClasses ?:string
     parentCollapse ?:boolean
-    onClick ?:Function
+    onClick ?:MouseEventHandler<HTMLDivElement>
 }
 export const Collapse = forwardRef((
     props :PropsWithChildren<ICollapse>,
