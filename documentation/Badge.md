@@ -7,7 +7,7 @@ Badge component is a simple component used to provide a visual representation of
 | Property        | Type           | Description  |
 | ------------- |:-------------:| :-----|
 | size      | `Size` | Size of the Badge component. Accepted values are "xs", "sm", "md", "lg". Default value is "md".|
-| className      | `string` | Additional className for customizing the component.|
+| className      | `string` | Additional class name for customizing the component. Useful for spacing, sizing, etc|
 | variant      | `BaselessVariant` | Color variant of the Badge component. Accepted values are "neutral", "primary", "secondary", "success", "danger", "warning". Default value is "neutral".|
 | onClick      | `MouseEventHandler` | Event handler for click event on the component.|
 | isGhost      | `boolean` | Changes the component style to a ghost variant.|
