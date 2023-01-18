@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge Sizes Respects lg size 1`] = `
+<div
+  class="badge badge-lg badge-neutral"
+>
+  <span>
+    testing 
+    lg
+     button size
+  </span>
+</div>
+`;
+
+exports[`Badge Sizes Respects md size 1`] = `
+<div
+  class="badge badge-md badge-neutral"
+>
+  <span>
+    testing 
+    md
+     button size
+  </span>
+</div>
+`;
+
+exports[`Badge Sizes Respects sm size 1`] = `
+<div
+  class="badge badge-sm badge-neutral"
+>
+  <span>
+    testing 
+    sm
+     button size
+  </span>
+</div>
+`;
+
+exports[`Badge Sizes Respects xs size 1`] = `
+<div
+  class="badge badge-xs badge-neutral"
+>
+  <span>
+    testing 
+    xs
+     button size
+  </span>
+</div>
+`;
+
+exports[`Badge Variants Respects accent variant 1`] = `
+<div
+  class="badge badge-md badge-accent"
+>
+  <span>
+    testing 
+    accent
+     variant
+  </span>
+</div>
+`;
+
+exports[`Badge Variants Respects error variant 1`] = `
+<div
+  class="badge badge-md badge-error"
+>
+  <span>
+    testing 
+    error
+     variant
+  </span>
+</div>
+`;
+
+exports[`Badge Variants Respects info variant 1`] = `
+<div
+  class="badge badge-md badge-info"
+>
+  <span>
+    testing 
+    info
+     variant
+  </span>
+</div>
+`;
+
+exports[`Badge Variants Respects neutral variant 1`] = `
+<div
+  class="badge badge-md badge-neutral"
+>
+  <span>
+    testing 
+    neutral
+     variant
+  </span>
+</div>
+`;
+
+exports[`Badge Variants Respects primary variant 1`] = `
+<div
+  class="badge badge-md badge-primary"
+>
+  <span>
+    testing 
+    primary
+     variant
+  </span>
+</div>
+`;
+
+exports[`Badge Variants Respects secondary variant 1`] = `
+<div
+  class="badge badge-md badge-secondary"
+>
+  <span>
+    testing 
+    secondary
+     variant
+  </span>
+</div>
+`;
+
+exports[`Badge Variants Respects success variant 1`] = `
+<div
+  class="badge badge-md badge-success"
+>
+  <span>
+    testing 
+    success
+     variant
+  </span>
+</div>
+`;
+
+exports[`Badge Variants Respects warning variant 1`] = `
+<div
+  class="badge badge-md badge-warning"
+>
+  <span>
+    testing 
+    warning
+     variant
+  </span>
+</div>
+`;

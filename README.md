@@ -1,6 +1,6 @@
 # Daisy UI React components
 
-[![codecov](https://codecov.io/gh/nenorrell/daisy-ui-react/branch/master/graph/badge.svg?token=5BVSFNKS43)](https://codecov.io/gh/nenorrell/daisy-ui-react)
+[![codecov](https://codecov.io/gh/nenorrell/daisy-ui-react/branch/master/graph/badge.svg?token=5BVSFNKS43)](https://codecov.io/gh/nenorrell/daisy-ui-react) [![CI](https://github.com/nenorrell/daisy-ui-react/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/nenorrell/daisy-ui-react/actions/workflows/ci.yml)
 
 <img src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui/card-3.png" />
 

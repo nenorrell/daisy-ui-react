@@ -1,11 +1,10 @@
 import { FC, ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren } from "react";
 import { BaselessVariant, ButtonSize } from "../../@types/Daisy";
 import ColorMap from "../../modules/ColorMap";
-import { getButtonSize } from "../../modules/utility";
 import clsx from "clsx";
+import SizeMap from "../../modules/SizeMap";
 
 interface IButton {
-    buttonText ?:string
     size ?:ButtonSize
     className ?:string
     variant ?:BaselessVariant
@@ -24,29 +23,30 @@ export const Button :FC<PropsWithChildren<IButton>> = forwardRef((
     ref ?:ForwardedRef<HTMLButtonElement>
 )=>{
     const variantColors = ColorMap.get(props.variant || "neutral");
-    const btnSize = getButtonSize(props.size);
+    const size = SizeMap.get(props.size || "md");
 
     return (
         <button
             ref={ref}
             onClick={props.onClick || undefined}
-            className={
-                `btn ${btnSize} ${variantColors?.btn} ${clsx(
-                    props.className && props.className,
-                    props.isGhost && "btn-ghost",
-                    props.isGlass && "glass",
-                    props.isLink && "btn-link",
-                    props.isLoading && "loading",
-                    props.isOutline && "btn-outline",
-                    props.noAnimation && "no-animation",
-                    props.shape &&
-                        props.shape === "circle" && "btn-circle" ||
-                        props.shape === "square" && "btn-square"
-                )}`
-            }
+            className={clsx(
+                "btn",
+                size.btn,
+                variantColors?.btn,
+                props.className,
+                props.isGhost && "btn-ghost",
+                props.isGlass && "glass",
+                props.isLink && "btn-link",
+                props.isLoading && "loading",
+                props.isOutline && "btn-outline",
+                props.noAnimation && "no-animation",
+                props.shape &&
+                    props.shape === "circle" && "btn-circle" ||
+                    props.shape === "square" && "btn-square"
+            )}
             disabled={props.isDisabled}
         >
-            {props.buttonText || props.children}
+            {props.children}
         </button>
     );
 });

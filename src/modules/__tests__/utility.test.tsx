@@ -1,15 +1,5 @@
 import React from "react";
-import { ButtonSize } from "../../@types/Daisy";
-import { getButtonSize, processComponentOrJSX } from "../utility";
-
-describe("getButtonSize()", ()=>{
-    const buttonSizes :ButtonSize[] = ["xs", "sm", "md", "lg"];
-    buttonSizes.forEach(size =>{
-        it(`It gets the proper class when ${size} is passed in`, ()=>{
-            expect(getButtonSize(size)).toEqual(`btn-${size}`);
-        });
-    });
-});
+import { processComponentOrJSX } from "../utility";
 
 describe("processComponentOrJSX", () => {
     it("should return the input component if it is a valid React component", () => {

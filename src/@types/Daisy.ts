@@ -9,6 +9,14 @@ export interface VariantColors {
     focus ?:`${BaselessVariant}-focus`
     btn ?:`btn-${BaselessVariant}`
     alert ?:`alert-${StatusVariant}`
+    badge ?:`badge-${BaselessVariant}`
 }
 
-export type ButtonSize = "lg" | "md" | "sm" | "xs" | "wide" | "block";
+export type Size = "lg" | "md" | "sm" | "xs";
+export type ButtonSize = Size | "wide" | "block";
+export type AllSizes = Size | ButtonSize;
+
+export interface ComponentSize {
+    btn ?:`btn-${ButtonSize}`
+    badge ?:`badge-${Size}`
+};
