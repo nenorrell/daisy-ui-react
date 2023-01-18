@@ -30,14 +30,12 @@ For styling specifics, see: https://daisyui.com/components/button/
 import { Button } from 'daisy-ui-react-components';
 import { IconArrowRight } from '@heroicons/react';
 
-<Button buttonText="Click me" />
+<Button size="large" variant="primary" className="custom-class">Click me</Button>
 
-<Button size="large" variant="primary" className="custom-class" />
-
-<Button isGhost={true} isLink isOutline isDisabled isGlass isLoading noAnimation shape="circle" />
+<Button isGhost={true} isLink isOutline isDisabled isGlass isLoading noAnimation shape="circle">Click me</Button>
 
 <Button onClick={() => console.log('Button clicked')}>
-  <IconArrowRight size={20} />
   Next
+  <IconArrowRight className="w-5 h-5"/>
 </Button>
 ```

@@ -29,11 +29,10 @@ export const App = () => {
                 </SimpleCollapse>
 
                 <Button variant="primary"
-                    buttonText="Hello"
                     onClick={(e)=>{
                         console.log(e);
                     }}
-                />
+                >Hello</Button>
 
                 <Avatar
                     className="m-5"

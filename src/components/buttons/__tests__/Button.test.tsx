@@ -1,18 +1,18 @@
 import { fireEvent, render } from "@testing-library/react";
 import ColorMap from "../../../modules/ColorMap";
+import SizeMap from "../../../modules/SizeMap";
 import { BaselessVariantOptions, ButtonSizes } from "../../../modules/testUtils";
-import { getButtonSize } from "../../../modules/utility";
 import { Button } from "../Button";
 
 describe("Button", ()=>{
     describe("Variants", ()=>{
         BaselessVariantOptions.forEach(variant=>{
             it(`Respects ${variant} variant`, ()=>{
-                const component = render(<Button buttonText={`testing ${variant} variant`} variant={variant} />);
+                const component = render(<Button variant={variant}>testing {variant} variant</Button>);
                 const container = component.container.querySelector("button.btn");
                 const colors = ColorMap.get(variant);
 
-                expect(container?.classList.contains(colors.btn as any)).toBe(true);
+                expect(container?.classList.contains(colors.btn as string)).toBe(true);
                 expect(container).toMatchSnapshot();
             });
         });
@@ -21,11 +21,13 @@ describe("Button", ()=>{
     describe("Sizes", ()=>{
         ButtonSizes.forEach(size=>{
             it(`Respects ${size} size`, ()=>{
-                const component = render(<Button buttonText={`testing ${size} button size`} size={size} />);
+                const component = render(
+                    <Button size={size}>testing {size} button size</Button>
+                );
                 const container = component.container.querySelector("button.btn");
-                const sizing = getButtonSize(size);
+                const sizing = SizeMap.get(size);
 
-                expect(container?.classList.contains(sizing)).toBe(true);
+                expect(container?.classList.contains(sizing.btn as string)).toBe(true);
                 expect(container).toMatchSnapshot();
             });
         });
@@ -34,10 +36,7 @@ describe("Button", ()=>{
     it("Respects onClick when passed in", ()=>{
         const stub = jest.fn();
         const component = render(
-            <Button
-                buttonText="testing"
-                onClick={stub}
-            />
+            <Button onClick={stub}>Testing</Button>
         );
         const container = component.container.querySelector("button.btn");
         fireEvent.click(container as HTMLButtonElement);
@@ -46,10 +45,7 @@ describe("Button", ()=>{
 
     it("Disables button when passed in", ()=>{
         const component = render(
-            <Button
-                buttonText="testing"
-                isDisabled={true}
-            />
+            <Button isDisabled>Testing</Button>
         );
         const container = component.container.querySelector("button.btn");
         expect(container).toBeDisabled();
@@ -57,26 +53,10 @@ describe("Button", ()=>{
 
     it("Does not disable button when disabled is false", ()=>{
         const component = render(
-            <Button
-                buttonText="testing"
-                isDisabled={false}
-            />
+            <Button isDisabled={false}>Testing</Button>
         );
         const container = component.container.querySelector("button.btn");
         expect(container).not.toBeDisabled();
-    });
-
-    it("Renders buttonText instead of children when both are present", ()=>{
-        const component = render(
-            <Button
-                buttonText="testing"
-            ><p className="find-me">Some Child</p></Button>
-        );
-        const container = component.container.querySelector("button.btn");
-        expect(container?.firstChild?.nodeValue).toEqual("testing");
-
-        const child = component.container.querySelector("p.find-me");
-        expect(child).not.toBeInTheDocument();
     });
 
     it("Renders children", ()=>{

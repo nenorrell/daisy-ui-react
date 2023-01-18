@@ -2,112 +2,140 @@
 
 exports[`Button Sizes Respects block size 1`] = `
 <button
-  class="btn btn-block btn-neutral "
+  class="btn btn-block btn-neutral"
 >
-  testing block button size
+  testing 
+  block
+   button size
 </button>
 `;
 
 exports[`Button Sizes Respects lg size 1`] = `
 <button
-  class="btn btn-lg btn-neutral "
+  class="btn btn-lg btn-neutral"
 >
-  testing lg button size
+  testing 
+  lg
+   button size
 </button>
 `;
 
 exports[`Button Sizes Respects md size 1`] = `
 <button
-  class="btn btn-md btn-neutral "
+  class="btn btn-md btn-neutral"
 >
-  testing md button size
+  testing 
+  md
+   button size
 </button>
 `;
 
 exports[`Button Sizes Respects sm size 1`] = `
 <button
-  class="btn btn-sm btn-neutral "
+  class="btn btn-sm btn-neutral"
 >
-  testing sm button size
+  testing 
+  sm
+   button size
 </button>
 `;
 
 exports[`Button Sizes Respects wide size 1`] = `
 <button
-  class="btn btn-lg btn-neutral "
+  class="btn btn-wide btn-neutral"
 >
-  testing wide button size
+  testing 
+  wide
+   button size
 </button>
 `;
 
 exports[`Button Sizes Respects xs size 1`] = `
 <button
-  class="btn btn-xs btn-neutral "
+  class="btn btn-xs btn-neutral"
 >
-  testing xs button size
+  testing 
+  xs
+   button size
 </button>
 `;
 
 exports[`Button Variants Respects accent variant 1`] = `
 <button
-  class="btn btn-md btn-accent "
+  class="btn btn-md btn-accent"
 >
-  testing accent variant
+  testing 
+  accent
+   variant
 </button>
 `;
 
 exports[`Button Variants Respects error variant 1`] = `
 <button
-  class="btn btn-md btn-error "
+  class="btn btn-md btn-error"
 >
-  testing error variant
+  testing 
+  error
+   variant
 </button>
 `;
 
 exports[`Button Variants Respects info variant 1`] = `
 <button
-  class="btn btn-md btn-info "
+  class="btn btn-md btn-info"
 >
-  testing info variant
+  testing 
+  info
+   variant
 </button>
 `;
 
 exports[`Button Variants Respects neutral variant 1`] = `
 <button
-  class="btn btn-md btn-neutral "
+  class="btn btn-md btn-neutral"
 >
-  testing neutral variant
+  testing 
+  neutral
+   variant
 </button>
 `;
 
 exports[`Button Variants Respects primary variant 1`] = `
 <button
-  class="btn btn-md btn-primary "
+  class="btn btn-md btn-primary"
 >
-  testing primary variant
+  testing 
+  primary
+   variant
 </button>
 `;
 
 exports[`Button Variants Respects secondary variant 1`] = `
 <button
-  class="btn btn-md btn-secondary "
+  class="btn btn-md btn-secondary"
 >
-  testing secondary variant
+  testing 
+  secondary
+   variant
 </button>
 `;
 
 exports[`Button Variants Respects success variant 1`] = `
 <button
-  class="btn btn-md btn-success "
+  class="btn btn-md btn-success"
 >
-  testing success variant
+  testing 
+  success
+   variant
 </button>
 `;
 
 exports[`Button Variants Respects warning variant 1`] = `
 <button
-  class="btn btn-md btn-warning "
+  class="btn btn-md btn-warning"
 >
-  testing warning variant
+  testing 
+  warning
+   variant
 </button>
 `;
