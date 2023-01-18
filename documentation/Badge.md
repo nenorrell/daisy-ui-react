@@ -16,6 +16,8 @@ Badge component is a simple component used to provide a visual representation of
 ## Example
 
 ```Javascript
+import { Badge } from 'daisy-ui-react-components';
+
 const SomeComponent = ()=>{
     return (
         <>
