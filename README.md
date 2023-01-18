@@ -27,19 +27,5 @@ module.exports = {
 };
 ```
 
-## Development
-### Starting dev env
-- `make run` 
-  - (requires Docker)
-- Alternatively:
-  - `npm start`
-
-### Testing
-- `make test`
-  - (requires Docker)
-- Alternatively:
-  - `npm test`
-
-or to skip the install step:
-- `make test-fast`
-  - (requires Docker)
+## Contributing
+For contributing to this project, please see Please see [Contributing Guidelines](https://github.com/nenorrell/daisy-ui-react/blob/master/CONTRIBUTING.md)
