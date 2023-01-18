@@ -28,4 +28,4 @@ module.exports = {
 ```
 
 ## Contributing
-For contributing to this project, please see Please see [Contributing Guidelines](https://github.com/nenorrell/daisy-ui-react/blob/master/CONTRIBUTING.md)
+For contributing to this project, please see [Contributing Guidelines](https://github.com/nenorrell/daisy-ui-react/blob/master/CONTRIBUTING.md)

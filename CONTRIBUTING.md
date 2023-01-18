@@ -4,7 +4,7 @@ Thank you for considering contributing to Daisy UI React Components! We welcome 
 
 ## How to Contribute
 
-1. Fork the repository
+1. Clone the repository
 2. Create a new branch for your contribution
 3. Make your changes
 4. Test your changes
