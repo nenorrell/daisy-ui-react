@@ -7,7 +7,7 @@ describe("ModalFrame", () => {
     describe("Variants", ()=>{
         VariantOptions.forEach(variant=>{
             it(`Respects ${variant} variant`, ()=>{
-                const component = render(<ModalFrame variant={variant}>testing {variant} variant</ModalFrame>);
+                const component = render(<ModalFrame variant={variant} isOpen={true} closeHandler={jest.fn()}>testing {variant} variant</ModalFrame>);
                 const container = component.container.querySelector("div.modal-box");
                 const colors = ColorMap.get(variant);
 
@@ -19,7 +19,7 @@ describe("ModalFrame", () => {
     });
 
     it("should render with default values", () => {
-        const { container } = render(<ModalFrame isOpen={true} />);
+        const { container } = render(<ModalFrame isOpen={true} closeHandler={jest.fn()} />);
         expect(container).toMatchSnapshot();
     });
 
@@ -45,23 +45,17 @@ describe("ModalFrame", () => {
     });
 
     it("should render with the correct position class", () => {
-        const { container } = render(<ModalFrame isOpen={true} position="bottom" />);
+        const { container } = render(<ModalFrame isOpen={true} position="bottom" closeHandler={jest.fn()} />);
         expect(container.firstChild).toHaveClass("modal-bottom");
     });
 
     it("should render with the correct id", () => {
-        const { container } = render(<ModalFrame isOpen={true} id="test-id" />);
+        const { container } = render(<ModalFrame isOpen={true} id="test-id" closeHandler={jest.fn()} />);
         expect(container.firstChild).toHaveAttribute("id", "test-id");
     });
 
     it("should render with the correct class name", () => {
-        const { container } = render(<ModalFrame isOpen={true} className="test-class" />);
+        const { container } = render(<ModalFrame isOpen={true} className="test-class" closeHandler={jest.fn()} />);
         expect(container.querySelector(".modal-box")).toHaveClass("test-class");
-    });
-
-    it("should render with the correct action section", () => {
-        const actionSection = <div className="test-action-section">Test Action Section</div>;
-        const { container } = render(<ModalFrame isOpen={true} ActionSection={actionSection} />);
-        expect(container.querySelector(".test-action-section")).toBeTruthy();
     });
 });

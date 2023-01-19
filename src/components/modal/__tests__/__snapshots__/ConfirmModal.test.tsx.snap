@@ -11,20 +11,16 @@ exports[`ConfirmModal should render with default values 1`] = `
       <div
         class="modal-action"
       >
-        <div
-          class="modal-action"
+        <button
+          class="btn btn-md btn-neutral"
         >
-          <button
-            class="btn btn-md btn-neutral"
-          >
-            Close
-          </button>
-          <button
-            class="btn btn-md btn-neutral"
-          >
-            Confirm
-          </button>
-        </div>
+          Close
+        </button>
+        <button
+          class="btn btn-md btn-neutral"
+        >
+          Confirm
+        </button>
       </div>
     </div>
   </div>

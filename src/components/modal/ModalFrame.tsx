@@ -10,11 +10,10 @@ export interface IModalFrame {
     className ?:string
     /** @default neutral */
     variant ?:Variant
-    isOpen ?:boolean
+    isOpen :boolean
     /** @default "middle" */
     position ?: "bottom" | "middle"
-    ActionSection ?:React.ReactNode
-    closeHandler ?:MouseEventHandler
+    closeHandler :MouseEventHandler
     /** @default false */
     cornerClose ?:boolean
     /** @default true */
@@ -55,12 +54,6 @@ export const ModalFrame = forwardRef<HTMLDivElement, PropsWithChildren<IModalFra
                     </Button>
                 }
                 {props.children}
-
-                {
-                    props.ActionSection && <div className="modal-action">
-                        {props.ActionSection}
-                    </div>
-                }
             </div>
         </div>
     );

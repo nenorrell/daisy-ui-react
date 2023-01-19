@@ -4,7 +4,7 @@ import { Modal } from "../Modal";
 
 describe("Modal", () => {
     it("should render with default values", () => {
-        const { container } = render(<Modal isOpen={true} />);
+        const { container } = render(<Modal closeHandler={jest.fn()} isOpen={true} />);
         expect(container).toMatchSnapshot();
     });
 
@@ -16,7 +16,7 @@ describe("Modal", () => {
     });
 
     it("should not render with confirm button if noActionButton is true", () => {
-        const { container } = render(<Modal isOpen={true} noActionButton={true} />);
+        const { container } = render(<Modal isOpen={true} closeHandler={jest.fn()} noActionButton={true} />);
         expect(container.querySelector(".modal-action")).toBeFalsy();
     });
 });

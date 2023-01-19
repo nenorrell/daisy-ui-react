@@ -5,6 +5,10 @@ Before getting started, please note that you'll need to have the library install
 
 ## Actions
 - [Button](Button.md)
+- Modals
+  - [Modal Frame](ModalFrame.md)
+  - [Modal](Modal.md)
+  - [Confirm Modal](ConfirmModal.md)
 
 ## Data Display
 - [Alert](Alert.md)

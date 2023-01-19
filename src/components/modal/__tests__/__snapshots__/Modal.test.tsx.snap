@@ -11,15 +11,11 @@ exports[`Modal should render with default values 1`] = `
       <div
         class="modal-action"
       >
-        <div
-          class="modal-action"
+        <button
+          class="btn btn-md btn-neutral"
         >
-          <button
-            class="btn btn-md btn-neutral"
-          >
-            Close
-          </button>
-        </div>
+          Close
+        </button>
       </div>
     </div>
   </div>

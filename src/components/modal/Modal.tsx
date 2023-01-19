@@ -3,7 +3,7 @@ import { BaselessVariant } from "../../@types/Daisy";
 import { Button } from "../buttons/Button";
 import { IModalFrame, ModalFrame } from "./ModalFrame";
 
-interface IModal extends Omit<IModalFrame, "ActionSection">{
+interface IModal extends IModalFrame{
     closeButtonVariant ?:BaselessVariant
     closeButtonText ?:string
     noActionButton ?:boolean
@@ -23,15 +23,16 @@ export const Modal = forwardRef<HTMLDivElement, PropsWithChildren<IModal>>((
             closeHandler={props.closeHandler}
             cornerClose={props.cornerClose}
             overlayClose={props.overlayClose}
-            ActionSection={ !props.noActionButton &&
+        >
+            {props.children}
+
+            { !props.noActionButton &&
                 <div className="modal-action">
                     <Button variant={props.closeButtonVariant} onClick={props.closeHandler}>
                         {props.closeButtonText || "Close"}
                     </Button>
                 </div>
             }
-        >
-            {props.children}
         </ModalFrame>
     );
 });

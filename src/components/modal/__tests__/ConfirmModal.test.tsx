@@ -4,7 +4,7 @@ import { ConfirmModal } from "../ConfirmModal";
 
 describe("ConfirmModal", () => {
     it("should render with default values", () => {
-        const { container } = render(<ConfirmModal isOpen={true} />);
+        const { container } = render(<ConfirmModal isOpen={true} closeHandler={jest.fn()} />);
         expect(container).toMatchSnapshot();
     });
 
@@ -17,7 +17,7 @@ describe("ConfirmModal", () => {
 
     it("should call confirmHandler when confirm button is clicked", () => {
         const confirmHandler = jest.fn();
-        const { container } = render(<ConfirmModal isOpen={true} confirmHandler={confirmHandler} />);
+        const { container } = render(<ConfirmModal isOpen={true} closeHandler={jest.fn()} confirmHandler={confirmHandler} />);
         fireEvent.click((container as any).querySelector(".modal-action button:last-child"));
         expect(confirmHandler).toHaveBeenCalled();
     });

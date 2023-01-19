@@ -3,7 +3,7 @@ import { BaselessVariant } from "../../@types/Daisy";
 import { Button } from "../buttons/Button";
 import { IModalFrame, ModalFrame } from "./ModalFrame";
 
-interface IConfirmModal extends Omit<IModalFrame, "ActionSection">{
+interface IConfirmModal extends IModalFrame{
     confirmButtonVariant ?:BaselessVariant
     confirmHandler ?:MouseEventHandler
     confirmButtonText ?:string
@@ -25,19 +25,18 @@ export const ConfirmModal = forwardRef<HTMLDivElement, PropsWithChildren<IConfir
             closeHandler={props.closeHandler}
             cornerClose={props.cornerClose}
             overlayClose={props.overlayClose}
-            ActionSection={
-                <div className="modal-action">
-                    <Button variant={props.closeButtonVariant} onClick={props.closeHandler}>
-                        {props.closeButtonText || "Close"}
-                    </Button>
-
-                    <Button variant={props.confirmButtonVariant} onClick={props.confirmHandler}>
-                        {props.confirmButtonText || "Confirm"}
-                    </Button>
-                </div>
-            }
         >
             {props.children}
+
+            <div className="modal-action">
+                <Button variant={props.closeButtonVariant} onClick={props.closeHandler}>
+                    {props.closeButtonText || "Close"}
+                </Button>
+
+                <Button variant={props.confirmButtonVariant} onClick={props.confirmHandler}>
+                    {props.confirmButtonText || "Confirm"}
+                </Button>
+            </div>
         </ModalFrame>
     );
 });

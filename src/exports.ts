@@ -4,3 +4,6 @@ export { Collapse } from "./components/collapses/Collapse";
 export { SimpleCollapse } from "./components/collapses/SimpleCollapse";
 export { Avatar } from "./components/avatar/Avatar";
 export { Alert } from "./components/alert/Alert";
+export { Modal } from "./components/modal/Modal";
+export { ModalFrame } from "./components/modal/ModalFrame";
+export { ConfirmModal } from "./components/modal/ConfirmModal";
