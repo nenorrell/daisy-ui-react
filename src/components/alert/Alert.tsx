@@ -6,7 +6,7 @@ import clsx from "clsx";
 interface IAlert {
     className ?:string
     variant ?:StatusVariant
-    onClick ?:MouseEventHandler
+    onClick ?:MouseEventHandler<HTMLDivElement>
 }
 export const Alert = forwardRef((
     {className, variant, onClick, children}:PropsWithChildren<IAlert>,

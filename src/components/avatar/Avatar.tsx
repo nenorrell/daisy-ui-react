@@ -9,7 +9,7 @@ interface IAvatar {
     className ?:string
     contentClasses ?:string
     variant ?:Variant
-    onClick ?:MouseEventHandler
+    onClick ?:MouseEventHandler<HTMLDivElement>
 }
 export const Avatar = forwardRef((
     props :PropsWithChildren<IAvatar>,

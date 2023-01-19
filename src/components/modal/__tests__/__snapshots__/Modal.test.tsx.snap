@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should render with default values 1`] = `
+<div>
+  <div
+    class="modal modal-open"
+  >
+    <div
+      class="modal-box bg-neutral text-neutral-content"
+    >
+      <div
+        class="modal-action"
+      >
+        <button
+          class="btn btn-md btn-neutral"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

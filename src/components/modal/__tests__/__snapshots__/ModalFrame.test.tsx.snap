@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalFrame Variants Respects accent variant 1`] = `
+<div
+  class="modal-box bg-accent text-accent-content"
+>
+  testing 
+  accent
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects base-100 variant 1`] = `
+<div
+  class="modal-box bg-base-100 text-base-content"
+>
+  testing 
+  base-100
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects base-200 variant 1`] = `
+<div
+  class="modal-box bg-base-200 text-base-content"
+>
+  testing 
+  base-200
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects base-300 variant 1`] = `
+<div
+  class="modal-box bg-base-300 text-base-content"
+>
+  testing 
+  base-300
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects error variant 1`] = `
+<div
+  class="modal-box bg-error text-error-content"
+>
+  testing 
+  error
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects error variant 2`] = `
+<div
+  class="modal-box bg-error text-error-content"
+>
+  testing 
+  error
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects info variant 1`] = `
+<div
+  class="modal-box bg-info text-info-content"
+>
+  testing 
+  info
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects info variant 2`] = `
+<div
+  class="modal-box bg-info text-info-content"
+>
+  testing 
+  info
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects neutral variant 1`] = `
+<div
+  class="modal-box bg-neutral text-neutral-content"
+>
+  testing 
+  neutral
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects primary variant 1`] = `
+<div
+  class="modal-box bg-primary text-primary-content"
+>
+  testing 
+  primary
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects secondary variant 1`] = `
+<div
+  class="modal-box bg-secondary text-secondary-content"
+>
+  testing 
+  secondary
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects success variant 1`] = `
+<div
+  class="modal-box bg-success text-success-content"
+>
+  testing 
+  success
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects success variant 2`] = `
+<div
+  class="modal-box bg-success text-success-content"
+>
+  testing 
+  success
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects warning variant 1`] = `
+<div
+  class="modal-box bg-warning text-warning-content"
+>
+  testing 
+  warning
+   variant
+</div>
+`;
+
+exports[`ModalFrame Variants Respects warning variant 2`] = `
+<div
+  class="modal-box bg-warning text-warning-content"
+>
+  testing 
+  warning
+   variant
+</div>
+`;
+
+exports[`ModalFrame should render with default values 1`] = `
+<div>
+  <div
+    class="modal modal-open"
+  >
+    <div
+      class="modal-box bg-neutral text-neutral-content"
+    />
+  </div>
+</div>
+`;
