@@ -1,13 +1,15 @@
 # Modal
 A simple modal component that can be used for displaying data, alerts, etc.
 
+For Modal styling specifics, please see: https://daisyui.com/components/modal/
+
 ## Props
 
 | Name | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
 | `id` | string | optional | - | The id of the modal |
-| `isOpen` | boolean | true | - | Whether the modal is open or not |
-| `closeHandler` | function | true | - | Function to be called when the modal is closed |
+| `isOpen` | boolean | required | - | Whether the modal is open or not |
+| `closeHandler` | function | required | - | Function to be called when the modal is closed |
 | `variant` | string | optional | `"neutral"` | The color variant of the modal |
 | `position` | string | optional | `"middle"` | The position of the modal |
 | `className` | string | optional | - | Additional className to be added to the modal |

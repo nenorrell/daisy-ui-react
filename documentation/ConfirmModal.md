@@ -4,6 +4,8 @@ The `ConfirmModal` component is a reusable confirm modal component that can be u
 
 It is built on top of the [ModalFrame Component](ModalFrame.md)
 
+For Modal styling specifics, please see: https://daisyui.com/components/modal/
+
 ## Props
 
 | Prop | Type | Required | Default | Description |

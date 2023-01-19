@@ -56,12 +56,12 @@ export const App = () => {
                     WARNING
                 </Alert>
 
-                <Button className="mt-5" onClick={()=>toggleModal()}>Open Modal</Button>
+                <Button className="mt-5" onClick={toggleModal}>Open Modal</Button>
 
                 <ConfirmModal
-                    // isOpen={isModalOpen}
+                    isOpen={isModalOpen}
                     variant="success"
-                    closeHandler={()=>toggleModal()}
+                    closeHandler={toggleModal}
                     cornerClose={true}
                 >
                     <h3 className="font-bold text-lg">Congratulations random Internet user!</h3>
@@ -72,7 +72,7 @@ export const App = () => {
                     isOpen={isModalOpen}
                     variant="base-200"
                     noActionButton={true}
-                    closeHandler={()=>toggleModal()}
+                    closeHandler={toggleModal}
                 >
                     <h3 className="font-bold text-lg">Congratulations random Internet user!</h3>
                     <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
