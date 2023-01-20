@@ -8,7 +8,7 @@ This library is designed to simplify the integration of Daisy UI into React proj
 
 ## Component Documentation
 
-Please see [Daisy UI React Component Documentation](https://github.com/nenorrell/daisy-ui-react/blob/master/documentation/README.md) for component specific documentation
+See docs at: [Daisy UI React Component Documentation](https://github.com/nenorrell/daisy-ui-react/wiki)
 
 ## Installation & Setup
 
