@@ -5,8 +5,9 @@ import clsx from "clsx";
 import SizeMap from "../../modules/SizeMap";
 
 interface IButton {
-    size ?:ButtonSize
+    id ?:string
     className ?:string
+    size ?:ButtonSize
     variant ?:BaselessVariant
     onClick ?:MouseEventHandler<HTMLButtonElement>
     isGhost ?:boolean
@@ -19,19 +20,20 @@ interface IButton {
     shape ?:"circle" | "square"
 }
 export const Button :FC<PropsWithChildren<IButton>> = forwardRef((
-    props,
+    {variant="neutral", size="md", ...props},
     ref ?:ForwardedRef<HTMLButtonElement>
 )=>{
-    const variantColors = ColorMap.get(props.variant || "neutral");
-    const size = SizeMap.get(props.size || "md");
+    const variantColors = ColorMap.get(variant);
+    const sizing = SizeMap.get(size);
 
     return (
         <button
+            id={props.id}
             ref={ref}
-            onClick={props.onClick || undefined}
+            onClick={props.onClick}
             className={clsx(
                 "btn",
-                size.btn,
+                sizing.btn,
                 variantColors?.btn,
                 props.className,
                 props.isGhost && "btn-ghost",
@@ -40,9 +42,8 @@ export const Button :FC<PropsWithChildren<IButton>> = forwardRef((
                 props.isLoading && "loading",
                 props.isOutline && "btn-outline",
                 props.noAnimation && "no-animation",
-                props.shape &&
-                    props.shape === "circle" && "btn-circle" ||
-                    props.shape === "square" && "btn-square"
+                props.shape === "circle" && "btn-circle" ||
+                props.shape === "square" && "btn-square"
             )}
             disabled={props.isDisabled}
         >

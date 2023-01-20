@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu component Variants Respects accent variant 1`] = `
+<ul
+  class="menu vertical bg-accent text-accent-content"
+>
+  <li>
+    Testing variant 
+    accent
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects base-100 variant 1`] = `
+<ul
+  class="menu vertical bg-base-100 text-base-content"
+>
+  <li>
+    Testing variant 
+    base-100
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects base-200 variant 1`] = `
+<ul
+  class="menu vertical bg-base-200 text-base-content"
+>
+  <li>
+    Testing variant 
+    base-200
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects base-300 variant 1`] = `
+<ul
+  class="menu vertical bg-base-300 text-base-content"
+>
+  <li>
+    Testing variant 
+    base-300
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects error variant 1`] = `
+<ul
+  class="menu vertical bg-error text-error-content"
+>
+  <li>
+    Testing variant 
+    error
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects error variant 2`] = `
+<ul
+  class="menu vertical bg-error text-error-content"
+>
+  <li>
+    Testing variant 
+    error
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects info variant 1`] = `
+<ul
+  class="menu vertical bg-info text-info-content"
+>
+  <li>
+    Testing variant 
+    info
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects info variant 2`] = `
+<ul
+  class="menu vertical bg-info text-info-content"
+>
+  <li>
+    Testing variant 
+    info
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects neutral variant 1`] = `
+<ul
+  class="menu vertical bg-neutral text-neutral-content"
+>
+  <li>
+    Testing variant 
+    neutral
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects primary variant 1`] = `
+<ul
+  class="menu vertical bg-primary text-primary-content"
+>
+  <li>
+    Testing variant 
+    primary
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects secondary variant 1`] = `
+<ul
+  class="menu vertical bg-secondary text-secondary-content"
+>
+  <li>
+    Testing variant 
+    secondary
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects success variant 1`] = `
+<ul
+  class="menu vertical bg-success text-success-content"
+>
+  <li>
+    Testing variant 
+    success
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects success variant 2`] = `
+<ul
+  class="menu vertical bg-success text-success-content"
+>
+  <li>
+    Testing variant 
+    success
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects warning variant 1`] = `
+<ul
+  class="menu vertical bg-warning text-warning-content"
+>
+  <li>
+    Testing variant 
+    warning
+  </li>
+</ul>
+`;
+
+exports[`Menu component Variants Respects warning variant 2`] = `
+<ul
+  class="menu vertical bg-warning text-warning-content"
+>
+  <li>
+    Testing variant 
+    warning
+  </li>
+</ul>
+`;

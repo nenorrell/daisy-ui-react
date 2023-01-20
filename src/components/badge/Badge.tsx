@@ -13,19 +13,19 @@ interface IBadge {
     isOutline ?:boolean
 }
 export const Badge :FC<PropsWithChildren<IBadge>> = forwardRef((
-    props,
+    {variant="neutral", size="md", ...props},
     ref ?:ForwardedRef<HTMLDivElement>
 )=>{
-    const variantColors = ColorMap.get(props.variant || "neutral");
-    const size = SizeMap.get(props.size || "md");
+    const variantColors = ColorMap.get(variant);
+    const sizing = SizeMap.get(size);
 
     return (
         <div
             ref={ref}
-            onClick={props.onClick || undefined}
+            onClick={props.onClick}
             className={clsx(
                 "badge",
-                size.badge,
+                sizing.badge,
                 variantColors?.badge,
                 props.className,
                 props.isGhost && "badge-ghost",

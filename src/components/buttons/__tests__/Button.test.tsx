@@ -12,7 +12,7 @@ describe("Button", ()=>{
                 const container = component.container.querySelector("button.btn");
                 const colors = ColorMap.get(variant);
 
-                expect(container?.classList.contains(colors.btn as string)).toBe(true);
+                expect(container).toHaveClass(colors.btn as string);
                 expect(container).toMatchSnapshot();
             });
         });
@@ -27,7 +27,7 @@ describe("Button", ()=>{
                 const container = component.container.querySelector("button.btn");
                 const sizing = SizeMap.get(size);
 
-                expect(container?.classList.contains(sizing.btn as string)).toBe(true);
+                expect(container).toHaveClass(sizing.btn as any);
                 expect(container).toMatchSnapshot();
             });
         });

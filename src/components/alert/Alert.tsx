@@ -18,10 +18,10 @@ export const Alert = forwardRef((
         <div ref={ref} className={clsx(
             "alert",
             "shadow-lg",
-            variantColors?.alert && variantColors.alert,
-            className && className
+            variantColors?.alert,
+            className
         )}
-        onClick={onClick || undefined}
+        onClick={onClick}
         >
             {children}
         </div>

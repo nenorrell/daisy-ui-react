@@ -15,7 +15,7 @@ describe("Alert", ()=>{
                 const container = component.container.querySelector("div.alert");
                 const colors = ColorMap.get(variant);
 
-                expect(container?.classList.contains(colors.alert as any)).toBe(true);
+                expect(container).toHaveClass(colors.alert as any);
                 expect(container).toMatchSnapshot();
             });
         });
