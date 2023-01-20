@@ -12,20 +12,20 @@ interface IAvatar {
     onClick ?:MouseEventHandler<HTMLDivElement>
 }
 export const Avatar = forwardRef((
-    props :PropsWithChildren<IAvatar>,
+    {variant="neutral", ...props} :PropsWithChildren<IAvatar>,
     ref ?:ForwardedRef<HTMLDivElement>
 ) =>{
-    const variantColors = ColorMap.get(props?.variant || "neutral");
+    const variantColors = ColorMap.get(variant);
 
     return (
         <div
             ref={ref}
             className={`avatar ${clsx(
-                props.className && props.className,
+                props.className,
                 !props.isPlaceholder && "placeholder",
-                props.status && props.status
+                props.status
             )}`}
-            onClick={props.onClick || undefined}
+            onClick={props.onClick}
         >
             <div className={`${variantColors.bg} ${variantColors.text} ${props.contentClasses || "w-12"}`}>
                 {props.children}

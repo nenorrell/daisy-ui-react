@@ -1,3 +1,5 @@
+⬅️ [Back to component index](README.md)
+
 # Badge
 
 Badge component is a simple component used to provide a visual representation of a status or label. For specific styling details, please see https://daisyui.com/components/badge/

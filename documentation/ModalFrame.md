@@ -1,3 +1,5 @@
+⬅️ [Back to component index](README.md)
+
 # ModalFrame
 
 The `ModalFrame` component is a reusable modal component that can be used to create various types of modals.

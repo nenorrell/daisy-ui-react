@@ -14,10 +14,10 @@ interface ISimpleCollapse {
     defaultExpand ?:boolean
 }
 export const SimpleCollapse = forwardRef((
-    props :PropsWithChildren<ISimpleCollapse>,
+    {variant="neutral", ...props} :PropsWithChildren<ISimpleCollapse>,
     ref ?:ForwardedRef<HTMLDivElement>
 )=>{
-    const variant = ColorMap.get(props.variant || "neutral");
+    const variantColors = ColorMap.get(variant);
     const [isExpanded, toggle] = useToggle(props.defaultExpand || false);
     const roundedClasses = !isExpanded ? "rounded-md" : "rounded-t-md";
     const transitionClasses = !isExpanded ? "transition-all duration-[1s]" : "";
@@ -27,11 +27,11 @@ export const SimpleCollapse = forwardRef((
             headerContent={props.headerContent}
             leftIcon={props.leftIcon}
             className={props.className}
-            headerClasses={`${transitionClasses} ${variant.text} ${variant.bg} ${props.rounded ? roundedClasses : ""}`}
+            headerClasses={`${transitionClasses} ${variantColors.text} ${variantColors.bg} ${props.rounded ? roundedClasses : ""}`}
             onClick={toggle}
             ref={ref}
         >
-            <div className={`${variant.text} ${variant.bg} ${props.rounded ? "rounded-b-md":""}`}>
+            <div className={`${variantColors.text} ${variantColors.bg} ${props.rounded ? "rounded-b-md":""}`}>
                 {props.children}
             </div>
         </Collapse>

@@ -7,3 +7,6 @@ export { Alert } from "./components/alert/Alert";
 export { Modal } from "./components/modal/Modal";
 export { ModalFrame } from "./components/modal/ModalFrame";
 export { ConfirmModal } from "./components/modal/ConfirmModal";
+export {Menu} from "./components/menu/Menu";
+export {MenuItem} from "./components/menu/MenuItem";
+export {Dropdown} from "./components/dropdown/Dropdown";

@@ -1,3 +1,5 @@
+⬅️ [Back to component index](README.md)
+
 # Modal
 A simple modal component that can be used for displaying data, alerts, etc.
 

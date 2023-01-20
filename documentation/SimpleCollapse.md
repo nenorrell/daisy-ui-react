@@ -1,12 +1,12 @@
 ⬅️ [Back to component index](README.md)
 
-## SimpleCollapse
+# SimpleCollapse
 
 A simpler version of the Collapse component that provides an easy way to create collapsible content with a header.
 
 The SimpleCollapse component is built on top of the `Collapse` component, only abstracts away some of the `Collapse` component complexity. It also provides things like `Variant` support, which the `Collapse` component does not have.
 
-### Props
+## Props
 
 | Prop             | Type                                                | Default | Description                                                                                                                                                                                                 |
 |------------------|--------------------------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -18,7 +18,7 @@ The SimpleCollapse component is built on top of the `Collapse` component, only a
 | `defaultExpand`  | `boolean`                                             | `false` | Determines whether the collapse should be expanded by default.
 
 
-### Examples
+## Examples
 
 ```javascript
 import { SimpleCollapse } from 'daisy-ui-react-components';

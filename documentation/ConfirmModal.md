@@ -1,3 +1,5 @@
+⬅️ [Back to component index](README.md)
+
 # ConfirmModal
 
 The `ConfirmModal` component is a reusable confirm modal component that can be used to create various types of confirm modals, such as delete confirmations and form submission confirmations.

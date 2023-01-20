@@ -20,11 +20,10 @@ export interface IModalFrame {
     overlayClose ?:boolean
 }
 export const ModalFrame = forwardRef<HTMLDivElement, PropsWithChildren<IModalFrame>>((
-    props,
+    {variant="neutral", overlayClose=true, ...props},
     ref
 )=>{
-    const variantColors = ColorMap.get(props.variant || "neutral");
-    const overlayClose = props.overlayClose ?? true;
+    const variantColors = ColorMap.get(variant);
 
     return (
         <div ref={ref} id={props.id} onClick={overlayClose ? props.closeHandler : undefined} className={clsx(

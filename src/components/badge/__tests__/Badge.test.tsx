@@ -12,7 +12,7 @@ describe("Badge", ()=>{
                 const container = component.container.querySelector("div.badge");
                 const colors = ColorMap.get(variant);
 
-                expect(container?.classList.contains(colors.badge as string)).toBe(true);
+                expect(container).toHaveClass(colors.badge as any);
                 expect(container).toMatchSnapshot();
             });
         });
@@ -27,7 +27,7 @@ describe("Badge", ()=>{
                 const container = component.container.querySelector("div.badge");
                 const sizing = SizeMap.get(size);
 
-                expect(container?.classList.contains(sizing.badge as string)).toBe(true);
+                expect(container).toHaveClass(sizing.badge as any);
                 expect(container).toMatchSnapshot();
             });
         });

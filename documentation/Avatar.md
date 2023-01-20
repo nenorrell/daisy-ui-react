@@ -1,12 +1,12 @@
 ⬅️ [Back to component index](README.md)
 
-## Avatar
+# Avatar
 
 Avatars are used to show a thumbnail representation of an individual or business in the interface.
 
 For styling specifics, please see: https://daisyui.com/components/avatar/
 
-### Props
+## Props
 
 | Prop             | Type                                                | Default | Description                                                                                                                                                                                                 |
 |------------------|--------------------------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -17,7 +17,7 @@ For styling specifics, please see: https://daisyui.com/components/avatar/
 | `variant`        | `"neutral"`, `"primary"`, `"secondary"`, `"danger"` | `"neutral"` | The color variant of the avatar.                                                                                                                                                                             |
 | `onClick`        | `MouseEventHandler`                                  | `undefined`| Function to be executed when the avatar is clicked.                                                                                                                                                           |
 
-### Examples
+## Examples
 
 ```javascript
 import { Avatar } from 'daisy-ui-react-components';

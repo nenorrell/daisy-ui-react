@@ -24,7 +24,7 @@ describe("Collapse Component", () => {
         );
 
         const collapseBody = component.container.querySelector<HTMLDivElement>("div.collapse-body");
-        expect(collapseBody?.classList.contains("h-0")).toBe(true);
+        expect(collapseBody).toHaveClass("h-0");
         expect(collapseBody?.style.height).toBe("0px");
         expect(component.container).toMatchSnapshot();
     });
@@ -59,21 +59,20 @@ describe("Collapse Component", () => {
         const chevronWrapper = collapseTitle?.querySelector<HTMLDivElement>("div.items-end");
 
         // Initial state
-        expect(collapseBody?.classList.contains("h-0")).toBe(true);
+        expect(collapseBody).toHaveClass("h-0");
         expect(collapseBody?.style.height).toBe("0px");
-        expect(chevronWrapper?.classList.contains("-rotate-90")).toBe(true);
-
+        expect(chevronWrapper).toHaveClass("-rotate-90");
         // Expand
         fireEvent.click(collapseTitle as HTMLDivElement);
-        expect(collapseBody?.classList.contains("h-0")).toBe(false);
+        expect(collapseBody).not.toHaveClass("h-0");
         expect(collapseBody?.style.height).toBe("30px");
-        expect(chevronWrapper?.classList.contains("-rotate-90")).toBe(false);
+        expect(chevronWrapper).not.toHaveClass("-rotate-90");
 
         // Collapse
         fireEvent.click(collapseTitle as HTMLDivElement);
-        expect(collapseBody?.classList.contains("h-0")).toBe(true);
+        expect(collapseBody).toHaveClass("h-0");
         expect(collapseBody?.style.height).toBe("0px");
-        expect(chevronWrapper?.classList.contains("-rotate-90")).toBe(true);
+        expect(chevronWrapper).toHaveClass("-rotate-90");
     });
 
     it("Toggles collapse on click when defaultExpand is set to true", () => {
@@ -90,21 +89,21 @@ describe("Collapse Component", () => {
         const chevronWrapper = collapseTitle?.querySelector<HTMLDivElement>("div.items-end");
 
         // Initial state
-        expect(collapseBody?.classList.contains("h-0")).toBe(false);
+        expect(collapseBody).not.toHaveClass("h-0");
         expect(collapseBody?.style.height).toBe("30px");
-        expect(chevronWrapper?.classList.contains("-rotate-90")).toBe(false);
+        expect(chevronWrapper).not.toHaveClass("-rotate-90");
 
         // Collapse
         fireEvent.click(collapseTitle as HTMLDivElement);
-        expect(collapseBody?.classList.contains("h-0")).toBe(true);
+        expect(collapseBody).toHaveClass("h-0");
         expect(collapseBody?.style.height).toBe("0px");
-        expect(chevronWrapper?.classList.contains("-rotate-90")).toBe(true);
+        expect(chevronWrapper).toHaveClass("-rotate-90");
 
         // Expand
         fireEvent.click(collapseTitle as HTMLDivElement);
-        expect(collapseBody?.classList.contains("h-0")).toBe(false);
+        expect(collapseBody).not.toHaveClass("h-0");
         expect(collapseBody?.style.height).toBe("30px");
-        expect(chevronWrapper?.classList.contains("-rotate-90")).toBe(false);
+        expect(chevronWrapper).not.toHaveClass("-rotate-90");
     });
 
     it("Renders an expanded collapse component when defaultExpand is true", () => {
@@ -118,7 +117,7 @@ describe("Collapse Component", () => {
         );
         const collapseBody = component.container.querySelector<HTMLDivElement>("div.collapse-body");
 
-        expect(collapseBody?.classList.contains("h-0")).toBe(false);
+        expect(collapseBody).not.toHaveClass("h-0");
         expect(collapseBody?.style.height).toBe("30px");
         expect(component.container).toMatchSnapshot();
     });
@@ -135,7 +134,7 @@ describe("Collapse Component", () => {
 
         const el = container.firstChild as HTMLElement;
         expect(el).toBeInTheDocument();
-        expect(el.classList.contains("my-class-name")).toBe(true);
+        expect(el).toHaveClass("my-class-name");
         expect(el).toMatchSnapshot();
     });
 

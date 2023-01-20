@@ -6,7 +6,7 @@ Use Daisy's custom button styles with support for multiple sizes, states, and mo
 
 For styling specifics, see: https://daisyui.com/components/button/
 
-### Props
+## Props
 
 | Prop        | Type                                            | Default | Description                                                                                             |
 |-------------|-------------------------------------------------|---------|---------------------------------------------------------------------------------------------------------|
@@ -24,7 +24,7 @@ For styling specifics, see: https://daisyui.com/components/button/
 | `noAnimation`| `boolean`                                      | `false` | If true, the button will not have animation.                                                           |
 | `shape`     | `"circle"`, `"square"`                          | `"square"` | The shape of the button.                                                                                |
 
-### Examples
+## Examples
 
 ```javascript
 import { Button } from 'daisy-ui-react-components';
