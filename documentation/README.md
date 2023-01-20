@@ -16,3 +16,8 @@ Before getting started, please note that you'll need to have the library install
 - [Badge](Badge.md)
 - [Collapse](Collapse.md)
 - [Simple Collapse](SimpleCollapse.md)
+
+## Navigation
+- Menu
+  - [Menu](Menu.md)
+  - [Menu Item](MenuItem.md)
