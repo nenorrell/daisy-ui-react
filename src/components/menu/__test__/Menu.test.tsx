@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import { Menu } from "../Menu";
 import { VariantOptions } from "../../../modules/testUtils";
 import ColorMap from "../../../modules/ColorMap";
@@ -19,6 +19,15 @@ describe("Menu component", () => {
                 expect(container).toMatchSnapshot();
             });
         });
+    });
+
+    it("calls the onClick prop when the element is clicked", () => {
+        const onClick = jest.fn();
+        const { container } = render(<Menu className="find-me" onClick={onClick}></Menu>);
+        const el = container.querySelector("ul.find-me");
+
+        fireEvent.click(el as any);
+        expect(onClick).toHaveBeenCalled();
     });
 
     it("should render", () => {

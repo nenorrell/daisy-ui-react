@@ -1,0 +1,331 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown component Variants Respects accent variant 1`] = `
+<ul
+  class="menu vertical bg-accent text-accent-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects base-100 variant 1`] = `
+<ul
+  class="menu vertical bg-base-100 text-base-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects base-200 variant 1`] = `
+<ul
+  class="menu vertical bg-base-200 text-base-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects base-300 variant 1`] = `
+<ul
+  class="menu vertical bg-base-300 text-base-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects error variant 1`] = `
+<ul
+  class="menu vertical bg-error text-error-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects error variant 2`] = `
+<ul
+  class="menu vertical bg-error text-error-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects info variant 1`] = `
+<ul
+  class="menu vertical bg-info text-info-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects info variant 2`] = `
+<ul
+  class="menu vertical bg-info text-info-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects neutral variant 1`] = `
+<ul
+  class="menu vertical bg-neutral text-neutral-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects primary variant 1`] = `
+<ul
+  class="menu vertical bg-primary text-primary-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects secondary variant 1`] = `
+<ul
+  class="menu vertical bg-secondary text-secondary-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects success variant 1`] = `
+<ul
+  class="menu vertical bg-success text-success-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects success variant 2`] = `
+<ul
+  class="menu vertical bg-success text-success-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects warning variant 1`] = `
+<ul
+  class="menu vertical bg-warning text-warning-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Dropdown component Variants Respects warning variant 2`] = `
+<ul
+  class="menu vertical bg-warning text-warning-content dropdown-content menu"
+  tabindex="0"
+>
+  <li
+    class=""
+  >
+    <span>
+      Test1
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      Test2
+    </span>
+  </li>
+</ul>
+`;
