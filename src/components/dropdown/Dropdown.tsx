@@ -1,15 +1,9 @@
-import React, {forwardRef, MouseEventHandler, PropsWithChildren } from "react";
+import {forwardRef, PropsWithChildren } from "react";
 import clsx from "clsx";
-import { Variant } from "../../@types/Daisy";
-import { Menu } from "../menu/Menu";
 
 export interface IDropdown {
     id ?:string
     className ?:string
-    menuClassName ?:string
-    variant ?:Variant
-    button :React.ReactNode
-    onClick ?:MouseEventHandler
     position ?: "left" | "right" | "bottom" | "top"
     isEnd ?:boolean
     isOpen ?:boolean
@@ -31,19 +25,7 @@ export const Dropdown = forwardRef<HTMLDivElement, PropsWithChildren<IDropdown>>
             props.isEnd && "dropdown-end",
             props.className
         )}>
-            {props.button}
-            <Menu
-                onClick={props.onClick}
-                tabIndex={0}
-                variant={props.variant}
-                className={clsx(
-                    props.menuClassName,
-                    "dropdown-content",
-                    "menu",
-                )}
-            >
-                {props.children}
-            </Menu>
+            {props.children}
         </div>
     );
 });
