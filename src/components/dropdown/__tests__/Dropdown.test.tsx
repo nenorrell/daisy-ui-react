@@ -5,7 +5,7 @@ import { Dropdown } from "../Dropdown";
 import { DropdownMenu } from "../DropdownMenu";
 
 describe("Dropdown component", () => {
-    test("Should render the button and children", () => {
+    it("Should render the button and children", () => {
         const { container } = render(
             <Dropdown>
                 <Button className="m-2">Test Dropdown</Button>

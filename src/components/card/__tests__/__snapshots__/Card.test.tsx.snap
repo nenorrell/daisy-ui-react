@@ -1,0 +1,331 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component Variants Respects accent variant 1`] = `
+<div
+  class="card bg-accent text-accent-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        accent
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects base-100 variant 1`] = `
+<div
+  class="card bg-base-100 text-base-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        base-100
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects base-200 variant 1`] = `
+<div
+  class="card bg-base-200 text-base-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        base-200
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects base-300 variant 1`] = `
+<div
+  class="card bg-base-300 text-base-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        base-300
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects error variant 1`] = `
+<div
+  class="card bg-error text-error-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        error
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects error variant 2`] = `
+<div
+  class="card bg-error text-error-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        error
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects info variant 1`] = `
+<div
+  class="card bg-info text-info-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        info
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects info variant 2`] = `
+<div
+  class="card bg-info text-info-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        info
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects neutral variant 1`] = `
+<div
+  class="card bg-neutral text-neutral-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        neutral
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects primary variant 1`] = `
+<div
+  class="card bg-primary text-primary-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        primary
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects secondary variant 1`] = `
+<div
+  class="card bg-secondary text-secondary-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        secondary
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects success variant 1`] = `
+<div
+  class="card bg-success text-success-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        success
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects success variant 2`] = `
+<div
+  class="card bg-success text-success-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        success
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects warning variant 1`] = `
+<div
+  class="card bg-warning text-warning-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        warning
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card component Variants Respects warning variant 2`] = `
+<div
+  class="card bg-warning text-warning-content card-normal"
+>
+  <div
+    class="card-body"
+  >
+    <div
+      class="card-title"
+    >
+      <h2>
+        Testing variant 
+        warning
+      </h2>
+    </div>
+    <p>
+      Test body
+    </p>
+  </div>
+</div>
+`;

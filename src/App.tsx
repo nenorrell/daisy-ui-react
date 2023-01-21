@@ -12,6 +12,11 @@ import { Modal } from "./components/modal/Modal";
 import { Dropdown } from "./components/dropdown/Dropdown";
 import { Menu } from "./components/menu/Menu";
 import { MenuItem } from "./components/menu/MenuItem";
+import { Card } from "./components/card/Card";
+import { DropdownMenu } from "./components/dropdown/DropdownMenu";
+import { CardBody } from "./components/card/CardBody";
+import { CardTitle } from "./components/card/CardTitle";
+import { CardActions } from "./components/card/CardActions";
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -84,23 +89,79 @@ export const App = () => {
                     <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
                 </Modal>
 
-                <Dropdown
-                    className="shadow w-52"
-                    variant="primary"
-                    button={<Button className="m-2">Test Dropdown</Button>}
-                >
-                    <MenuItem>Hello</MenuItem>
-                    <MenuItem>Hello</MenuItem>
-                    <MenuItem isDisabled>Border</MenuItem>
-                    <MenuItem>Hello</MenuItem>
+                <Dropdown>
+                    <Button className="m-2">Test Dropdown</Button>
+                    <DropdownMenu className="shadow w-52" variant="base-200">
+                        <MenuItem isTitle>Test Title</MenuItem>
+                        <MenuItem isActive><a href="#">Selected item</a></MenuItem>
+                        <MenuItem isDisabled>Disabled item</MenuItem>
+                        <MenuItem isBordered>Bordered item</MenuItem>
+                        <MenuItem hover>hover me</MenuItem>
+                    </DropdownMenu>
                 </Dropdown>
 
-                <Menu variant="primary" className="shadow w-52 mt-14 ml-5">
-                    <MenuItem>Hello</MenuItem>
-                    <MenuItem>Hello</MenuItem>
-                    <MenuItem isDisabled>Border</MenuItem>
-                    <MenuItem>Hello</MenuItem>
-                </Menu>
+                <div className="p-5">
+                    <div className="grid grid-cols-12">
+                        <div className="col-span-2">
+                            <Menu variant="base-300" className="shadow w-52">
+                                <MenuItem>Hello</MenuItem>
+                                <MenuItem>Hello</MenuItem>
+                                <MenuItem isDisabled>Border</MenuItem>
+                                <MenuItem>Hello</MenuItem>
+                            </Menu>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="p-5">
+                    <div className="grid grid-cols-12">
+                        <div className="col-span-2 m-2">
+                            <Card>
+                                <CardBody>
+                                    <CardTitle><h2>Something about a dog</h2></CardTitle>
+                                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                                </CardBody>
+                            </Card>
+                        </div>
+
+                        <div className="col-span-2 m-2">
+                            <Card imageFull>
+                                <figure><img src="https://placeimg.com/400/225/arch"/></figure>
+                                <CardBody>
+                                    <CardTitle><h2>Full image card</h2></CardTitle>
+                                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                                </CardBody>
+                            </Card>
+                        </div>
+
+                        <div className="col-span-2 m-2">
+                            <Card variant="primary">
+                                <CardBody>
+                                    <CardTitle><h2>Card with actions</h2></CardTitle>
+                                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                                    <CardActions className="justify-end mt-3">
+                                        <Button variant="secondary">Decline</Button>
+                                        <Button variant="secondary">Confirm</Button>
+                                    </CardActions>
+                                </CardBody>
+                            </Card>
+                        </div>
+
+                        <div className="col-span-2 m-2">
+                            <Card variant="accent">
+                                <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                                <CardBody>
+                                    <CardTitle><h2>Card with actions</h2></CardTitle>
+                                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                                    <CardActions className="justify-end mt-3">
+                                        <Button variant="secondary">Decline</Button>
+                                        <Button variant="secondary">Confirm</Button>
+                                    </CardActions>
+                                </CardBody>
+                            </Card>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     );
