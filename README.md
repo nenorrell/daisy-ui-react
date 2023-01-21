@@ -6,6 +6,9 @@
 
 This library is designed to simplify the integration of Daisy UI into React projects by providing a set of pre-built React components. The API and functionality of these components are heavily influenced by popular libraries such as React Bootstrap, making it easy for developers familiar with those libraries to work with Daisy UI.
 
+## Alpha
+**WARNING**: This library is still in alpha, so components are subject to change
+
 ## Component Documentation
 
 See docs at: [Daisy UI React Component Documentation](https://github.com/nenorrell/daisy-ui-react/wiki)

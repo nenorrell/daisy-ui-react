@@ -1,15 +1,18 @@
-import { render, fireEvent } from "@testing-library/react";
-import ColorMap from "../../../modules/ColorMap";
-import { VariantOptions } from "../../../modules/testUtils";
+import { render } from "@testing-library/react";
+import { Button } from "../../buttons/Button";
 import { MenuItem } from "../../menu/MenuItem";
 import { Dropdown } from "../Dropdown";
+import { DropdownMenu } from "../DropdownMenu";
 
 describe("Dropdown component", () => {
-    test("Should render the button and children", () => {
+    it("Should render the button and children", () => {
         const { container } = render(
-            <Dropdown button={<button>Button</button>}>
-                <MenuItem>Test1</MenuItem>
-                <MenuItem>Test2</MenuItem>
+            <Dropdown>
+                <Button className="m-2">Test Dropdown</Button>
+                <DropdownMenu className="shadow w-52" variant="base-200">
+                    <MenuItem>test item</MenuItem>
+                    <MenuItem>test item 2</MenuItem>
+                </DropdownMenu>
             </Dropdown>
         );
         expect(container.querySelector("button")).toBeInTheDocument();
@@ -17,32 +20,15 @@ describe("Dropdown component", () => {
         expect(container.querySelectorAll("li").length).toBe(2);
     });
 
-    describe("Variants", ()=>{
-        VariantOptions.forEach(variant=>{
-            it(`Respects ${variant} variant`, ()=>{
-                const component = render(
-                    <Dropdown button={<button>Button</button>} variant={variant}>
-                        <MenuItem>Test1</MenuItem>
-                        <MenuItem>Test2</MenuItem>
-                    </Dropdown>
-                );
-                const container = component.container.querySelector("ul.menu");
-                const colors = ColorMap.get(variant);
-
-                expect(container).toHaveClass(colors.bg as string);
-                expect(container).toHaveClass(colors.text as string);
-                expect(container).toMatchSnapshot();
-            });
-        });
-    });
-
     describe("Position", ()=>{
         ["left", "right", "bottom", "top"].forEach(position=>{
             it(`Respects ${position} position`, ()=>{
                 const component = render(
-                    <Dropdown button={<button>Button</button>} position={position as any}>
-                        <MenuItem>Test1</MenuItem>
-                        <MenuItem>Test2</MenuItem>
+                    <Dropdown position={position as any}>
+                        <Button className="m-2">Test Dropdown position {position}</Button>
+                        <DropdownMenu className="shadow w-52" variant="base-200">
+                            <MenuItem>Test Title</MenuItem>
+                        </DropdownMenu>
                     </Dropdown>
                 );
                 const container = component.container.querySelector("div.dropdown");
@@ -53,29 +39,23 @@ describe("Dropdown component", () => {
 
     it("Should add custom class to dropdown wrapper", () => {
         const { container } = render(
-            <Dropdown button={<button>Button</button>} className="custom-class">
-                <MenuItem>Test1</MenuItem>
-                <MenuItem>Test2</MenuItem>
+            <Dropdown className="custom-class">
+                <Button className="m-2">Test Dropdown</Button>
+                <DropdownMenu className="shadow w-52" variant="base-200">
+                    <MenuItem>Test Title</MenuItem>
+                </DropdownMenu>
             </Dropdown>
         );
         expect(container.querySelector("div.dropdown")).toHaveClass("custom-class");
     });
 
-    it("Should add custom classes to the dropdown menu with menuClassName", () => {
-        const { container } = render(
-            <Dropdown button={<button>Button</button>} menuClassName="custom-class">
-                <MenuItem>Test1</MenuItem>
-                <MenuItem>Test2</MenuItem>
-            </Dropdown>
-        );
-        expect(container.querySelector("ul.menu")).toHaveClass("custom-class");
-    });
-
     it("Should set id", () => {
         const { container } = render(
-            <Dropdown button={<button>Button</button>} id="custom-id">
-                <MenuItem>Test1</MenuItem>
-                <MenuItem>Test2</MenuItem>
+            <Dropdown id="custom-id">
+                <Button className="m-2">Test Dropdown</Button>
+                <DropdownMenu className="shadow w-52" variant="base-200">
+                    <MenuItem>Test Title</MenuItem>
+                </DropdownMenu>
             </Dropdown>
         );
         expect(container.querySelector("#custom-id")).toBeInTheDocument();
@@ -83,9 +63,11 @@ describe("Dropdown component", () => {
 
     it("Should set hover", () => {
         const { container } = render(
-            <Dropdown button={<button>Button</button>} hover>
-                <MenuItem>Test1</MenuItem>
-                <MenuItem>Test2</MenuItem>
+            <Dropdown hover>
+                <Button className="m-2">Test Dropdown</Button>
+                <DropdownMenu className="shadow w-52" variant="base-200">
+                    <MenuItem>Test Title</MenuItem>
+                </DropdownMenu>
             </Dropdown>
         );
         expect(container.querySelector("div.dropdown")).toHaveClass("dropdown-hover");
@@ -93,9 +75,11 @@ describe("Dropdown component", () => {
 
     it("Should set isEnd prop", () => {
         const { container } = render(
-            <Dropdown button={<button>Button</button>} isEnd>
-                <MenuItem>Test1</MenuItem>
-                <MenuItem>Test2</MenuItem>
+            <Dropdown isEnd>
+                <Button className="m-2">Test Dropdown</Button>
+                <DropdownMenu className="shadow w-52" variant="base-200">
+                    <MenuItem>Test Title</MenuItem>
+                </DropdownMenu>
             </Dropdown>
         );
         expect(container.querySelector("div.dropdown")).toHaveClass("dropdown-end");
@@ -103,24 +87,13 @@ describe("Dropdown component", () => {
 
     it("Should set isOpen prop", () => {
         const { container } = render(
-            <Dropdown button={<button>Button</button>} isOpen>
-                <MenuItem>Test1</MenuItem>
-                <MenuItem>Test2</MenuItem>
+            <Dropdown isOpen>
+                <Button className="m-2">Test Dropdown</Button>
+                <DropdownMenu className="shadow w-52" variant="base-200">
+                    <MenuItem>Test Title</MenuItem>
+                </DropdownMenu>
             </Dropdown>
         );
         expect(container.querySelector("div.dropdown")).toHaveClass("dropdown-open");
-    });
-
-    it("calls the onClick prop when the element is clicked", () => {
-        const onClick = jest.fn();
-        const { container } = render(
-            <Dropdown button={<button>Button</button>} id="custom-id" onClick={onClick}>
-                <MenuItem>Test1</MenuItem>
-                <MenuItem>Test2</MenuItem>
-            </Dropdown>
-        );
-        const el = container.querySelector("ul.menu");
-        fireEvent.click(el as any);
-        expect(onClick).toHaveBeenCalled();
     });
 });
