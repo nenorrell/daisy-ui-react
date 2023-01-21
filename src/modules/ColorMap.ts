@@ -1,10 +1,11 @@
-import { Variant, VariantColors } from "../@types/Daisy";
+import { Variant, VariantColors } from "../@types/Colors";
 import { IMap } from "../@types/Generic";
 
 /**
  * Why can't we just dynamically generate these class names instead of storing them like this?
  * See https://tailwindcss.com/docs/content-configuration#dynamic-class-names
 */
+
 export default <IMap<Variant, VariantColors>> new Map([
     ["primary", {
         bg: "bg-primary",

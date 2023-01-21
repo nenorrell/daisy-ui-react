@@ -1,4 +1,4 @@
-import { Variant } from "../../@types/Daisy";
+import { Variant } from "../../@types/Colors";
 import { ComponentOrJSX } from "../../@types/Generic";
 import ColorMap from "../../modules/ColorMap";
 import { useToggle } from "../../modules/hooks";
