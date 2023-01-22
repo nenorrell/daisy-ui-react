@@ -17,6 +17,7 @@ import { DropdownMenu } from "./components/dropdown/DropdownMenu";
 import { CardBody } from "./components/card/CardBody";
 import { CardTitle } from "./components/card/CardTitle";
 import { CardActions } from "./components/card/CardActions";
+import { Swap } from "./components/swap/Swap";
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -161,6 +162,13 @@ export const App = () => {
                             </Card>
                         </div>
                     </div>
+                </div>
+
+                <div className="p-5">
+                    <Swap className="text-5xl">
+                        <div>🥵</div>
+                        <div>🥶</div>
+                    </Swap>
                 </div>
             </div>
         </>
