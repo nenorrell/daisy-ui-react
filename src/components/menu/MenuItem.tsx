@@ -26,7 +26,7 @@ export const MenuItem = forwardRef<HTMLLIElement, IMenuItem>((
         child = React.cloneElement(props.children as any, {
             ...(child).props,
             ...(childClasses && {
-                className: clsx(childClasses, (child).props.className)
+                className: clsx(childClasses, child.props.className)
             })
         });
     }

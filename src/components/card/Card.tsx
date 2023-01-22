@@ -1,5 +1,5 @@
 import { FC, ForwardedRef, forwardRef, PropsWithChildren } from "react";
-import { Variant } from "../../@types/Daisy";
+import { Variant } from "../../@types/Colors";
 import ColorMap from "../../modules/ColorMap";
 import clsx from "clsx";
 

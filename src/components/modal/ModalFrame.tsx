@@ -1,6 +1,6 @@
 import React, {forwardRef, MouseEventHandler, PropsWithChildren } from "react";
 import clsx from "clsx";
-import { Variant } from "../../@types/Daisy";
+import { Variant } from "../../@types/Colors";
 import ColorMap from "../../modules/ColorMap";
 import { Button } from "../buttons/Button";
 import { XMarkIcon } from "@heroicons/react/24/solid";

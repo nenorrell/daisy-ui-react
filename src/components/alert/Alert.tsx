@@ -1,5 +1,5 @@
 import { ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren } from "react";
-import { StatusVariant } from "../../@types/Daisy";
+import { StatusVariant } from "../../@types/Colors";
 import ColorMap from "../../modules/ColorMap";
 import clsx from "clsx";
 

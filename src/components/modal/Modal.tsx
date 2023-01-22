@@ -1,5 +1,5 @@
 import { forwardRef, PropsWithChildren } from "react";
-import { BaselessVariant } from "../../@types/Daisy";
+import { BaselessVariant } from "../../@types/Colors";
 import { Button } from "../buttons/Button";
 import { IModalFrame, ModalFrame } from "./ModalFrame";
 

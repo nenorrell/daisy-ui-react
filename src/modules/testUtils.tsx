@@ -1,4 +1,5 @@
-import { BaselessVariant, ButtonSize, Size, StatusVariant, Variant } from "../@types/Daisy";
+import { BaselessVariant, StatusVariant, Variant } from "../@types/Colors";
+import { ButtonSize, Size } from "../@types/Daisy";
 
 export const BaselessVariantOptions :BaselessVariant[] = ["primary", "secondary", "accent", "neutral", "info", "success", "error", "warning"];
 export const StatusVariantOptions :StatusVariant[] = ["info", "success", "error", "warning"];

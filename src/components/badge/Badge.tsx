@@ -1,5 +1,6 @@
 import { FC, ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren } from "react";
-import { BaselessVariant, Size } from "../../@types/Daisy";
+import { Size } from "../../@types/Daisy";
+import { BaselessVariant } from "../../@types/Colors";
 import ColorMap from "../../modules/ColorMap";
 import clsx from "clsx";
 import SizeMap from "../../modules/SizeMap";

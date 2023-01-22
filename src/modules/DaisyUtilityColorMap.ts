@@ -1,12 +1,10 @@
 
-import { DaisyColor } from "../@types/Colors";
-import { Variant } from "../@types/Daisy";
+import { DaisyUtilityColor, Variant } from "../@types/Colors";
 import { IMap } from "../@types/Generic";
 
 
-export type DaisyVariant =
+export type DaisyColor =
     Variant |
-    "primary" |
     "primary-focus" |
     "primary-content" |
     "secondary-focus" |
@@ -25,7 +23,7 @@ export type DaisyVariant =
  * Why can't we just dynamically generate these class names instead of storing them like this?
  * See https://tailwindcss.com/docs/content-configuration#dynamic-class-names
 */
-export const DaisyColorMap = <IMap<DaisyVariant, DaisyColor>> new Map([
+export const DaisyUtilityColorMap = <IMap<DaisyColor, DaisyUtilityColor>> new Map([
     ["primary", {
         bg: "bg-primary",
         to: "to-primary",

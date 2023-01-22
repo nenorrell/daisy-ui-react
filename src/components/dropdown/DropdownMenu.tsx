@@ -1,6 +1,6 @@
 import {forwardRef, MouseEventHandler, PropsWithChildren } from "react";
 import clsx from "clsx";
-import { Variant } from "../../@types/Daisy";
+import { Variant } from "../../@types/Colors";
 import { Menu } from "../menu/Menu";
 
 export interface IDropdownMenu {
