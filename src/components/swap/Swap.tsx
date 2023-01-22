@@ -50,3 +50,4 @@ export const Swap = forwardRef<HTMLLabelElement, PropsWithChildren<ISwap>>((
         </label>
     );
 });
+Swap.displayName = "Swap";

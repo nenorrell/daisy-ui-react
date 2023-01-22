@@ -40,3 +40,5 @@ export const ConfirmModal = forwardRef<HTMLDivElement, PropsWithChildren<IConfir
         </ModalFrame>
     );
 });
+
+ConfirmModal.displayName = "ConfirmModal";

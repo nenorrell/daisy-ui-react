@@ -27,3 +27,5 @@ export const Alert = forwardRef((
         </div>
     );
 });
+
+Alert.displayName = "Alert";

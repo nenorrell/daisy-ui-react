@@ -52,3 +52,5 @@ export const Button :FC<PropsWithChildren<IButton>> = forwardRef((
         </button>
     );
 });
+
+Button.displayName = "Button";

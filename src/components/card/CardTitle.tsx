@@ -18,3 +18,5 @@ export const CardTitle :FC<PropsWithChildren<ICardTitle>> = forwardRef((
         </div>
     );
 });
+
+CardTitle.displayName = "CardTitle";

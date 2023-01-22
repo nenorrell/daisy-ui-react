@@ -33,3 +33,4 @@ export const Card :FC<PropsWithChildren<ICard>> = forwardRef((
     );
 });
 
+Card.displayName = "Card";

@@ -33,3 +33,5 @@ export const Avatar = forwardRef((
         </div>
     );
 });
+
+Avatar.displayName = "Avatar";

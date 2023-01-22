@@ -45,3 +45,5 @@ export const MenuItem = forwardRef<HTMLLIElement, IMenuItem>((
         )}>{child}</li>
     );
 });
+
+MenuItem.displayName = "MenuItem";

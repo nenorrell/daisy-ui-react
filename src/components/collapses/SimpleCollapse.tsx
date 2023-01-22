@@ -37,3 +37,5 @@ export const SimpleCollapse = forwardRef((
         </Collapse>
     );
 });
+
+SimpleCollapse.displayName = "SimpleCollapse";

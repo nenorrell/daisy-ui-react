@@ -30,3 +30,5 @@ export const DropdownMenu = forwardRef<HTMLUListElement, PropsWithChildren<IDrop
         </Menu>
     );
 });
+
+DropdownMenu.displayName = "DropdownMenu";

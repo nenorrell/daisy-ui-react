@@ -18,3 +18,5 @@ export const CardActions :FC<PropsWithChildren<ICardActions>> = forwardRef((
         </div>
     );
 });
+
+CardActions.displayName = "CardActions";

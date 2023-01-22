@@ -69,3 +69,5 @@ export const Collapse = forwardRef((
         </div>
     );
 });
+
+Collapse.displayName = "Collapse";

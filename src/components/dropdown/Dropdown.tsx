@@ -29,3 +29,5 @@ export const Dropdown = forwardRef<HTMLDivElement, PropsWithChildren<IDropdown>>
         </div>
     );
 });
+
+Dropdown.displayName = "Dropdown";

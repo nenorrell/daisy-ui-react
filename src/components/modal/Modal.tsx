@@ -36,3 +36,5 @@ export const Modal = forwardRef<HTMLDivElement, PropsWithChildren<IModal>>((
         </ModalFrame>
     );
 });
+
+Modal.displayName = "Modal";

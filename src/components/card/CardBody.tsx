@@ -18,3 +18,5 @@ export const CardBody :FC<PropsWithChildren<ICardBody>> = forwardRef((
         </div>
     );
 });
+
+CardBody.displayName = "CardBody";

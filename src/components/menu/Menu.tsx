@@ -36,3 +36,5 @@ export const Menu = forwardRef<HTMLUListElement, PropsWithChildren<IMenu>>((
         </ul>
     );
 });
+
+Menu.displayName = "Menu";

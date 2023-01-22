@@ -37,3 +37,5 @@ export const Badge :FC<PropsWithChildren<IBadge>> = forwardRef((
         </div>
     );
 });
+
+Badge.displayName = "Badge";
