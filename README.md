@@ -2,7 +2,9 @@
 
 [![codecov](https://codecov.io/gh/nenorrell/daisy-ui-react/branch/master/graph/badge.svg?token=5BVSFNKS43)](https://codecov.io/gh/nenorrell/daisy-ui-react) [![CI](https://github.com/nenorrell/daisy-ui-react/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/nenorrell/daisy-ui-react/actions/workflows/ci.yml)
 
-<img src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui/card-3.png" />
+
+<img src="https://raw.githubusercontent.com/nenorrell/files/master/daisy-ui-react/public/logo_no_bg.png" />
+
 
 This library is designed to simplify the integration of Daisy UI into React projects by providing a set of pre-built React components. The API and functionality of these components are heavily influenced by popular libraries such as React Bootstrap, making it easy for developers familiar with those libraries to work with Daisy UI.
 
