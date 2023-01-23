@@ -1,7 +1,8 @@
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren, ReactNode, RefObject, useEffect, useRef, useState } from "react";
-import { ComponentOrJSX } from "../../@types/Generic";
-import { processComponentOrJSX } from "../../modules/utility";
+import clsx from "clsx";
+import React, { ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren, ReactElement, ReactNode, RefObject, useEffect, useRef, useState } from "react";
+import { WithRef } from "../../@types/Generic";
+import { ICollapseBody } from "./CollapseBody";
+import { ICollapseTitle } from "./CollapseTitle";
 
 const toggleExpand = (ref :RefObject<HTMLDivElement>, isExpanded :boolean, parentCollapse ?:boolean)=>{
     if(ref.current?.clientHeight && !isExpanded) {
@@ -18,54 +19,59 @@ const toggleExpand = (ref :RefObject<HTMLDivElement>, isExpanded :boolean, paren
 interface ICollapse {
     className ?:string;
     defaultExpand ?:boolean
-    headerContent :string | ReactNode
-    headerClasses ?:string
-    leftIcon ?:ComponentOrJSX
-    leftIconClasses ?:string
-    rightIcon ?:ComponentOrJSX
-    rightIconClasses ?:string
     parentCollapse ?:boolean
     onClick ?:MouseEventHandler<HTMLDivElement>
+    children :[ReactElement, ReactElement]
 }
+
+type ChildWithRef = ReactElement<WithRef<ICollapseTitle | ICollapseBody, HTMLDivElement>>;
+
 export const Collapse = forwardRef((
     props :PropsWithChildren<ICollapse>,
     ref ?:ForwardedRef<HTMLDivElement>
 ) => {
     const expandableContent = useRef<HTMLDivElement>(null);
     const [isExpanded, setIsExpanded] = useState<boolean>(props.defaultExpand || false);
-    const RightIcon = props.rightIcon && processComponentOrJSX(props.rightIcon);
-    const LeftIcon = props.leftIcon && processComponentOrJSX(props.leftIcon);
+
+    if(props.children.length !== 2) {
+        throw Error("Collapse expects exactly two root children");
+    }
+
+    const formattedChildren = React.Children.map<ReactNode, ChildWithRef>(props.children, (child, i) => {
+        if(React.isValidElement(child)) {
+            if(i == 0) {
+                // The first child is always treated as the Collapse Title
+                const childProps = child.props as ICollapseTitle;
+                return React.cloneElement(child, {
+                    ...(childProps),
+                    isExpanded,
+                    onClick: (e :React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+                        setIsExpanded(!isExpanded);
+                        childProps.onClick && childProps.onClick(e);
+                    }
+                });
+            }
+
+            // The second child is always treated as the Collapse Body
+            const childProps = child.props as ICollapseBody;
+            return React.cloneElement(child, {
+                ...(childProps),
+                isExpanded,
+                ref: expandableContent
+            });
+        }
+    });
 
     useEffect(()=>{
         toggleExpand(expandableContent, isExpanded, props.parentCollapse);
     }, [isExpanded]); // eslint-disable-line
 
     return (
-        <div ref={ref} tabIndex={0} className={`w-100 collapse ${props.className || ""}`}>
-            <div className={`collapse-title cursor-pointer flex items-center justify-center px-4 ${props.headerClasses || ""}`}
-                onClick={(e)=>{
-                    setIsExpanded(!isExpanded);
-                    props.onClick && props.onClick(e);
-                } }>
-                {
-                    LeftIcon && <LeftIcon className={props.leftIconClasses || "w-6 h-6 mr-3"} />
-                }
-                <div className="w-full">{props.headerContent}</div>
-                <div className={`items-end transition ease-in-out ${isExpanded ? "" : "-rotate-90"}`}>
-                    {
-                        RightIcon ?
-                            <RightIcon className={props.rightIconClasses || "w-4 h-4"} /> :
-                            <ChevronDownIcon className={props.rightIconClasses || "w-4 h-4"}/>
-                    }
-                </div>
-            </div>
-
-            <div
-                ref={expandableContent}
-                className={`collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden ${isExpanded ? "" : "h-0"}`}
-            >
-                {props.children}
-            </div>
+        <div ref={ref} tabIndex={0} onClick={props.onClick} className={clsx(
+            "collapse",
+            props.className
+        )}>
+            {formattedChildren}
         </div>
     );
 });

@@ -18,7 +18,7 @@ export const Swap = forwardRef<HTMLLabelElement, PropsWithChildren<ISwap>>((
         throw Error("Swap expects exactly two root children");
     }
 
-    const [active, toggle] = useToggle(props.isActive ?? false);
+    const [active, toggle] = useToggle(props.isActive || false);
 
     const formattedChildren = React.Children.map<ReactNode, ReactNode>(props.children, (child, i) => {
         if(React.isValidElement(child)) {

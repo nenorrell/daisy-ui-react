@@ -1,9 +1,13 @@
+export * as ColorMap from "./modules/ColorMap";
+
 export { Badge } from "./components/badge/Badge";
 export { Button } from "./components/buttons/Button";
 export { Avatar } from "./components/avatar/Avatar";
 export { Alert } from "./components/alert/Alert";
 
 export { Collapse } from "./components/collapses/Collapse";
+export { CollapseTitle } from "./components/collapses/CollapseTitle";
+export { CollapseBody } from "./components/collapses/CollapseBody";
 export { SimpleCollapse } from "./components/collapses/SimpleCollapse";
 
 export { Modal } from "./components/modal/Modal";

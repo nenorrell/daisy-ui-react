@@ -22,8 +22,7 @@ describe("Card component", () => {
                 const container = component.container.querySelector("div.card");
                 const colors = ColorMap.get(variant);
 
-                expect(container).toHaveClass(colors.bg as string);
-                expect(container).toHaveClass(colors.text as string);
+                expect(container).toHaveClass(colors.bg, colors.text);
                 expect(container).toMatchSnapshot();
             });
         });

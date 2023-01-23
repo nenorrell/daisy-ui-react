@@ -15,8 +15,7 @@ describe("Avatar", ()=>{
                 const container = component.container.querySelector("div.find-me");
                 const colors = ColorMap.get(variant);
 
-                expect(container).toHaveClass(colors.bg as any);
-                expect(container).toHaveClass(colors.text as any);
+                expect(container).toHaveClass(colors.bg, colors.text);
                 expect(container).toMatchSnapshot();
             });
         });

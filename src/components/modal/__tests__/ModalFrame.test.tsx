@@ -11,8 +11,7 @@ describe("ModalFrame", () => {
                 const container = component.container.querySelector("div.modal-box");
                 const colors = ColorMap.get(variant);
 
-                expect(container).toHaveClass(colors.bg as string);
-                expect(container).toHaveClass(colors.text as string);
+                expect(container).toHaveClass(colors.bg, colors.text);
                 expect(container).toMatchSnapshot();
             });
         });

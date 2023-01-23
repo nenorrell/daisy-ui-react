@@ -1,4 +1,3 @@
-import { ArrowDownIcon } from "@heroicons/react/24/solid";
 import { Alert } from "./components/alert/Alert";
 import { Avatar } from "./components/avatar/Avatar";
 import { Button } from "./components/buttons/Button";
@@ -18,6 +17,9 @@ import { CardBody } from "./components/card/CardBody";
 import { CardTitle } from "./components/card/CardTitle";
 import { CardActions } from "./components/card/CardActions";
 import { Swap } from "./components/swap/Swap";
+import { CollapseTitle } from "./components/collapses/CollapseTitle";
+import { CollapseBody } from "./components/collapses/CollapseBody";
+import { ArrowDownIcon } from "@heroicons/react/24/solid";
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -31,19 +33,28 @@ export const App = () => {
         <>
             <div className="mb-2 text-7xl">Dev sandbox</div>
             <div>
-                <Collapse
-                    className="w-1/2 m-5"
-                    headerContent="Hello"
-                    headerClasses="bg-base-200 rounded-t-md"
-                    leftIcon={<FontAwesomeIcon icon={faGitlab} />}
-                    rightIcon={ArrowDownIcon}
-                >
-                    <div className="bg-base-300">
+                <Collapse className="w-1/2 m-5" defaultExpand>
+                    <CollapseTitle
+                        className="bg-base-300 rounded-t-md"
+                        RightIcon={<ArrowDownIcon className="h-5 w-5"/>}
+                    >
+                        <div className="mr-4">
+                            <FontAwesomeIcon icon={faGitlab} className="h-5 w-5" />
+                        </div>
+                        <h2 className="w-full text-2xl">This is a Collapse</h2>
+                    </CollapseTitle>
+
+                    <CollapseBody className="bg-base-200">
                         <p className="p-4">Hey everyone</p>
-                    </div>
+                    </CollapseBody>
                 </Collapse>
 
-                <SimpleCollapse headerContent="Testing" variant="info" className="w-1/2 m-5" rounded={true}>
+                {/* <Collapse className="w-1/2 m-5">
+                    <div>Title</div>
+                    <div>Body</div>
+                </Collapse> */}
+
+                <SimpleCollapse LeftIcon={<FontAwesomeIcon icon={faGitlab} className="h-5 w-5" />} headerContent="Testing" variant="info" className="w-1/2 m-5" rounded={true}>
                     <p className="p-4">Hey everyone</p>
                 </SimpleCollapse>
 

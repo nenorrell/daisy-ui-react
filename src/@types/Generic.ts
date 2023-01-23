@@ -1,5 +1,7 @@
 export type ComponentOrJSX<T=any> = React.FunctionComponent<T> | React.ReactElement;
 
+export type WithRef<I, R=any> = I & {ref ?:React.ForwardedRef<R>}
+
 /**
  * custom Map interface to get rid of implicit "possibly undefined value" from Map
  * See: https://github.com/microsoft/TypeScript/issues/9619

@@ -1,153 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SimpleCollapse Should render as expected 1`] = `
-Object {
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <div
-        class="w-100 collapse "
-        tabindex="0"
-      >
-        <div
-          class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-neutral-content bg-neutral "
-        >
-          <div
-            class="w-full"
-          >
-            test
-          </div>
-          <div
-            class="items-end transition ease-in-out -rotate-90"
-          >
-            <svg
-              aria-hidden="true"
-              class="w-4 h-4"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0"
-        >
-          <div
-            class="text-neutral-content bg-neutral "
-          />
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
+<div>
+  <div
+    class="collapse"
+    tabindex="0"
+  >
     <div
-      class="w-100 collapse "
-      tabindex="0"
+      class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-neutral text-neutral-content rounded-md transition-all duration-[1s]"
     >
-      <div
-        class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-neutral-content bg-neutral "
+      <p
+        class="w-full text-lg"
       >
-        <div
-          class="w-full"
-        >
-          test
-        </div>
-        <div
-          class="items-end transition ease-in-out -rotate-90"
-        >
-          <svg
-            aria-hidden="true"
-            class="w-4 h-4"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-      </div>
+        test
+      </p>
       <div
-        class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0"
+        class="items-end transition ease-in-out -rotate-90"
       >
-        <div
-          class="text-neutral-content bg-neutral "
-        />
+        <svg
+          aria-hidden="true"
+          class="w-4 h-4"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+            fill-rule="evenodd"
+          />
+        </svg>
       </div>
     </div>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
+    <div
+      class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-neutral text-neutral-content"
+    />
+  </div>
+</div>
 `;
 
 exports[`SimpleCollapse Variants Respects accent variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-accent-content bg-accent "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-accent text-accent-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing accent variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -170,19 +70,19 @@ exports[`SimpleCollapse Variants Respects accent variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects accent variant 2`] = `
 <div
-  class="text-accent-content bg-accent "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-accent text-accent-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects base-100 variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-base-content bg-base-100 "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-base-100 text-base-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing base-100 variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -205,19 +105,19 @@ exports[`SimpleCollapse Variants Respects base-100 variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects base-100 variant 2`] = `
 <div
-  class="text-base-content bg-base-100 "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-base-100 text-base-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects base-200 variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-base-content bg-base-200 "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-base-200 text-base-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing base-200 variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -240,19 +140,19 @@ exports[`SimpleCollapse Variants Respects base-200 variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects base-200 variant 2`] = `
 <div
-  class="text-base-content bg-base-200 "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-base-200 text-base-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects base-300 variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-base-content bg-base-300 "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-base-300 text-base-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing base-300 variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -275,19 +175,19 @@ exports[`SimpleCollapse Variants Respects base-300 variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects base-300 variant 2`] = `
 <div
-  class="text-base-content bg-base-300 "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-base-300 text-base-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects error variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-error-content bg-error "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-error text-error-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing error variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -310,19 +210,19 @@ exports[`SimpleCollapse Variants Respects error variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects error variant 2`] = `
 <div
-  class="text-error-content bg-error "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-error text-error-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects error variant 3`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-error-content bg-error "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-error text-error-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing error variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -345,19 +245,19 @@ exports[`SimpleCollapse Variants Respects error variant 3`] = `
 
 exports[`SimpleCollapse Variants Respects error variant 4`] = `
 <div
-  class="text-error-content bg-error "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-error text-error-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects info variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-info-content bg-info "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-info text-info-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing info variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -380,19 +280,19 @@ exports[`SimpleCollapse Variants Respects info variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects info variant 2`] = `
 <div
-  class="text-info-content bg-info "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-info text-info-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects info variant 3`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-info-content bg-info "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-info text-info-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing info variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -415,19 +315,19 @@ exports[`SimpleCollapse Variants Respects info variant 3`] = `
 
 exports[`SimpleCollapse Variants Respects info variant 4`] = `
 <div
-  class="text-info-content bg-info "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-info text-info-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects neutral variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-neutral-content bg-neutral "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-neutral text-neutral-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing neutral variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -450,19 +350,19 @@ exports[`SimpleCollapse Variants Respects neutral variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects neutral variant 2`] = `
 <div
-  class="text-neutral-content bg-neutral "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-neutral text-neutral-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects primary variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-primary-content bg-primary "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-primary text-primary-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing primary variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -485,19 +385,19 @@ exports[`SimpleCollapse Variants Respects primary variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects primary variant 2`] = `
 <div
-  class="text-primary-content bg-primary "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-primary text-primary-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects secondary variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-secondary-content bg-secondary "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-secondary text-secondary-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing secondary variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -520,19 +420,19 @@ exports[`SimpleCollapse Variants Respects secondary variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects secondary variant 2`] = `
 <div
-  class="text-secondary-content bg-secondary "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-secondary text-secondary-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects success variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-success-content bg-success "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-success text-success-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing success variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -555,19 +455,19 @@ exports[`SimpleCollapse Variants Respects success variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects success variant 2`] = `
 <div
-  class="text-success-content bg-success "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-success text-success-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects success variant 3`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-success-content bg-success "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-success text-success-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing success variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -590,19 +490,19 @@ exports[`SimpleCollapse Variants Respects success variant 3`] = `
 
 exports[`SimpleCollapse Variants Respects success variant 4`] = `
 <div
-  class="text-success-content bg-success "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-success text-success-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects warning variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-warning-content bg-warning "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-warning text-warning-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing warning variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -625,19 +525,19 @@ exports[`SimpleCollapse Variants Respects warning variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects warning variant 2`] = `
 <div
-  class="text-warning-content bg-warning "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-warning text-warning-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects warning variant 3`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 transition-all duration-[1s] text-warning-content bg-warning "
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-warning text-warning-content rounded-md transition-all duration-[1s]"
 >
-  <div
-    class="w-full"
+  <p
+    class="w-full text-lg"
   >
     testing warning variant
-  </div>
+  </p>
   <div
     class="items-end transition ease-in-out -rotate-90"
   >
@@ -660,6 +560,6 @@ exports[`SimpleCollapse Variants Respects warning variant 3`] = `
 
 exports[`SimpleCollapse Variants Respects warning variant 4`] = `
 <div
-  class="text-warning-content bg-warning "
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-warning text-warning-content"
 />
 `;

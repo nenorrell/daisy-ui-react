@@ -1,6 +1,8 @@
-import { HomeIcon } from "@heroicons/react/24/solid";
+import { ArrowDownIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
 import { render, fireEvent } from "@testing-library/react";
 import { Collapse } from "../Collapse";
+import { CollapseBody } from "../CollapseBody";
+import { CollapseTitle } from "../CollapseTitle";
 
 describe("Collapse Component", () => {
     beforeEach(() => {
@@ -16,10 +18,20 @@ describe("Collapse Component", () => {
 
     it("Renders a collapse component", () => {
         const component = render(
-            <Collapse
-                headerContent='My Collapse'
-            >
-                <p className="test-element">Hi everyone</p>
+            <Collapse>
+                <CollapseTitle
+                    className="bg-base-300 rounded-t-md"
+                    RightIcon={<ArrowDownIcon className="h-5 w-5"/>}
+                >
+                    <div className="mr-4">
+                        <Cog6ToothIcon className="h-5 w-5" />
+                    </div>
+                    <h2 className="w-full text-2xl">This is the title</h2>
+                </CollapseTitle>
+
+                <CollapseBody className="bg-base-200">
+                    <p className="p-4">This is the body</p>
+                </CollapseBody>
             </Collapse>
         );
 
@@ -32,11 +44,20 @@ describe("Collapse Component", () => {
     it("Respects onClick when passed in", ()=>{
         const stub = jest.fn();
         const component = render(
-            <Collapse
-                headerContent='My Collapse'
-                onClick={stub}
-            >
-                <p className="test-element">Hi everyone</p>
+            <Collapse onClick={stub}>
+                <CollapseTitle
+                    className="bg-base-300 rounded-t-md"
+                    RightIcon={<ArrowDownIcon className="h-5 w-5"/>}
+                >
+                    <div className="mr-4">
+                        <Cog6ToothIcon className="h-5 w-5" />
+                    </div>
+                    <h2 className="w-full text-2xl">This is the title</h2>
+                </CollapseTitle>
+
+                <CollapseBody className="bg-base-200">
+                    <p className="p-4">This is the body</p>
+                </CollapseBody>
             </Collapse>
         );
 
@@ -47,10 +68,20 @@ describe("Collapse Component", () => {
 
     it("Toggles collapse on click", () => {
         const component = render(
-            <Collapse
-                headerContent='My Collapse'
-            >
-                <p className="test-element">Hi everyone</p>
+            <Collapse>
+                <CollapseTitle
+                    className="bg-base-300 rounded-t-md"
+                    RightIcon={<ArrowDownIcon className="h-5 w-5"/>}
+                >
+                    <div className="mr-4">
+                        <Cog6ToothIcon className="h-5 w-5" />
+                    </div>
+                    <h2 className="w-full text-2xl">This is the title</h2>
+                </CollapseTitle>
+
+                <CollapseBody className="bg-base-200">
+                    <p className="p-4">This is the body</p>
+                </CollapseBody>
             </Collapse>
         );
 
@@ -77,11 +108,20 @@ describe("Collapse Component", () => {
 
     it("Toggles collapse on click when defaultExpand is set to true", () => {
         const component = render(
-            <Collapse
-                defaultExpand={true}
-                headerContent='My Collapse'
-            >
-                <p className="test-element">Hi everyone</p>
+            <Collapse defaultExpand>
+                <CollapseTitle
+                    className="bg-base-300 rounded-t-md"
+                    RightIcon={<ArrowDownIcon className="h-5 w-5"/>}
+                >
+                    <div className="mr-4">
+                        <Cog6ToothIcon className="h-5 w-5" />
+                    </div>
+                    <h2 className="w-full text-2xl">This is the title</h2>
+                </CollapseTitle>
+
+                <CollapseBody className="bg-base-200">
+                    <p className="p-4">This is the body</p>
+                </CollapseBody>
             </Collapse>
         );
         const collapseTitle = component.container.querySelector<HTMLDivElement>("div.collapse-title");
@@ -107,154 +147,99 @@ describe("Collapse Component", () => {
     });
 
     it("Renders an expanded collapse component when defaultExpand is true", () => {
-        const component = render(
-            <Collapse
-                headerContent='My Collapse'
-                defaultExpand={true}
-            >
-                <p className="test-element">Hi everyone</p>
+        const {container} = render(
+            <Collapse defaultExpand>
+                <CollapseTitle
+                    className="bg-base-300 rounded-t-md"
+                    RightIcon={<ArrowDownIcon className="h-5 w-5"/>}
+                >
+                    <div className="mr-4">
+                        <Cog6ToothIcon className="h-5 w-5" />
+                    </div>
+                    <h2 className="w-full text-2xl">This is the title</h2>
+                </CollapseTitle>
+
+                <CollapseBody className="bg-base-200">
+                    <p className="p-4">This is the body</p>
+                </CollapseBody>
             </Collapse>
         );
-        const collapseBody = component.container.querySelector<HTMLDivElement>("div.collapse-body");
+        const collapseBody = container.querySelector<HTMLDivElement>("div.collapse-body");
 
         expect(collapseBody).not.toHaveClass("h-0");
         expect(collapseBody?.style.height).toBe("30px");
-        expect(component.container).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
-    it("Respects className prop", () => {
+    it("Respects works with regular children", () => {
+        // This will throw a ReactDOM warning since these divs aren't function
+        // componenets & don't have an "isExpanded" prop associated to them.
+        const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+
         const {container} = render(
-            <Collapse
-                headerContent='My Collapse'
-                className='my-class-name'
-            >
-                <p className="test-element">Hi everyone</p>
+            <Collapse>
+                <div className="title-test">Title</div>
+                <div className="body-test">Body</div>
             </Collapse>
         );
 
         const el = container.firstChild as HTMLElement;
+        const titleEl = el?.querySelector("div.title-test");
+        const bodyEl = el?.querySelector("div.body-test");
         expect(el).toBeInTheDocument();
-        expect(el).toHaveClass("my-class-name");
+        expect(titleEl).toBeInTheDocument();
+        expect(bodyEl).toBeInTheDocument();
         expect(el).toMatchSnapshot();
+        consoleSpy.mockRestore();
     });
 
-    it("Respects headerClasses prop", () => {
-        const {container} = render(
-            <Collapse
-                headerContent='My Collapse'
-                headerClasses='some-header-class another-header-class'
-            >
-                <p className="test-element">Hi everyone</p>
-            </Collapse>
-        );
-        const headerContainer = container.querySelector("div.some-header-class.another-header-class");
-        expect(headerContainer).toBeInTheDocument();
-        expect(headerContainer).toMatchSnapshot();
+    it("Throws an error when more than 2 children are passed", () => {
+        const CollapseAny :any = Collapse;
+        const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+
+        expect(()=>render(
+            <CollapseAny defaultExpand>
+                <CollapseTitle
+                    className="bg-base-300 rounded-t-md"
+                    RightIcon={<ArrowDownIcon className="h-5 w-5"/>}
+                >
+                    <div className="mr-4">
+                        <Cog6ToothIcon className="h-5 w-5" />
+                    </div>
+                    <h2 className="w-full text-2xl">This is the title</h2>
+                </CollapseTitle>
+
+                <CollapseBody className="bg-base-200">
+                    <p className="p-4">This is the body</p>
+                </CollapseBody>
+
+                <CollapseBody className="bg-base-200">
+                    <p className="p-4">This is the body</p>
+                </CollapseBody>
+            </CollapseAny>
+        )).toThrowError("Collapse expects exactly two root children");
+
+        consoleSpy.mockRestore();
     });
 
-    it("Respects leftIcon prop as a functional component", () => {
-        const {container} = render(
-            <Collapse
-                headerContent='My Collapse'
-                leftIcon={HomeIcon}
-            >
-                <p className="test-element">Hi everyone</p>
-            </Collapse>
-        );
+    it("Throws an error when less than 2 children are passed", () => {
+        const CollapseAny :any = Collapse;
+        const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
 
-        const collapseTitleEl = container.querySelector("div.collapse-title");
-        expect(collapseTitleEl?.querySelector("svg")).toEqual(collapseTitleEl?.firstElementChild);
-        expect(collapseTitleEl).toMatchSnapshot();
-    });
+        expect(()=>render(
+            <CollapseAny defaultExpand>
+                <CollapseTitle
+                    className="bg-base-300 rounded-t-md"
+                    RightIcon={<ArrowDownIcon className="h-5 w-5"/>}
+                >
+                    <div className="mr-4">
+                        <Cog6ToothIcon className="h-5 w-5" />
+                    </div>
+                    <h2 className="w-full text-2xl">This is the title</h2>
+                </CollapseTitle>
+            </CollapseAny>
+        )).toThrowError("Collapse expects exactly two root children");
 
-    it("Respects leftIcon prop as a JSX element", () => {
-        const {container} = render(
-            <Collapse
-                headerContent='My Collapse'
-                leftIcon={<HomeIcon />}
-            >
-                <p className="test-element">Hi everyone</p>
-            </Collapse>
-        );
-
-        const collapseTitleEl = container.querySelector("div.collapse-title");
-        expect(collapseTitleEl?.querySelector("svg")).toEqual(collapseTitleEl?.firstElementChild);
-        expect(collapseTitleEl).toMatchSnapshot();
-    });
-
-    it("Respects rightIcon prop as a functional component", () => {
-        const {container} = render(
-            <Collapse
-                headerContent='My Collapse'
-                rightIcon={HomeIcon}
-            >
-                <p className="test-element">Hi everyone</p>
-            </Collapse>
-        );
-
-        const rightIconContainer = container.querySelector("div.items-end");
-        expect(rightIconContainer?.querySelector("svg")).toEqual(rightIconContainer?.firstElementChild);
-        expect(rightIconContainer).toMatchSnapshot();
-    });
-
-    it("Respects rightIcon prop as a JSX element", () => {
-        const {container} = render(
-            <Collapse
-                headerContent='My Collapse'
-                rightIcon={<HomeIcon />}
-            >
-                <p className="test-element">Hi everyone</p>
-            </Collapse>
-        );
-
-        const rightIconContainer = container.querySelector("div.items-end");
-        expect(rightIconContainer?.querySelector("svg")).toEqual(rightIconContainer?.firstElementChild);
-        expect(rightIconContainer).toMatchSnapshot();
-    });
-
-    it("Does not render leftIcon when prop is undefined", () => {
-        const {container} = render(
-            <Collapse
-                headerContent='My Collapse'
-            >
-                <p className="test-element">Hi everyone</p>
-            </Collapse>
-        );
-
-        const collapseTitleEl = container.querySelector("div.collapse-title");
-        expect(collapseTitleEl?.querySelector("svg")).not.toEqual(collapseTitleEl?.firstElementChild);
-        expect(collapseTitleEl).toMatchSnapshot();
-    });
-
-    it("Respects leftIconClasses arg", () => {
-        const {container} = render(
-            <Collapse
-                headerContent='My Collapse'
-                leftIcon={HomeIcon}
-                leftIconClasses='some-icon-class'
-            >
-                <p className="test-element">Hi everyone</p>
-            </Collapse>
-        );
-
-        const collapseTitleEl = container.querySelector("div.collapse-title");
-        expect(collapseTitleEl?.querySelector("svg.some-icon-class")).toBeInTheDocument();
-        expect(collapseTitleEl).toMatchSnapshot();
-    });
-
-    it("Respects rightIconClasses arg", () => {
-        const {container} = render(
-            <Collapse
-                headerContent='My Collapse'
-                rightIconClasses='some-icon-class'
-            >
-                <p className="test-element">Hi everyone</p>
-            </Collapse>
-        );
-
-        const collapseTitleEl = container.querySelector("div.collapse-title");
-        const iconEl = collapseTitleEl?.querySelector("svg.some-icon-class");
-        expect(iconEl).toBeInTheDocument();
-        expect(collapseTitleEl).toMatchSnapshot();
+        consoleSpy.mockRestore();
     });
 });

@@ -91,6 +91,19 @@ describe("DropdownMenu", () => {
         consoleSpy.mockRestore();
     });
 
+    it("Throws an error when less than 2 children are passed", () => {
+        const SwapAny :any = Swap;
+        const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+
+        expect(()=>render(
+            <SwapAny className="text-5xl">
+                <div className="first-el">🥵</div>
+            </SwapAny>
+        )).toThrowError("Swap expects exactly two root children");
+
+        consoleSpy.mockRestore();
+    });
+
     it("Should respect the transition prop when it's flip", ()=>{
         const { container } = render(
             <Swap transition="flip" className="text-5xl">
