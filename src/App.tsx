@@ -19,7 +19,8 @@ import { CardActions } from "./components/card/CardActions";
 import { Swap } from "./components/swap/Swap";
 import { CollapseTitle } from "./components/collapses/CollapseTitle";
 import { CollapseBody } from "./components/collapses/CollapseBody";
-import { ArrowDownIcon } from "@heroicons/react/24/solid";
+import { ArrowDownIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
+import { ButtonGroup } from "./components/buttons/ButtonGroup";
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -39,7 +40,7 @@ export const App = () => {
                         RightIcon={<ArrowDownIcon className="h-5 w-5"/>}
                     >
                         <div className="mr-4">
-                            <FontAwesomeIcon icon={faGitlab} className="h-5 w-5" />
+                            <Cog6ToothIcon className="h-5 w-5" />
                         </div>
                         <h2 className="w-full text-2xl">This is a Collapse</h2>
                     </CollapseTitle>
@@ -64,6 +65,12 @@ export const App = () => {
                         console.log(e);
                     }}
                 >Hello</Button>
+
+                <ButtonGroup>
+                    <Button>Button 1</Button>
+                    <Button isActive>Button 2</Button>
+                    <Button>Button 3</Button>
+                </ButtonGroup>
 
                 <Avatar
                     className="m-5"
