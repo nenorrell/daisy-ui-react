@@ -1,4 +1,4 @@
-import React, {forwardRef, MouseEventHandler, PropsWithChildren, ReactNode } from "react";
+import React, {forwardRef, MouseEventHandler, ReactNode } from "react";
 import { useToggle } from "../../modules/hooks";
 import clsx from "clsx";
 
@@ -10,7 +10,7 @@ export interface ISwap {
     onClick ?:MouseEventHandler
     children :[ReactNode, ReactNode]
 }
-export const Swap = forwardRef<HTMLLabelElement, PropsWithChildren<ISwap>>((
+export const Swap = forwardRef<HTMLLabelElement, ISwap>((
     props,
     ref
 )=>{

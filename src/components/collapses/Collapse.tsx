@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren, ReactElement, ReactNode, RefObject, useEffect, useMemo, useRef, useState } from "react";
+import React, { ForwardedRef, forwardRef, MouseEventHandler, ReactElement, ReactNode, RefObject, useEffect, useMemo, useRef, useState } from "react";
 import { WithRef } from "../../@types/Generic";
 import { ICollapseBody } from "./CollapseBody";
 import { ICollapseTitle } from "./CollapseTitle";
@@ -27,7 +27,7 @@ interface ICollapse {
 type ChildWithRef = ReactElement<WithRef<ICollapseTitle | ICollapseBody, HTMLDivElement>>;
 
 export const Collapse = forwardRef((
-    props :PropsWithChildren<ICollapse>,
+    props :ICollapse,
     ref ?:ForwardedRef<HTMLDivElement>
 ) => {
     const expandableContent = useRef<HTMLDivElement>(null);

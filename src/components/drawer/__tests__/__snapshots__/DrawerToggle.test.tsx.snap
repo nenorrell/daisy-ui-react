@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DrawerToggle Component Variants Respects accent variant 1`] = `
+<label
+  class="btn drawer-button btn-accent"
+  for="test-id"
+>
+  Toggle me with 
+  accent
+</label>
+`;
+
+exports[`DrawerToggle Component Variants Respects error variant 1`] = `
+<label
+  class="btn drawer-button btn-error"
+  for="test-id"
+>
+  Toggle me with 
+  error
+</label>
+`;
+
+exports[`DrawerToggle Component Variants Respects info variant 1`] = `
+<label
+  class="btn drawer-button btn-info"
+  for="test-id"
+>
+  Toggle me with 
+  info
+</label>
+`;
+
+exports[`DrawerToggle Component Variants Respects neutral variant 1`] = `
+<label
+  class="btn drawer-button btn-neutral"
+  for="test-id"
+>
+  Toggle me with 
+  neutral
+</label>
+`;
+
+exports[`DrawerToggle Component Variants Respects primary variant 1`] = `
+<label
+  class="btn drawer-button btn-primary"
+  for="test-id"
+>
+  Toggle me with 
+  primary
+</label>
+`;
+
+exports[`DrawerToggle Component Variants Respects secondary variant 1`] = `
+<label
+  class="btn drawer-button btn-secondary"
+  for="test-id"
+>
+  Toggle me with 
+  secondary
+</label>
+`;
+
+exports[`DrawerToggle Component Variants Respects success variant 1`] = `
+<label
+  class="btn drawer-button btn-success"
+  for="test-id"
+>
+  Toggle me with 
+  success
+</label>
+`;
+
+exports[`DrawerToggle Component Variants Respects warning variant 1`] = `
+<label
+  class="btn drawer-button btn-warning"
+  for="test-id"
+>
+  Toggle me with 
+  warning
+</label>
+`;
