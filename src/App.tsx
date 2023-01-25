@@ -19,7 +19,13 @@ import { CardActions } from "./components/card/CardActions";
 import { Swap } from "./components/swap/Swap";
 import { CollapseTitle } from "./components/collapses/CollapseTitle";
 import { CollapseBody } from "./components/collapses/CollapseBody";
-import { ArrowDownIcon } from "@heroicons/react/24/solid";
+import { ArrowDownIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
+import { ButtonGroup } from "./components/buttons/ButtonGroup";
+import { useState } from "react";
+import { Drawer } from "./components/drawer/Drawer";
+import { DrawerSide } from "./components/drawer/DrawerSide";
+import { DrawerContent } from "./components/drawer/DrawerContent";
+import { DrawerToggle } from "./components/drawer/DrawerToggle";
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -28,18 +34,36 @@ import { ArrowDownIcon } from "@heroicons/react/24/solid";
 export const App = () => {
     const [isConfirmModalOpen, toggleConfirmModal] = useToggle(false);
     const [isModalOpen, toggleModal] = useToggle(false);
+    const [counter, setCounter] = useState(0);
 
     return (
         <>
+            <div className="m-2 w-1/2 relative overflow-x-auto">
+                <Drawer id="test-drawer" className="h-52">
+                    <DrawerContent>
+                        <DrawerToggle>Toggle me</DrawerToggle>
+                    </DrawerContent>
+                    <DrawerSide>
+                        <Menu variant="base-200" className="shadow w-52">
+                            <MenuItem>Hello</MenuItem>
+                            <MenuItem>Hello</MenuItem>
+                            <MenuItem isDisabled>Border</MenuItem>
+                            <MenuItem>Hello</MenuItem>
+                        </Menu>
+                    </DrawerSide>
+                </Drawer>
+            </div>
+
             <div className="mb-2 text-7xl">Dev sandbox</div>
             <div>
+                <Button onClick={()=>setCounter(counter+1)}>Thang</Button>
                 <Collapse className="w-1/2 m-5" defaultExpand>
                     <CollapseTitle
                         className="bg-base-300 rounded-t-md"
                         RightIcon={<ArrowDownIcon className="h-5 w-5"/>}
                     >
                         <div className="mr-4">
-                            <FontAwesomeIcon icon={faGitlab} className="h-5 w-5" />
+                            <Cog6ToothIcon className="h-5 w-5" />
                         </div>
                         <h2 className="w-full text-2xl">This is a Collapse</h2>
                     </CollapseTitle>
@@ -64,6 +88,12 @@ export const App = () => {
                         console.log(e);
                     }}
                 >Hello</Button>
+
+                <ButtonGroup>
+                    <Button>Button 1</Button>
+                    <Button isActive>Button 2</Button>
+                    <Button>Button 3</Button>
+                </ButtonGroup>
 
                 <Avatar
                     className="m-5"

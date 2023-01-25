@@ -122,4 +122,11 @@ describe("Button", ()=>{
 
         expect(button).toHaveClass("btn-square");
     });
+
+    it("applies isActive class", () => {
+        const { container } = render(<Button isActive />);
+        const button = container.firstChild;
+
+        expect(button).toHaveClass("btn-active");
+    });
 });

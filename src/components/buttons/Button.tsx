@@ -18,6 +18,7 @@ interface IButton {
     isGlass ?:boolean
     isLoading ?:boolean
     noAnimation ?:boolean
+    isActive ?:boolean
     shape ?:"circle" | "square"
 }
 export const Button :FC<PropsWithChildren<IButton>> = forwardRef((
@@ -38,6 +39,7 @@ export const Button :FC<PropsWithChildren<IButton>> = forwardRef((
                 variantColors?.btn,
                 props.className,
                 props.isGhost && "btn-ghost",
+                props.isActive && "btn-active",
                 props.isGlass && "glass",
                 props.isLink && "btn-link",
                 props.isLoading && "loading",

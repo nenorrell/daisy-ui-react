@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren, ReactElement, ReactNode, RefObject, useEffect, useRef, useState } from "react";
+import React, { ForwardedRef, forwardRef, MouseEventHandler, ReactElement, ReactNode, RefObject, useEffect, useMemo, useRef, useState } from "react";
 import { WithRef } from "../../@types/Generic";
 import { ICollapseBody } from "./CollapseBody";
 import { ICollapseTitle } from "./CollapseTitle";
@@ -27,7 +27,7 @@ interface ICollapse {
 type ChildWithRef = ReactElement<WithRef<ICollapseTitle | ICollapseBody, HTMLDivElement>>;
 
 export const Collapse = forwardRef((
-    props :PropsWithChildren<ICollapse>,
+    props :ICollapse,
     ref ?:ForwardedRef<HTMLDivElement>
 ) => {
     const expandableContent = useRef<HTMLDivElement>(null);
@@ -37,7 +37,7 @@ export const Collapse = forwardRef((
         throw Error("Collapse expects exactly two root children");
     }
 
-    const formattedChildren = React.Children.map<ReactNode, ChildWithRef>(props.children, (child, i) => {
+    const formattedChildren = useMemo(()=>React.Children.map<ReactNode, ChildWithRef>(props.children, (child, i) => {
         if(React.isValidElement(child)) {
             if(i == 0) {
                 // The first child is always treated as the Collapse Title
@@ -60,7 +60,7 @@ export const Collapse = forwardRef((
                 ref: expandableContent
             });
         }
-    });
+    }), [isExpanded]);
 
     useEffect(()=>{
         toggleExpand(expandableContent, isExpanded, props.parentCollapse);
