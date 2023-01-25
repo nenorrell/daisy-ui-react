@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import {forwardRef, ReactElement, useEffect, useRef } from "react";
+import {FC, PropsWithChildren, ReactElement, useEffect, useRef } from "react";
 import { nanoid } from "nanoid";
 
 export interface IDrawer{
@@ -10,10 +10,7 @@ export interface IDrawer{
     children :ReactElement[] | ReactElement
 }
 
-export const Drawer = forwardRef<HTMLDivElement, IDrawer>((
-    props,
-    ref
-)=>{
+export const Drawer :FC<PropsWithChildren<IDrawer>> = (props) =>{
     const drawerId = props.id || nanoid();
     const drawerEL = useRef<HTMLDivElement>(null);
 
@@ -39,6 +36,6 @@ export const Drawer = forwardRef<HTMLDivElement, IDrawer>((
             {props.children}
         </div>
     );
-});
+};
 
 Drawer.displayName = "Drawer";
