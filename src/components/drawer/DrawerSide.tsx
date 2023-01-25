@@ -10,7 +10,7 @@ export const DrawerSide = forwardRef<HTMLDivElement, PropsWithChildren<IDrawerSi
 )=>{
     return (
         <div ref={ref} className={clsx(props.className, "drawer-side")}>
-            <label htmlFor={(props as any).drawerId} className="drawer-overlay"></label>
+            <label className="drawer-overlay"></label>
             {props.children}
         </div>
     );

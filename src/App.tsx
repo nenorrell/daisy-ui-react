@@ -42,6 +42,7 @@ export const App = () => {
                 <Drawer id="test-drawer" className="h-52">
                     <DrawerContent>
                         <DrawerToggle>Toggle me</DrawerToggle>
+                        <p>Test things</p>
                     </DrawerContent>
                     <DrawerSide>
                         <Menu variant="base-200" className="shadow w-52">

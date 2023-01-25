@@ -1,21 +1,27 @@
 import clsx from "clsx";
-import {forwardRef, PropsWithChildren, ReactElement } from "react";
-import { passPropToChildren } from "../../modules/utility";
+import {FC, PropsWithChildren, ReactElement, useEffect, useRef } from "react";
 
 export interface IDrawerContent {
     className ?:string
     children :ReactElement[] | ReactElement
 }
 
-export const DrawerContent = forwardRef<HTMLDivElement, PropsWithChildren<IDrawerContent>>((
-    props,
-    ref
-)=>{
+export const DrawerContent :FC<PropsWithChildren<IDrawerContent>> = (props) =>{
+    const drawerContent = useRef<HTMLDivElement>(null);
+
+    // This allows us to pass the drawerId to only the toggle element instead of all children
+    useEffect(()=>{
+        const toggleEl = drawerContent.current?.querySelector("label.drawer-button");
+        if(toggleEl) {
+            toggleEl.setAttribute("for", (props as any).drawerId);
+        }
+    });
+
     return (
-        <div ref={ref} className={clsx("drawer-content", props.className)}>
-            {passPropToChildren(props.children, (props as any).drawerId)}
+        <div ref={drawerContent} className={clsx("drawer-content", props.className)}>
+            {props.children}
         </div>
     );
-});
+};
 
-DrawerContent.displayName = "DrawerContent";
+
