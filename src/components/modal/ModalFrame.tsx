@@ -1,7 +1,6 @@
 import React, {forwardRef, MouseEventHandler, PropsWithChildren } from "react";
 import clsx from "clsx";
 import { Variant } from "../../@types/Colors";
-import ColorMap from "../../modules/ColorMap";
 import { Button } from "../buttons/Button";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 
@@ -23,8 +22,6 @@ export const ModalFrame = forwardRef<HTMLDivElement, PropsWithChildren<IModalFra
     {variant="neutral", overlayClose=true, ...props},
     ref
 )=>{
-    const variantColors = ColorMap.get(variant);
-
     return (
         <div ref={ref} id={props.id} onClick={overlayClose ? props.closeHandler : undefined} className={clsx(
             "modal",
@@ -38,8 +35,10 @@ export const ModalFrame = forwardRef<HTMLDivElement, PropsWithChildren<IModalFra
             }} className={clsx(
                 "modal-box",
                 props.className,
-                variantColors.bg,
-                variantColors.text
+                {
+                    [`bg-${variant}`]: variant,
+                    [`text-${variant}-content`]: variant
+                }
             )}>
                 {
                     props.cornerClose && <Button

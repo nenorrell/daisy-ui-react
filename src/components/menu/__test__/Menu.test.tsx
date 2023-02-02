@@ -2,7 +2,6 @@ import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import { Menu } from "../Menu";
 import { VariantOptions } from "../../../modules/testUtils";
-import ColorMap from "../../../modules/ColorMap";
 
 describe("Menu component", () => {
     describe("Variants", ()=>{
@@ -12,9 +11,7 @@ describe("Menu component", () => {
                     <Menu variant={variant}><li>Testing variant {variant}</li></Menu>
                 );
                 const container = component.container.querySelector("ul.menu");
-                const colors = ColorMap.get(variant);
-
-                expect(container).toHaveClass(colors.bg, colors.text);
+                expect(container).toHaveClass(`bg-${variant}`, `text-${variant}-content`);
                 expect(container).toMatchSnapshot();
             });
         });

@@ -1,5 +1,3 @@
-export * as ColorMap from "./modules/ColorMap";
-
 export { Badge } from "./components/badge/Badge";
 export { Button } from "./components/buttons/Button";
 export { Avatar } from "./components/avatar/Avatar";

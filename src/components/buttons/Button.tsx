@@ -1,9 +1,7 @@
 import { FC, ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren } from "react";
 import { BaselessVariant } from "../../@types/Colors";
 import { ButtonSize } from "../../@types/Daisy";
-import ColorMap from "../../modules/ColorMap";
 import clsx from "clsx";
-import SizeMap from "../../modules/SizeMap";
 
 interface IButton {
     id ?:string
@@ -25,9 +23,6 @@ export const Button :FC<PropsWithChildren<IButton>> = forwardRef((
     {variant="neutral", size="md", ...props},
     ref ?:ForwardedRef<HTMLButtonElement>
 )=>{
-    const variantColors = ColorMap.get(variant);
-    const sizing = SizeMap.get(size);
-
     return (
         <button
             id={props.id}
@@ -35,8 +30,10 @@ export const Button :FC<PropsWithChildren<IButton>> = forwardRef((
             onClick={props.onClick}
             className={clsx(
                 "btn",
-                sizing.btn,
-                variantColors?.btn,
+                {
+                    [`btn-${variant}`]: variant,
+                    [`btn-${size}`]: size
+                },
                 props.className,
                 props.isGhost && "btn-ghost",
                 props.isActive && "btn-active",

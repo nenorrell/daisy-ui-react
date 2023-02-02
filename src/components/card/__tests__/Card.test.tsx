@@ -1,5 +1,4 @@
 import { render } from "@testing-library/react";
-import ColorMap from "../../../modules/ColorMap";
 import { VariantOptions } from "../../../modules/testUtils";
 import { Button } from "../../buttons/Button";
 import { Card } from "../Card";
@@ -20,9 +19,7 @@ describe("Card component", () => {
                     </Card>
                 );
                 const container = component.container.querySelector("div.card");
-                const colors = ColorMap.get(variant);
-
-                expect(container).toHaveClass(colors.bg, colors.text);
+                expect(container).toHaveClass(`bg-${variant}`, `text-${variant}-content`);
                 expect(container).toMatchSnapshot();
             });
         });

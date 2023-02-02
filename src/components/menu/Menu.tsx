@@ -1,7 +1,6 @@
 import {forwardRef, MouseEventHandler, PropsWithChildren } from "react";
 import clsx from "clsx";
 import { Variant } from "../../@types/Colors";
-import ColorMap from "../../modules/ColorMap";
 
 export interface IMenu {
     id ?:string
@@ -16,8 +15,6 @@ export const Menu = forwardRef<HTMLUListElement, PropsWithChildren<IMenu>>((
     {variant="neutral", type="vertical", ...props},
     ref
 )=>{
-    const variantColors = ColorMap.get(variant);
-
     return (
         <ul
             id={props.id}
@@ -26,8 +23,10 @@ export const Menu = forwardRef<HTMLUListElement, PropsWithChildren<IMenu>>((
             className={clsx(
                 "menu",
                 type,
-                variantColors.bg,
-                variantColors.text,
+                {
+                    [`bg-${variant}`]: variant,
+                    [`text-${variant}-content`]: variant
+                },
                 props.className
             )}
             onClick={props.onClick}

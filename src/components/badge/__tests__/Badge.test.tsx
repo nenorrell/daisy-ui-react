@@ -1,6 +1,4 @@
 import { fireEvent, render } from "@testing-library/react";
-import ColorMap from "../../../modules/ColorMap";
-import SizeMap from "../../../modules/SizeMap";
 import { BaselessVariantOptions, ComponentSizes } from "../../../modules/testUtils";
 import { Badge } from "../Badge";
 
@@ -10,9 +8,8 @@ describe("Badge", ()=>{
             it(`Respects ${variant} variant`, ()=>{
                 const component = render(<Badge variant={variant}><span>testing {variant} variant</span></Badge>);
                 const container = component.container.querySelector("div.badge");
-                const colors = ColorMap.get(variant);
 
-                expect(container).toHaveClass(colors.badge as any);
+                expect(container).toHaveClass(`badge-${variant}`);
                 expect(container).toMatchSnapshot();
             });
         });
@@ -25,9 +22,8 @@ describe("Badge", ()=>{
                     <Badge size={size}><span>testing {size} button size</span></Badge>
                 );
                 const container = component.container.querySelector("div.badge");
-                const sizing = SizeMap.get(size);
 
-                expect(container).toHaveClass(sizing.badge as any);
+                expect(container).toHaveClass(`badge-${size}`);
                 expect(container).toMatchSnapshot();
             });
         });

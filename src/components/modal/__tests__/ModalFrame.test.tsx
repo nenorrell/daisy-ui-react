@@ -1,5 +1,4 @@
 import { render, fireEvent } from "@testing-library/react";
-import ColorMap from "../../../modules/ColorMap";
 import { VariantOptions } from "../../../modules/testUtils";
 import { ModalFrame } from "../ModalFrame";
 
@@ -9,9 +8,7 @@ describe("ModalFrame", () => {
             it(`Respects ${variant} variant`, ()=>{
                 const component = render(<ModalFrame variant={variant} isOpen={true} closeHandler={jest.fn()}>testing {variant} variant</ModalFrame>);
                 const container = component.container.querySelector("div.modal-box");
-                const colors = ColorMap.get(variant);
-
-                expect(container).toHaveClass(colors.bg, colors.text);
+                expect(container).toHaveClass(`bg-${variant}`, `text-${variant}-content`);
                 expect(container).toMatchSnapshot();
             });
         });

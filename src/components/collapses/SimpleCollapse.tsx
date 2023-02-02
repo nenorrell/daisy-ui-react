@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { Variant } from "../../@types/Colors";
-import ColorMap from "../../modules/ColorMap";
 import { useToggle } from "../../modules/hooks";
 import { Collapse } from "./Collapse";
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from "react";
@@ -19,7 +18,6 @@ export const SimpleCollapse = forwardRef((
     {variant="neutral", ...props} :PropsWithChildren<ISimpleCollapse>,
     ref ?:ForwardedRef<HTMLDivElement>
 )=>{
-    const variantColors = ColorMap.get(variant);
     const [isExpanded, toggle] = useToggle(props.defaultExpand || false);
 
     return (
@@ -27,8 +25,10 @@ export const SimpleCollapse = forwardRef((
             <CollapseTitle
                 onClick={toggle}
                 className={clsx(
-                    variantColors.bg,
-                    variantColors.text,
+                    {
+                        [`bg-${variant}`]: variant,
+                        [`text-${variant}-content`]: variant
+                    },
                     isExpanded && "rounded-t-md",
                     !isExpanded && "rounded-md transition-all duration-[1s]"
                 )}
@@ -42,8 +42,10 @@ export const SimpleCollapse = forwardRef((
             </CollapseTitle>
 
             <CollapseBody className={clsx(
-                variantColors.bg,
-                variantColors.text,
+                {
+                    [`bg-${variant}`]: variant,
+                    [`text-${variant}-content`]: variant
+                },
                 props.rounded && "rounded-b-md"
             )}>
                 {props.children}

@@ -1,7 +1,6 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { render } from "@testing-library/react";
-import ColorMap from "../../../modules/ColorMap";
 import { VariantOptions } from "../../../modules/testUtils";
 import { SimpleCollapse } from "../SimpleCollapse";
 
@@ -19,10 +18,9 @@ describe("SimpleCollapse", ()=>{
                 );
                 const headerContainer = component.container.querySelector("div.collapse-title");
                 const bodyContainer = component.container.querySelector("div.collapse-body") as HTMLElement;
-                const colors = ColorMap.get(variant);
 
-                expect(headerContainer).toHaveClass(colors.bg, colors.text);
-                expect(bodyContainer).toHaveClass(colors.bg, colors.text);
+                expect(headerContainer).toHaveClass(`bg-${variant}`, `text-${variant}-content`);
+                expect(bodyContainer).toHaveClass(`bg-${variant}`, `text-${variant}-content`);
 
                 expect(headerContainer).toMatchSnapshot();
                 expect(bodyContainer).toMatchSnapshot();

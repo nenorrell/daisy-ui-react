@@ -24,7 +24,7 @@ exports[`Card component Variants Respects accent variant 1`] = `
 
 exports[`Card component Variants Respects base-100 variant 1`] = `
 <div
-  class="card bg-base-100 text-base-content card-normal"
+  class="card bg-base-100 text-base-100-content card-normal"
 >
   <div
     class="card-body"
@@ -46,7 +46,7 @@ exports[`Card component Variants Respects base-100 variant 1`] = `
 
 exports[`Card component Variants Respects base-200 variant 1`] = `
 <div
-  class="card bg-base-200 text-base-content card-normal"
+  class="card bg-base-200 text-base-200-content card-normal"
 >
   <div
     class="card-body"
@@ -68,7 +68,7 @@ exports[`Card component Variants Respects base-200 variant 1`] = `
 
 exports[`Card component Variants Respects base-300 variant 1`] = `
 <div
-  class="card bg-base-300 text-base-content card-normal"
+  class="card bg-base-300 text-base-300-content card-normal"
 >
   <div
     class="card-body"
