@@ -5,6 +5,7 @@ import { Collapse } from "./Collapse";
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from "react";
 import { CollapseTitle } from "./CollapseTitle";
 import { CollapseBody } from "./CollapseBody";
+import { getTextColor } from "../../modules/colors";
 
 interface ISimpleCollapse {
     headerContent :string
@@ -27,7 +28,7 @@ export const SimpleCollapse = forwardRef((
                 className={clsx(
                     {
                         [`bg-${variant}`]: variant,
-                        [`text-${variant}-content`]: variant
+                        [`text-${getTextColor(variant)}-content`]: variant
                     },
                     isExpanded && "rounded-t-md",
                     !isExpanded && "rounded-md transition-all duration-[1s]"
@@ -44,7 +45,7 @@ export const SimpleCollapse = forwardRef((
             <CollapseBody className={clsx(
                 {
                     [`bg-${variant}`]: variant,
-                    [`text-${variant}-content`]: variant
+                    [`text-${getTextColor(variant)}-content`]: variant
                 },
                 props.rounded && "rounded-b-md"
             )}>

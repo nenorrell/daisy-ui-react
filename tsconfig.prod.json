@@ -6,6 +6,7 @@
     },
     "include": [
         "src/exports.ts",
-        "src/@types/*"
+        "src/@types/*",
+        "src/tw-safelist.js",
     ]
 }

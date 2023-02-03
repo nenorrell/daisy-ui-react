@@ -1,6 +1,7 @@
 import {forwardRef, MouseEventHandler, PropsWithChildren } from "react";
 import clsx from "clsx";
 import { Variant } from "../../@types/Colors";
+import { getTextColor } from "../../modules/colors";
 
 export interface IMenu {
     id ?:string
@@ -25,7 +26,7 @@ export const Menu = forwardRef<HTMLUListElement, PropsWithChildren<IMenu>>((
                 type,
                 {
                     [`bg-${variant}`]: variant,
-                    [`text-${variant}-content`]: variant
+                    [`text-${getTextColor(variant)}-content`]: variant
                 },
                 props.className
             )}

@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { Variant } from "../../@types/Colors";
 import { Button } from "../buttons/Button";
 import { XMarkIcon } from "@heroicons/react/24/solid";
+import { getTextColor } from "../../modules/colors";
 
 export interface IModalFrame {
     id ?:string
@@ -37,7 +38,7 @@ export const ModalFrame = forwardRef<HTMLDivElement, PropsWithChildren<IModalFra
                 props.className,
                 {
                     [`bg-${variant}`]: variant,
-                    [`text-${variant}-content`]: variant
+                    [`text-${getTextColor(variant)}-content`]: variant
                 }
             )}>
                 {

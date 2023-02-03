@@ -76,7 +76,7 @@ exports[`SimpleCollapse Variants Respects accent variant 2`] = `
 
 exports[`SimpleCollapse Variants Respects base-100 variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-base-100 text-base-100-content rounded-md transition-all duration-[1s]"
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-base-100 text-base-content rounded-md transition-all duration-[1s]"
 >
   <p
     class="w-full text-lg"
@@ -105,13 +105,13 @@ exports[`SimpleCollapse Variants Respects base-100 variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects base-100 variant 2`] = `
 <div
-  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-base-100 text-base-100-content"
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-base-100 text-base-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects base-200 variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-base-200 text-base-200-content rounded-md transition-all duration-[1s]"
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-base-200 text-base-content rounded-md transition-all duration-[1s]"
 >
   <p
     class="w-full text-lg"
@@ -140,13 +140,13 @@ exports[`SimpleCollapse Variants Respects base-200 variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects base-200 variant 2`] = `
 <div
-  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-base-200 text-base-200-content"
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-base-200 text-base-content"
 />
 `;
 
 exports[`SimpleCollapse Variants Respects base-300 variant 1`] = `
 <div
-  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-base-300 text-base-300-content rounded-md transition-all duration-[1s]"
+  class="collapse-title cursor-pointer flex items-center justify-center px-4 bg-base-300 text-base-content rounded-md transition-all duration-[1s]"
 >
   <p
     class="w-full text-lg"
@@ -175,7 +175,7 @@ exports[`SimpleCollapse Variants Respects base-300 variant 1`] = `
 
 exports[`SimpleCollapse Variants Respects base-300 variant 2`] = `
 <div
-  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-base-300 text-base-300-content"
+  class="collapse-body ease-linear duration-[.25s] transition-[height] overflow-hidden h-0 bg-base-300 text-base-content"
 />
 `;
 

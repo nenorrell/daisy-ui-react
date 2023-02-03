@@ -1,4 +1,5 @@
 import { render, fireEvent } from "@testing-library/react";
+import { getTextColor } from "../../../modules/colors";
 import { VariantOptions } from "../../../modules/testUtils";
 import { ModalFrame } from "../ModalFrame";
 
@@ -8,7 +9,7 @@ describe("ModalFrame", () => {
             it(`Respects ${variant} variant`, ()=>{
                 const component = render(<ModalFrame variant={variant} isOpen={true} closeHandler={jest.fn()}>testing {variant} variant</ModalFrame>);
                 const container = component.container.querySelector("div.modal-box");
-                expect(container).toHaveClass(`bg-${variant}`, `text-${variant}-content`);
+                expect(container).toHaveClass(`bg-${variant}`, `text-${getTextColor(variant)}-content`);
                 expect(container).toMatchSnapshot();
             });
         });

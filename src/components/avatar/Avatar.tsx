@@ -1,6 +1,7 @@
 import { ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren } from "react";
 import { Variant } from "../../@types/Colors";
 import clsx from "clsx";
+import { getTextColor } from "../../modules/colors";
 
 interface IAvatar {
     isPlaceholder ?:boolean
@@ -27,7 +28,7 @@ export const Avatar = forwardRef((
             <div className={clsx(
                 {
                     [`bg-${variant}`]: variant,
-                    [`text-${variant}-content`]: variant
+                    [`text-${getTextColor(variant)}-content`]: variant
                 },
                 props.contentClasses || "w-12"
             )}>

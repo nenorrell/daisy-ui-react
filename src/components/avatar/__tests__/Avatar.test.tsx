@@ -1,4 +1,5 @@
 import { fireEvent, render } from "@testing-library/react";
+import { getTextColor } from "../../../modules/colors";
 import { VariantOptions } from "../../../modules/testUtils";
 import { Avatar } from "../Avatar";
 
@@ -12,7 +13,7 @@ describe("Avatar", ()=>{
                     </Avatar>
                 );
                 const container = component.container.querySelector("div.find-me");
-                expect(container).toHaveClass(`bg-${variant}`, `text-${variant}-content`);
+                expect(container).toHaveClass(`bg-${variant}`, `text-${getTextColor(variant)}-content`);
                 expect(container).toMatchSnapshot();
             });
         });

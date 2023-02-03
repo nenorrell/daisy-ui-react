@@ -1,4 +1,5 @@
 import { render } from "@testing-library/react";
+import { getTextColor } from "../../../modules/colors";
 import { VariantOptions } from "../../../modules/testUtils";
 import { Button } from "../../buttons/Button";
 import { Card } from "../Card";
@@ -19,7 +20,7 @@ describe("Card component", () => {
                     </Card>
                 );
                 const container = component.container.querySelector("div.card");
-                expect(container).toHaveClass(`bg-${variant}`, `text-${variant}-content`);
+                expect(container).toHaveClass(`bg-${variant}`, `text-${getTextColor(variant)}-content`);
                 expect(container).toMatchSnapshot();
             });
         });

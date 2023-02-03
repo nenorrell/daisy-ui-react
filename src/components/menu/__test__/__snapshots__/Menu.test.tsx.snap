@@ -13,7 +13,7 @@ exports[`Menu component Variants Respects accent variant 1`] = `
 
 exports[`Menu component Variants Respects base-100 variant 1`] = `
 <ul
-  class="menu vertical bg-base-100 text-base-100-content"
+  class="menu vertical bg-base-100 text-base-content"
 >
   <li>
     Testing variant 
@@ -24,7 +24,7 @@ exports[`Menu component Variants Respects base-100 variant 1`] = `
 
 exports[`Menu component Variants Respects base-200 variant 1`] = `
 <ul
-  class="menu vertical bg-base-200 text-base-200-content"
+  class="menu vertical bg-base-200 text-base-content"
 >
   <li>
     Testing variant 
@@ -35,7 +35,7 @@ exports[`Menu component Variants Respects base-200 variant 1`] = `
 
 exports[`Menu component Variants Respects base-300 variant 1`] = `
 <ul
-  class="menu vertical bg-base-300 text-base-300-content"
+  class="menu vertical bg-base-300 text-base-content"
 >
   <li>
     Testing variant 

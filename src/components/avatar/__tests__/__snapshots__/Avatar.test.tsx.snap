@@ -12,7 +12,7 @@ exports[`Avatar Variants Respects accent variant 1`] = `
 
 exports[`Avatar Variants Respects base-100 variant 1`] = `
 <div
-  class="bg-base-100 text-base-100-content find-me"
+  class="bg-base-100 text-base-content find-me"
 >
   <span>
     base-100
@@ -22,7 +22,7 @@ exports[`Avatar Variants Respects base-100 variant 1`] = `
 
 exports[`Avatar Variants Respects base-200 variant 1`] = `
 <div
-  class="bg-base-200 text-base-200-content find-me"
+  class="bg-base-200 text-base-content find-me"
 >
   <span>
     base-200
@@ -32,7 +32,7 @@ exports[`Avatar Variants Respects base-200 variant 1`] = `
 
 exports[`Avatar Variants Respects base-300 variant 1`] = `
 <div
-  class="bg-base-300 text-base-300-content find-me"
+  class="bg-base-300 text-base-content find-me"
 >
   <span>
     base-300
