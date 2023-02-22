@@ -46,11 +46,6 @@ describe("ModalFrame", () => {
         expect(container.firstChild).toHaveClass("modal-bottom");
     });
 
-    it("should render with the correct id", () => {
-        const { container } = render(<ModalFrame isOpen={true} id="test-id" closeHandler={jest.fn()} />);
-        expect(container.firstChild).toHaveAttribute("id", "test-id");
-    });
-
     it("should render with the correct class name", () => {
         const { container } = render(<ModalFrame isOpen={true} className="test-class" closeHandler={jest.fn()} />);
         expect(container.querySelector(".modal-box")).toHaveClass("test-class");

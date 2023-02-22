@@ -9,27 +9,26 @@ interface IModal extends IModalFrame{
     noActionButton ?:boolean
 }
 export const Modal = forwardRef<HTMLDivElement, PropsWithChildren<IModal>>((
-    props,
+    {
+        closeButtonText,
+        closeButtonVariant,
+        noActionButton,
+        children,
+        ...props
+    },
     ref
 )=>{
     return (
         <ModalFrame
             ref={ref}
-            id={props.id}
-            variant={props.variant}
-            isOpen={props.isOpen}
-            position={props.position}
-            className={props.className}
-            closeHandler={props.closeHandler}
-            cornerClose={props.cornerClose}
-            overlayClose={props.overlayClose}
+            {...props}
         >
-            {props.children}
+            {children}
 
-            { !props.noActionButton &&
+            { !noActionButton &&
                 <div className="modal-action">
-                    <Button variant={props.closeButtonVariant} onClick={props.closeHandler}>
-                        {props.closeButtonText || "Close"}
+                    <Button variant={closeButtonVariant} onClick={props.closeHandler}>
+                        {closeButtonText || "Close"}
                     </Button>
                 </div>
             }

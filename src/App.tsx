@@ -21,11 +21,11 @@ import { CollapseTitle } from "./components/collapses/CollapseTitle";
 import { CollapseBody } from "./components/collapses/CollapseBody";
 import { ArrowDownIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
 import { ButtonGroup } from "./components/buttons/ButtonGroup";
-import { useState } from "react";
 import { Drawer } from "./components/drawer/Drawer";
 import { DrawerSide } from "./components/drawer/DrawerSide";
 import { DrawerContent } from "./components/drawer/DrawerContent";
 import { DrawerToggle } from "./components/drawer/DrawerToggle";
+import { Checkbox } from "./components/checkbox/Checkbox";
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -34,7 +34,6 @@ import { DrawerToggle } from "./components/drawer/DrawerToggle";
 export const App = () => {
     const [isConfirmModalOpen, toggleConfirmModal] = useToggle(false);
     const [isModalOpen, toggleModal] = useToggle(false);
-    const [counter, setCounter] = useState(0);
 
     return (
         <>
@@ -57,7 +56,6 @@ export const App = () => {
 
             <div className="mb-2 text-7xl">Dev sandbox</div>
             <div>
-                <Button onClick={()=>setCounter(counter+1)}>Thang</Button>
                 <Collapse className="w-1/2 m-5" defaultExpand>
                     <CollapseTitle
                         className="bg-base-300 rounded-t-md"
@@ -73,11 +71,6 @@ export const App = () => {
                         <p className="p-4">Hey everyone</p>
                     </CollapseBody>
                 </Collapse>
-
-                {/* <Collapse className="w-1/2 m-5">
-                    <div>Title</div>
-                    <div>Body</div>
-                </Collapse> */}
 
                 <SimpleCollapse LeftIcon={<FontAwesomeIcon icon={faGitlab} className="h-5 w-5" />} headerContent="Testing" variant="info" className="w-1/2 m-5" rounded={true}>
                     <p className="p-4">Hey everyone</p>
@@ -105,7 +98,7 @@ export const App = () => {
                     <span>NN</span>
                 </Avatar>
 
-                <Alert className="w-1/4 m-5" variant="error">
+                <Alert className="w-1/4 m-5" variant="warning">
                     WARNING
                 </Alert>
 
@@ -191,7 +184,7 @@ export const App = () => {
                         </div>
 
                         <div className="col-span-2 m-2">
-                            <Card variant="accent">
+                            <Card variant="base-300">
                                 <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                                 <CardBody>
                                     <CardTitle><h2>Card with actions</h2></CardTitle>
@@ -212,6 +205,8 @@ export const App = () => {
                         <div>🥶</div>
                     </Swap>
                 </div>
+
+                <Checkbox />
             </div>
         </>
     );

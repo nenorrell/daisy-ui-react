@@ -1,14 +1,11 @@
-import { FC, ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren } from "react";
+import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 import { BaselessVariant } from "../../@types/Colors";
 import { ButtonSize } from "../../@types/Daisy";
 import clsx from "clsx";
 
-interface IButton {
-    id ?:string
-    className ?:string
+interface IButton extends PropsWithChildren<HTMLAttributes<HTMLButtonElement>>{
     size ?:ButtonSize
     variant ?:BaselessVariant
-    onClick ?:MouseEventHandler<HTMLButtonElement>
     isGhost ?:boolean
     isLink ?:boolean
     isOutline ?:boolean
@@ -19,35 +16,49 @@ interface IButton {
     isActive ?:boolean
     shape ?:"circle" | "square"
 }
-export const Button :FC<PropsWithChildren<IButton>> = forwardRef((
-    {variant="neutral", size="md", ...props},
-    ref ?:ForwardedRef<HTMLButtonElement>
+export const Button = forwardRef<HTMLButtonElement, IButton>((
+    {
+        variant="neutral",
+        size="md",
+        className,
+        isGhost,
+        isLink,
+        isOutline,
+        isDisabled,
+        isGlass,
+        isLoading,
+        noAnimation,
+        isActive,
+        shape,
+        children,
+        ...props
+    },
+    ref
 )=>{
     return (
         <button
-            id={props.id}
+            {...props}
             ref={ref}
-            onClick={props.onClick}
             className={clsx(
                 "btn",
                 {
                     [`btn-${variant}`]: variant,
                     [`btn-${size}`]: size
                 },
-                props.className,
-                props.isGhost && "btn-ghost",
-                props.isActive && "btn-active",
-                props.isGlass && "glass",
-                props.isLink && "btn-link",
-                props.isLoading && "loading",
-                props.isOutline && "btn-outline",
-                props.noAnimation && "no-animation",
-                props.shape === "circle" && "btn-circle" ||
-                props.shape === "square" && "btn-square"
+                className,
+                isGhost && "btn-ghost",
+                isActive && "btn-active",
+                isGlass && "glass",
+                isLink && "btn-link",
+                isLoading && "loading",
+                isOutline && "btn-outline",
+                noAnimation && "no-animation",
+                shape === "circle" && "btn-circle" ||
+                shape === "square" && "btn-square"
             )}
-            disabled={props.isDisabled}
+            disabled={isDisabled}
         >
-            {props.children}
+            {children}
         </button>
     );
 });

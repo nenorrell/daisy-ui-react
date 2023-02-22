@@ -1,14 +1,11 @@
-import React, {forwardRef, MouseEventHandler, PropsWithChildren } from "react";
+import React, {forwardRef, HTMLAttributes, MouseEventHandler, PropsWithChildren } from "react";
 import clsx from "clsx";
 import { Variant } from "../../@types/Colors";
 import { Button } from "../buttons/Button";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { getTextColor } from "../../modules/colors";
 
-export interface IModalFrame {
-    id ?:string
-    className ?:string
-    /** @default neutral */
+export interface IModalFrame extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {
     variant ?:Variant
     isOpen :boolean
     /** @default "middle" */
@@ -20,39 +17,52 @@ export interface IModalFrame {
     overlayClose ?:boolean
 }
 export const ModalFrame = forwardRef<HTMLDivElement, PropsWithChildren<IModalFrame>>((
-    {variant="neutral", overlayClose=true, ...props},
+    {
+        variant="neutral",
+        overlayClose=true,
+        isOpen,
+        position,
+        closeHandler,
+        cornerClose,
+        className,
+        children,
+        ...props
+    },
     ref
 )=>{
     return (
-        <div ref={ref} id={props.id} onClick={overlayClose ? props.closeHandler : undefined} className={clsx(
+        <div onClick={overlayClose ? closeHandler : undefined} className={clsx(
             "modal",
-            props.isOpen && "modal-open",
-            props.position &&
-                props.position === "bottom" && "modal-bottom" ||
-                props.position === "middle" && "modal-middle"
+            isOpen && "modal-open",
+            position &&
+                position === "bottom" && "modal-bottom" ||
+                position === "middle" && "modal-middle"
         )}>
-            <div onClick={(e)=>{
-                overlayClose && e.stopPropagation();
-            }} className={clsx(
-                "modal-box",
-                props.className,
+            <div
+                {...props}
+                ref={ref}
+                onClick={(e)=>{
+                    overlayClose && e.stopPropagation();
+                }}
+                className={clsx(
+                    className,
+                    "modal-box",
+                    `bg-${variant}`,
+                    `text-${getTextColor(variant)}-content`
+                )}
+            >
                 {
-                    [`bg-${variant}`]: variant,
-                    [`text-${getTextColor(variant)}-content`]: variant
-                }
-            )}>
-                {
-                    props.cornerClose && <Button
+                    cornerClose && <Button
                         className="absolute right-1 top-1"
                         size="sm"
                         shape="circle"
                         isGhost
-                        onClick={props.closeHandler}
+                        onClick={closeHandler}
                     >
                         <XMarkIcon className="h-5 w-5"/>
                     </Button>
                 }
-                {props.children}
+                {children}
             </div>
         </div>
     );

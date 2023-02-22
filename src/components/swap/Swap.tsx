@@ -1,26 +1,29 @@
-import React, {forwardRef, MouseEventHandler, ReactNode } from "react";
+import React, {forwardRef, LabelHTMLAttributes, ReactNode } from "react";
 import { useToggle } from "../../modules/hooks";
 import clsx from "clsx";
 
-export interface ISwap {
-    id ?:string
-    className ?:string
+export interface ISwap extends LabelHTMLAttributes<HTMLLabelElement> {
     isActive ?:boolean
     transition ?: "rotate" | "flip"
-    onClick ?:MouseEventHandler
     children :[ReactNode, ReactNode]
 }
 export const Swap = forwardRef<HTMLLabelElement, ISwap>((
-    props,
+    {
+        className,
+        isActive,
+        transition,
+        children,
+        ...props
+    },
     ref
 )=>{
-    if(props.children.length !== 2) {
+    if(children.length !== 2) {
         throw Error("Swap expects exactly two root children");
     }
 
-    const [active, toggle] = useToggle(props.isActive || false);
+    const [active, toggle] = useToggle(isActive || false);
 
-    const formattedChildren = React.Children.map<ReactNode, ReactNode>(props.children, (child, i) => {
+    const formattedChildren = React.Children.map<ReactNode, ReactNode>(children, (child, i) => {
         if(React.isValidElement(child)) {
             const swapClass = i ? "swap-on" : "swap-off";
             return React.cloneElement(child, {
@@ -32,14 +35,14 @@ export const Swap = forwardRef<HTMLLabelElement, ISwap>((
 
     return (
         <label
-            id={props.id}
+            {...props}
             ref={ref}
             className={clsx(
                 "swap",
-                props.className,
+                className,
                 active && "swap-active",
-                props.transition === "rotate" && "swap-rotate",
-                props.transition === "flip" && "swap-flip"
+                transition === "rotate" && "swap-rotate",
+                transition === "flip" && "swap-flip"
             )}
             onClick={e =>{
                 toggle();

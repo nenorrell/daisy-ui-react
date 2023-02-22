@@ -1,16 +1,21 @@
 import clsx from "clsx";
-import { ForwardedRef, forwardRef, PropsWithChildren } from "react";
+import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 
-export interface ICollapseBody {
+export interface ICollapseBody extends PropsWithChildren<HTMLAttributes<HTMLDivElement>>{
     isExpanded ?:boolean,
-    className ?:string
 }
-export const CollapseBody = forwardRef((
-    props :PropsWithChildren<ICollapseBody>,
-    ref ?:ForwardedRef<HTMLDivElement>
+export const CollapseBody = forwardRef<HTMLDivElement, ICollapseBody>((
+    {
+        className,
+        isExpanded,
+        children,
+        ...props
+    },
+    ref
 ) => {
     return (
         <div
+            {...props}
             ref={ref}
             className={clsx(
                 "collapse-body",
@@ -18,11 +23,11 @@ export const CollapseBody = forwardRef((
                 "duration-[.25s]",
                 "transition-[height]",
                 "overflow-hidden",
-                !props.isExpanded && "h-0",
-                props.className
+                !isExpanded && "h-0",
+                className
             )}
         >
-            {props.children}
+            {children}
         </div>
     );
 });

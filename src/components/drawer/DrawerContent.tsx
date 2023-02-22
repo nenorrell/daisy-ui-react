@@ -1,17 +1,18 @@
 import clsx from "clsx";
-import {forwardRef, PropsWithChildren } from "react";
+import {forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 
-export interface IDrawerContent {
-    className ?:string
-}
-
+export interface IDrawerContent extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {}
 export const DrawerContent = forwardRef<HTMLDivElement, PropsWithChildren<IDrawerContent>>((
-    props,
+    {
+        className,
+        children,
+        ...props
+    },
     ref
 )=>{
     return (
-        <div ref={ref} className={clsx("drawer-content", props.className)}>
-            {props.children}
+        <div {...props} ref={ref} className={clsx("drawer-content", className)}>
+            {children}
         </div>
     );
 });

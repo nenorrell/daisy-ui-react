@@ -1,35 +1,42 @@
-import { FC, ForwardedRef, forwardRef, PropsWithChildren } from "react";
+import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 import { Variant } from "../../@types/Colors";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 import { getTextColor } from "../../modules/colors";
 
-interface ICard {
-    id ?:string
-    className ?:string
+interface ICard extends PropsWithChildren<HTMLAttributes<HTMLDivElement>>{
     variant ?:Variant
     isBordered ?:boolean
     imageFull ?:boolean
     size ?: "normal" | "compact"
     isSide ?:boolean
 }
-export const Card :FC<PropsWithChildren<ICard>> = forwardRef((
-    {variant="neutral", size="normal", ...props},
-    ref ?:ForwardedRef<HTMLDivElement>
+export const Card = forwardRef<HTMLDivElement, ICard>((
+    {
+        variant="neutral",
+        size="normal",
+        isBordered,
+        imageFull,
+        isSide,
+        className,
+        children,
+        ...props
+    },
+    ref
 )=>{
     return (
-        <div id={props.id} ref={ref} className={twMerge(clsx(
+        <div {...props} ref={ref} className={twMerge(clsx(
             "card",
             {
                 [`bg-${variant}`]: variant,
                 [`text-${getTextColor(variant)}-content`]: variant
             },
             size === "compact" ? "card-compact" : "card-normal",
-            props.isSide && "card-side",
-            props.imageFull && "image-full",
-            props.className
+            isSide && "card-side",
+            imageFull && "image-full",
+            className
         ))}>
-            {props.children}
+            {children}
         </div>
     );
 });

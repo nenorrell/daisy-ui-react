@@ -1,38 +1,44 @@
-import { ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren } from "react";
+import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 import { Variant } from "../../@types/Colors";
 import clsx from "clsx";
 import { getTextColor } from "../../modules/colors";
 
-interface IAvatar {
+interface IAvatar extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {
     isPlaceholder ?:boolean
     status ?:"online"|"offline"
-    className ?:string
     contentClasses ?:string
     variant ?:Variant
-    onClick ?:MouseEventHandler<HTMLDivElement>
 }
-export const Avatar = forwardRef((
-    {variant="neutral", ...props} :PropsWithChildren<IAvatar>,
-    ref ?:ForwardedRef<HTMLDivElement>
+export const Avatar = forwardRef<HTMLDivElement, IAvatar>((
+    {
+        variant="neutral",
+        isPlaceholder,
+        status,
+        contentClasses,
+        className,
+        children,
+        ...props
+    },
+    ref
 ) =>{
     return (
         <div
+            {...props}
             ref={ref}
             className={`avatar ${clsx(
-                props.className,
-                !props.isPlaceholder && "placeholder",
-                props.status
+                className,
+                !isPlaceholder && "placeholder",
+                status
             )}`}
-            onClick={props.onClick}
         >
             <div className={clsx(
                 {
                     [`bg-${variant}`]: variant,
                     [`text-${getTextColor(variant)}-content`]: variant
                 },
-                props.contentClasses || "w-12"
+                contentClasses || "w-12"
             )}>
-                {props.children}
+                {children}
             </div>
         </div>
     );
