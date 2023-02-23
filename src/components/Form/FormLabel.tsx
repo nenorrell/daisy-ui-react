@@ -7,6 +7,7 @@ interface IFormLabel extends PropsWithChildren<LabelHTMLAttributes<HTMLLabelElem
 
 export const FormLabel = forwardRef<HTMLDivElement, IFormLabel>((
     {
+        title,
         className,
         children,
         ...props
@@ -15,7 +16,7 @@ export const FormLabel = forwardRef<HTMLDivElement, IFormLabel>((
 )=>{
     return (
         <label {...props} className={clsx("label", className)}>
-            <span ref={ref}>{props.title}</span>
+            <span className="label-text" ref={ref}>{title}</span>
             {children}
         </label>
     );

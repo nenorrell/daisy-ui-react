@@ -1,10 +1,10 @@
 import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 import { NoBaseOrNeutralVariant } from "../../@types/Colors";
-import { ButtonSize } from "../../@types/Daisy";
+import { Size } from "../../@types/Daisy";
 import clsx from "clsx";
 
 interface ICheckbox extends PropsWithChildren<HTMLAttributes<HTMLInputElement>>{
-    size ?:ButtonSize
+    size ?:Size
     variant ?:NoBaseOrNeutralVariant
 }
 export const Checkbox = forwardRef<HTMLInputElement, ICheckbox>((
