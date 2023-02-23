@@ -19,7 +19,7 @@ describe("Checkbox", () => {
         ComponentSizes.forEach(size=>{
             it(`Respects ${size} size`, ()=>{
                 const component = render(
-                    <Checkbox size={size} />
+                    <Checkbox scale={size} />
                 );
                 const container = component.container.querySelector("input.checkbox");
 

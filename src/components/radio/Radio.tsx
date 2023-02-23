@@ -1,13 +1,13 @@
-import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
+import { forwardRef, InputHTMLAttributes, PropsWithChildren } from "react";
 import { NoBaseOrNeutralVariant } from "../../@types/Colors";
 import { Size } from "../../@types/Daisy";
 import clsx from "clsx";
 
-interface ICheckbox extends PropsWithChildren<HTMLAttributes<HTMLInputElement>>{
+interface IRadio extends PropsWithChildren<InputHTMLAttributes<HTMLInputElement>>{
     scale ?:Size
     variant ?:NoBaseOrNeutralVariant
 }
-export const Checkbox = forwardRef<HTMLInputElement, ICheckbox>((
+export const Radio = forwardRef<HTMLInputElement, IRadio>((
     {
         scale="md",
         variant,
@@ -19,15 +19,15 @@ export const Checkbox = forwardRef<HTMLInputElement, ICheckbox>((
     return (
         <input
             {...props}
-            type="checkbox"
+            type="radio"
             ref={ref}
             className={clsx(
-                "checkbox",
+                "radio",
                 className,
-                {[`checkbox-${scale}`]: scale},
-                {[`checkbox-${variant}`]: variant}
+                {[`radio-${scale}`]: scale},
+                {[`radio-${variant}`]: variant}
             )} />
     );
 });
 
-Checkbox.displayName = "Checkbox";
+Radio.displayName = "Radio";

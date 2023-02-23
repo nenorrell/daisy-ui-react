@@ -22,3 +22,8 @@ export {CardActions} from "./components/card/CardActions";
 export {CardBody} from "./components/card/CardBody";
 export {CardTitle} from "./components/card/CardTitle";
 export {Card} from "./components/card/Card";
+
+export { FormControl } from "./components/form/FormControl";
+export { FormLabel } from "./components/form/FormLabel";
+export { Checkbox } from "./components/checkbox/Checkbox";
+export { FileInput } from "./components/file-input/FileInput";

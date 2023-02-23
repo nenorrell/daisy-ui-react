@@ -26,8 +26,9 @@ import { DrawerSide } from "./components/drawer/DrawerSide";
 import { DrawerContent } from "./components/drawer/DrawerContent";
 import { DrawerToggle } from "./components/drawer/DrawerToggle";
 import { Checkbox } from "./components/checkbox/Checkbox";
-import { FormControl } from "./components/Form/FormControl";
-import { FormLabel } from "./components/Form/FormLabel";
+import { FormControl } from "./components/form/FormControl";
+import { FormLabel } from "./components/form/FormLabel";
+import { FileInput } from "./components/file-input/FileInput";
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -210,9 +211,11 @@ export const App = () => {
 
                 <FormControl>
                     <FormLabel title="Hi Mom!!" htmlFor="some">
-                        <Checkbox id="some"/>
+                        <Checkbox id="some" variant="secondary"/>
                     </FormLabel>
                 </FormControl>
+
+                <FileInput variant="primary"/>
             </div>
         </>
     );

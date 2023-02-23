@@ -4,6 +4,8 @@ const themeColors = ["primary", "secondary", "accent", "neutral"];
 const statusColors = ["info", "warning", "error", "success"];
 const baseColors = ["base-100", "base-200", "base-300"];
 const allColors = [...baseColors, ...statusColors, ...themeColors];
+const sizes = ["xs", "sm", "md", "lg"];
+const buttonSizes = ["block", "wide", ...sizes];
 
 const colorVariants = [
     "base-content",
@@ -27,11 +29,35 @@ const builtColors = colorVariants.reduce((acc, variant) => {
     return acc;
 }, []);
 
-const buttonVariants = [...themeColors, ...statusColors].map(variant => `"btn-${variant}";`);
-const statusVariants = statusColors.map(variant => `"alert-${variant}";`);
-const badgeVariants = [...themeColors, ...statusColors].map(variant => `"badge-${variant}";`);
+const buildClasses = (colors, sizes, prefix)=>{
+    return {
+        variants: colors.map(variant => `"${prefix}-${variant}";`),
+        sizes: sizes.map(variant => `"${prefix}-${variant}";`)
+    };
+};
 
-const builtVariants = [...builtColors, ...buttonVariants, ...statusVariants, ...badgeVariants];
+const buttonClasses = buildClasses([...themeColors, ...statusColors], buttonSizes, "btn");
+const alertClasses = buildClasses(statusColors, sizes, "alert");
+const badgeClasses = buildClasses([...themeColors, ...statusColors], sizes, "badge");
+const checkboxClasses = buildClasses([...themeColors, ...statusColors], sizes, "checkbox");
+const fileInputClasses = buildClasses([...themeColors, ...statusColors], sizes, "file-input");
+const radioClasses = buildClasses([...themeColors, ...statusColors], sizes, "radio");
+
+const builtVariants = [
+    ...builtColors,
+    ...buttonClasses.variants,
+    ...buttonClasses.sizes,
+    ...alertClasses.variants,
+    ...alertClasses.sizes,
+    ...badgeClasses.variants,
+    ...badgeClasses.sizes,
+    ...checkboxClasses.variants,
+    ...checkboxClasses.sizes,
+    ...fileInputClasses.variants,
+    ...fileInputClasses.sizes,
+    ...radioClasses.variants,
+    ...radioClasses.sizes,
+];
 
 async function buildFile(clrs) {
     try {
