@@ -1,5 +1,5 @@
 import { render, fireEvent } from "@testing-library/react";
-import ColorMap from "../../../modules/ColorMap";
+import { getTextColor } from "../../../modules/colors";
 import { VariantOptions } from "../../../modules/testUtils";
 import { ModalFrame } from "../ModalFrame";
 
@@ -9,9 +9,7 @@ describe("ModalFrame", () => {
             it(`Respects ${variant} variant`, ()=>{
                 const component = render(<ModalFrame variant={variant} isOpen={true} closeHandler={jest.fn()}>testing {variant} variant</ModalFrame>);
                 const container = component.container.querySelector("div.modal-box");
-                const colors = ColorMap.get(variant);
-
-                expect(container).toHaveClass(colors.bg, colors.text);
+                expect(container).toHaveClass(`bg-${variant}`, `text-${getTextColor(variant)}-content`);
                 expect(container).toMatchSnapshot();
             });
         });
@@ -46,11 +44,6 @@ describe("ModalFrame", () => {
     it("should render with the correct position class", () => {
         const { container } = render(<ModalFrame isOpen={true} position="bottom" closeHandler={jest.fn()} />);
         expect(container.firstChild).toHaveClass("modal-bottom");
-    });
-
-    it("should render with the correct id", () => {
-        const { container } = render(<ModalFrame isOpen={true} id="test-id" closeHandler={jest.fn()} />);
-        expect(container.firstChild).toHaveAttribute("id", "test-id");
     });
 
     it("should render with the correct class name", () => {

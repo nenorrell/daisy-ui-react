@@ -1,29 +1,35 @@
-import React, {forwardRef, MouseEventHandler } from "react";
+import React, {forwardRef, HTMLAttributes } from "react";
 import clsx from "clsx";
 
-export interface IMenuItem {
-    id ?:string
-    className ?:string
+export interface IMenuItem extends HTMLAttributes<HTMLLIElement>{
     isTitle ?:boolean
     isActive ?:boolean
-    onClick ?:MouseEventHandler
     isDisabled ?:boolean
     isBordered ?:boolean
     hover ?:boolean
     children :React.ReactElement | string
 }
 export const MenuItem = forwardRef<HTMLLIElement, IMenuItem>((
-    props,
+    {
+        isTitle,
+        isActive,
+        isDisabled,
+        isBordered,
+        hover,
+        className,
+        children,
+        ...props
+    },
     ref
 )=>{
-    let child :React.ReactElement | string = props.children;
+    let child :React.ReactElement | string = children;
     const childClasses = clsx(
-        props.isTitle && "menu-title",
-        props.isActive && "active",
+        isTitle && "menu-title",
+        isActive && "active",
     );
 
     if(typeof child !== "string") {
-        child = React.cloneElement(props.children as any, {
+        child = React.cloneElement(children as any, {
             ...(child).props,
             ...(childClasses && {
                 className: clsx(childClasses, child.props.className)
@@ -31,17 +37,17 @@ export const MenuItem = forwardRef<HTMLLIElement, IMenuItem>((
         });
     }
     else{
-        child = React.cloneElement(<span>{props.children}</span> as any, {
+        child = React.cloneElement(<span>{children}</span> as any, {
             ...(childClasses && {className: childClasses})
         });
     }
 
     return (
-        <li ref={ref} id={props.id} onClick={props.onClick} className={clsx(
-            props.className,
-            props.isBordered && "bordered",
-            props.isDisabled && "disabled",
-            props.hover && "hover-bordered"
+        <li ref={ref} {...props} className={clsx(
+            className,
+            isBordered && "bordered",
+            isDisabled && "disabled",
+            hover && "hover-bordered"
         )}>{child}</li>
     );
 });

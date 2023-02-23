@@ -2,7 +2,7 @@
 
 exports[`Badge Sizes Respects lg size 1`] = `
 <div
-  class="badge badge-lg badge-neutral"
+  class="badge badge-neutral badge-lg"
 >
   <span>
     testing 
@@ -14,7 +14,7 @@ exports[`Badge Sizes Respects lg size 1`] = `
 
 exports[`Badge Sizes Respects md size 1`] = `
 <div
-  class="badge badge-md badge-neutral"
+  class="badge badge-neutral badge-md"
 >
   <span>
     testing 
@@ -26,7 +26,7 @@ exports[`Badge Sizes Respects md size 1`] = `
 
 exports[`Badge Sizes Respects sm size 1`] = `
 <div
-  class="badge badge-sm badge-neutral"
+  class="badge badge-neutral badge-sm"
 >
   <span>
     testing 
@@ -38,7 +38,7 @@ exports[`Badge Sizes Respects sm size 1`] = `
 
 exports[`Badge Sizes Respects xs size 1`] = `
 <div
-  class="badge badge-xs badge-neutral"
+  class="badge badge-neutral badge-xs"
 >
   <span>
     testing 
@@ -50,7 +50,7 @@ exports[`Badge Sizes Respects xs size 1`] = `
 
 exports[`Badge Variants Respects accent variant 1`] = `
 <div
-  class="badge badge-md badge-accent"
+  class="badge badge-accent badge-md"
 >
   <span>
     testing 
@@ -62,7 +62,7 @@ exports[`Badge Variants Respects accent variant 1`] = `
 
 exports[`Badge Variants Respects error variant 1`] = `
 <div
-  class="badge badge-md badge-error"
+  class="badge badge-error badge-md"
 >
   <span>
     testing 
@@ -74,7 +74,7 @@ exports[`Badge Variants Respects error variant 1`] = `
 
 exports[`Badge Variants Respects info variant 1`] = `
 <div
-  class="badge badge-md badge-info"
+  class="badge badge-info badge-md"
 >
   <span>
     testing 
@@ -86,7 +86,7 @@ exports[`Badge Variants Respects info variant 1`] = `
 
 exports[`Badge Variants Respects neutral variant 1`] = `
 <div
-  class="badge badge-md badge-neutral"
+  class="badge badge-neutral badge-md"
 >
   <span>
     testing 
@@ -98,7 +98,7 @@ exports[`Badge Variants Respects neutral variant 1`] = `
 
 exports[`Badge Variants Respects primary variant 1`] = `
 <div
-  class="badge badge-md badge-primary"
+  class="badge badge-primary badge-md"
 >
   <span>
     testing 
@@ -110,7 +110,7 @@ exports[`Badge Variants Respects primary variant 1`] = `
 
 exports[`Badge Variants Respects secondary variant 1`] = `
 <div
-  class="badge badge-md badge-secondary"
+  class="badge badge-secondary badge-md"
 >
   <span>
     testing 
@@ -122,7 +122,7 @@ exports[`Badge Variants Respects secondary variant 1`] = `
 
 exports[`Badge Variants Respects success variant 1`] = `
 <div
-  class="badge badge-md badge-success"
+  class="badge badge-success badge-md"
 >
   <span>
     testing 
@@ -134,7 +134,7 @@ exports[`Badge Variants Respects success variant 1`] = `
 
 exports[`Badge Variants Respects warning variant 1`] = `
 <div
-  class="badge badge-md badge-warning"
+  class="badge badge-warning badge-md"
 >
   <span>
     testing 

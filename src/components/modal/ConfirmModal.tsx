@@ -11,30 +11,31 @@ interface IConfirmModal extends IModalFrame{
     closeButtonText ?:string
 }
 export const ConfirmModal = forwardRef<HTMLDivElement, PropsWithChildren<IConfirmModal>>((
-    props,
+    {
+        closeButtonText,
+        closeButtonVariant,
+        confirmButtonText,
+        confirmButtonVariant,
+        confirmHandler,
+        children,
+        ...props
+    },
     ref
 )=>{
     return (
         <ModalFrame
             ref={ref}
-            id={props.id}
-            variant={props.variant}
-            isOpen={props.isOpen}
-            position={props.position}
-            className={props.className}
-            closeHandler={props.closeHandler}
-            cornerClose={props.cornerClose}
-            overlayClose={props.overlayClose}
+            {...props}
         >
-            {props.children}
+            {children}
 
             <div className="modal-action">
-                <Button variant={props.closeButtonVariant} onClick={props.closeHandler}>
-                    {props.closeButtonText || "Close"}
+                <Button variant={closeButtonVariant} onClick={props.closeHandler}>
+                    {closeButtonText || "Close"}
                 </Button>
 
-                <Button variant={props.confirmButtonVariant} onClick={props.confirmHandler}>
-                    {props.confirmButtonText || "Confirm"}
+                <Button variant={confirmButtonVariant} onClick={confirmHandler}>
+                    {confirmButtonText || "Confirm"}
                 </Button>
             </div>
         </ModalFrame>

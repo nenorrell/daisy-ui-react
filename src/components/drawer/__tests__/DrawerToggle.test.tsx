@@ -1,5 +1,4 @@
 import { render } from "@testing-library/react";
-import ColorMap from "../../../modules/ColorMap";
 import { BaselessVariantOptions } from "../../../modules/testUtils";
 import { DrawerToggle } from "../DrawerToggle";
 
@@ -12,9 +11,8 @@ describe("DrawerToggle Component", () => {
                     <DrawerToggleAny variant={variant} drawerId="test-id">Toggle me with {variant}</DrawerToggleAny>
                 );
                 const el = container.querySelector("label.drawer-button");
-                const colors = ColorMap.get(variant);
 
-                expect(el).toHaveClass(colors.btn as string);
+                expect(el).toHaveClass(`btn-${variant}`);
                 expect(el).toMatchSnapshot();
             });
         });

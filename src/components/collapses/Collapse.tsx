@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { ForwardedRef, forwardRef, MouseEventHandler, ReactElement, ReactNode, RefObject, useEffect, useMemo, useRef, useState } from "react";
+import React, { forwardRef, HTMLAttributes, ReactElement, ReactNode, RefObject, useEffect, useMemo, useRef, useState } from "react";
 import { WithRef } from "../../@types/Generic";
 import { ICollapseBody } from "./CollapseBody";
 import { ICollapseTitle } from "./CollapseTitle";
@@ -16,28 +16,32 @@ const toggleExpand = (ref :RefObject<HTMLDivElement>, isExpanded :boolean, paren
     }
 };
 
-interface ICollapse {
-    className ?:string;
+interface ICollapse extends HTMLAttributes<HTMLDivElement> {
     defaultExpand ?:boolean
     parentCollapse ?:boolean
-    onClick ?:MouseEventHandler<HTMLDivElement>
     children :[ReactElement, ReactElement]
 }
 
 type ChildWithRef = ReactElement<WithRef<ICollapseTitle | ICollapseBody, HTMLDivElement>>;
 
-export const Collapse = forwardRef((
-    props :ICollapse,
-    ref ?:ForwardedRef<HTMLDivElement>
+export const Collapse = forwardRef<HTMLDivElement, ICollapse>((
+    {
+        defaultExpand,
+        parentCollapse,
+        className,
+        children,
+        ...props
+    },
+    ref
 ) => {
     const expandableContent = useRef<HTMLDivElement>(null);
-    const [isExpanded, setIsExpanded] = useState<boolean>(props.defaultExpand || false);
+    const [isExpanded, setIsExpanded] = useState<boolean>(defaultExpand || false);
 
-    if(props.children.length !== 2) {
+    if(children.length !== 2) {
         throw Error("Collapse expects exactly two root children");
     }
 
-    const formattedChildren = useMemo(()=>React.Children.map<ReactNode, ChildWithRef>(props.children, (child, i) => {
+    const formattedChildren = useMemo(()=>React.Children.map<ReactNode, ChildWithRef>(children, (child, i) => {
         if(React.isValidElement(child)) {
             if(i == 0) {
                 // The first child is always treated as the Collapse Title
@@ -63,13 +67,13 @@ export const Collapse = forwardRef((
     }), [isExpanded]);
 
     useEffect(()=>{
-        toggleExpand(expandableContent, isExpanded, props.parentCollapse);
+        toggleExpand(expandableContent, isExpanded, parentCollapse);
     }, [isExpanded]); // eslint-disable-line
 
     return (
-        <div ref={ref} tabIndex={0} onClick={props.onClick} className={clsx(
+        <div {...props} ref={ref} tabIndex={0} className={clsx(
             "collapse",
-            props.className
+            className
         )}>
             {formattedChildren}
         </div>

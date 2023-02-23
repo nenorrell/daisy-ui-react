@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle Sizes Respects lg size 1`] = `
+<input
+  class="toggle toggle-lg"
+  type="checkbox"
+/>
+`;
+
+exports[`Toggle Sizes Respects md size 1`] = `
+<input
+  class="toggle toggle-md"
+  type="checkbox"
+/>
+`;
+
+exports[`Toggle Sizes Respects sm size 1`] = `
+<input
+  class="toggle toggle-sm"
+  type="checkbox"
+/>
+`;
+
+exports[`Toggle Sizes Respects xs size 1`] = `
+<input
+  class="toggle toggle-xs"
+  type="checkbox"
+/>
+`;
+
+exports[`Toggle Variants Respects accent variant 1`] = `
+<input
+  class="toggle toggle-md toggle-accent"
+  type="checkbox"
+/>
+`;
+
+exports[`Toggle Variants Respects error variant 1`] = `
+<input
+  class="toggle toggle-md toggle-error"
+  type="checkbox"
+/>
+`;
+
+exports[`Toggle Variants Respects info variant 1`] = `
+<input
+  class="toggle toggle-md toggle-info"
+  type="checkbox"
+/>
+`;
+
+exports[`Toggle Variants Respects primary variant 1`] = `
+<input
+  class="toggle toggle-md toggle-primary"
+  type="checkbox"
+/>
+`;
+
+exports[`Toggle Variants Respects secondary variant 1`] = `
+<input
+  class="toggle toggle-md toggle-secondary"
+  type="checkbox"
+/>
+`;
+
+exports[`Toggle Variants Respects success variant 1`] = `
+<input
+  class="toggle toggle-md toggle-success"
+  type="checkbox"
+/>
+`;
+
+exports[`Toggle Variants Respects warning variant 1`] = `
+<input
+  class="toggle toggle-md toggle-warning"
+  type="checkbox"
+/>
+`;

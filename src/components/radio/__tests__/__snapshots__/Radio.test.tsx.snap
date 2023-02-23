@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio Sizes Respects lg size 1`] = `
+<input
+  class="radio radio-lg"
+  type="radio"
+/>
+`;
+
+exports[`Radio Sizes Respects md size 1`] = `
+<input
+  class="radio radio-md"
+  type="radio"
+/>
+`;
+
+exports[`Radio Sizes Respects sm size 1`] = `
+<input
+  class="radio radio-sm"
+  type="radio"
+/>
+`;
+
+exports[`Radio Sizes Respects xs size 1`] = `
+<input
+  class="radio radio-xs"
+  type="radio"
+/>
+`;
+
+exports[`Radio Variants Respects accent variant 1`] = `
+<input
+  class="radio radio-md radio-accent"
+  type="radio"
+/>
+`;
+
+exports[`Radio Variants Respects error variant 1`] = `
+<input
+  class="radio radio-md radio-error"
+  type="radio"
+/>
+`;
+
+exports[`Radio Variants Respects info variant 1`] = `
+<input
+  class="radio radio-md radio-info"
+  type="radio"
+/>
+`;
+
+exports[`Radio Variants Respects primary variant 1`] = `
+<input
+  class="radio radio-md radio-primary"
+  type="radio"
+/>
+`;
+
+exports[`Radio Variants Respects secondary variant 1`] = `
+<input
+  class="radio radio-md radio-secondary"
+  type="radio"
+/>
+`;
+
+exports[`Radio Variants Respects success variant 1`] = `
+<input
+  class="radio radio-md radio-success"
+  type="radio"
+/>
+`;
+
+exports[`Radio Variants Respects warning variant 1`] = `
+<input
+  class="radio radio-md radio-warning"
+  type="radio"
+/>
+`;

@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Range Sizes Respects lg size 1`] = `
+<input
+  class="range range-lg"
+  max="100"
+  min="0"
+  type="range"
+/>
+`;
+
+exports[`Range Sizes Respects md size 1`] = `
+<input
+  class="range range-md"
+  max="100"
+  min="0"
+  type="range"
+/>
+`;
+
+exports[`Range Sizes Respects sm size 1`] = `
+<input
+  class="range range-sm"
+  max="100"
+  min="0"
+  type="range"
+/>
+`;
+
+exports[`Range Sizes Respects xs size 1`] = `
+<input
+  class="range range-xs"
+  max="100"
+  min="0"
+  type="range"
+/>
+`;
+
+exports[`Range Variants Respects accent variant 1`] = `
+<input
+  class="range range-md range-accent"
+  max="100"
+  min="0"
+  type="range"
+/>
+`;
+
+exports[`Range Variants Respects error variant 1`] = `
+<input
+  class="range range-md range-error"
+  max="100"
+  min="0"
+  type="range"
+/>
+`;
+
+exports[`Range Variants Respects info variant 1`] = `
+<input
+  class="range range-md range-info"
+  max="100"
+  min="0"
+  type="range"
+/>
+`;
+
+exports[`Range Variants Respects primary variant 1`] = `
+<input
+  class="range range-md range-primary"
+  max="100"
+  min="0"
+  type="range"
+/>
+`;
+
+exports[`Range Variants Respects secondary variant 1`] = `
+<input
+  class="range range-md range-secondary"
+  max="100"
+  min="0"
+  type="range"
+/>
+`;
+
+exports[`Range Variants Respects success variant 1`] = `
+<input
+  class="range range-md range-success"
+  max="100"
+  min="0"
+  type="range"
+/>
+`;
+
+exports[`Range Variants Respects warning variant 1`] = `
+<input
+  class="range range-md range-warning"
+  max="100"
+  min="0"
+  type="range"
+/>
+`;

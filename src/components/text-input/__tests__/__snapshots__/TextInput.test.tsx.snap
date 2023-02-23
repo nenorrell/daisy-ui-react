@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput Sizes Respects lg size 1`] = `
+<input
+  class="input input-lg"
+  type="text"
+/>
+`;
+
+exports[`TextInput Sizes Respects md size 1`] = `
+<input
+  class="input input-md"
+  type="text"
+/>
+`;
+
+exports[`TextInput Sizes Respects sm size 1`] = `
+<input
+  class="input input-sm"
+  type="text"
+/>
+`;
+
+exports[`TextInput Sizes Respects xs size 1`] = `
+<input
+  class="input input-xs"
+  type="text"
+/>
+`;
+
+exports[`TextInput Variants Respects accent variant 1`] = `
+<input
+  class="input input-md input-accent"
+  type="text"
+/>
+`;
+
+exports[`TextInput Variants Respects error variant 1`] = `
+<input
+  class="input input-md input-error"
+  type="text"
+/>
+`;
+
+exports[`TextInput Variants Respects info variant 1`] = `
+<input
+  class="input input-md input-info"
+  type="text"
+/>
+`;
+
+exports[`TextInput Variants Respects primary variant 1`] = `
+<input
+  class="input input-md input-primary"
+  type="text"
+/>
+`;
+
+exports[`TextInput Variants Respects secondary variant 1`] = `
+<input
+  class="input input-md input-secondary"
+  type="text"
+/>
+`;
+
+exports[`TextInput Variants Respects success variant 1`] = `
+<input
+  class="input input-md input-success"
+  type="text"
+/>
+`;
+
+exports[`TextInput Variants Respects warning variant 1`] = `
+<input
+  class="input input-md input-warning"
+  type="text"
+/>
+`;

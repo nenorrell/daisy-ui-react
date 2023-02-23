@@ -1,16 +1,17 @@
-import { FC, ForwardedRef, forwardRef, PropsWithChildren } from "react";
+import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 import clsx from "clsx";
 
-interface ICardBody {
-    id ?:string
-    className ?:string
-}
-export const CardBody :FC<PropsWithChildren<ICardBody>> = forwardRef((
-    {id, className, children},
-    ref ?:ForwardedRef<HTMLDivElement>
+interface ICardBody extends PropsWithChildren<HTMLAttributes<HTMLDivElement>>{}
+export const CardBody = forwardRef<HTMLDivElement, ICardBody>((
+    {
+        className,
+        children,
+        ...props
+    },
+    ref
 )=>{
     return (
-        <div ref={ref} id={id} className={clsx(
+        <div ref={ref} {...props} className={clsx(
             "card-body",
             className
         )}>

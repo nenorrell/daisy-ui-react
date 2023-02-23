@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileInput Sizes Respects lg size 1`] = `
+<input
+  class="file-input file-input-lg"
+  type="file"
+/>
+`;
+
+exports[`FileInput Sizes Respects md size 1`] = `
+<input
+  class="file-input file-input-md"
+  type="file"
+/>
+`;
+
+exports[`FileInput Sizes Respects sm size 1`] = `
+<input
+  class="file-input file-input-sm"
+  type="file"
+/>
+`;
+
+exports[`FileInput Sizes Respects xs size 1`] = `
+<input
+  class="file-input file-input-xs"
+  type="file"
+/>
+`;
+
+exports[`FileInput Variants Respects accent variant 1`] = `
+<input
+  class="file-input file-input-md file-input-accent"
+  type="file"
+/>
+`;
+
+exports[`FileInput Variants Respects error variant 1`] = `
+<input
+  class="file-input file-input-md file-input-error"
+  type="file"
+/>
+`;
+
+exports[`FileInput Variants Respects info variant 1`] = `
+<input
+  class="file-input file-input-md file-input-info"
+  type="file"
+/>
+`;
+
+exports[`FileInput Variants Respects primary variant 1`] = `
+<input
+  class="file-input file-input-md file-input-primary"
+  type="file"
+/>
+`;
+
+exports[`FileInput Variants Respects secondary variant 1`] = `
+<input
+  class="file-input file-input-md file-input-secondary"
+  type="file"
+/>
+`;
+
+exports[`FileInput Variants Respects success variant 1`] = `
+<input
+  class="file-input file-input-md file-input-success"
+  type="file"
+/>
+`;
+
+exports[`FileInput Variants Respects warning variant 1`] = `
+<input
+  class="file-input file-input-md file-input-warning"
+  type="file"
+/>
+`;

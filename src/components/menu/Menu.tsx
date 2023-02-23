@@ -1,38 +1,35 @@
-import {forwardRef, MouseEventHandler, PropsWithChildren } from "react";
+import {forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 import clsx from "clsx";
 import { Variant } from "../../@types/Colors";
-import ColorMap from "../../modules/ColorMap";
+import { getTextColor } from "../../modules/colors";
 
-export interface IMenu {
-    id ?:string
-    /* Use for spacing/sizing, menu-compact/menu-normal, etc */
-    className ?:string
+export interface IMenu extends HTMLAttributes<HTMLUListElement>{
     variant ?:Variant
     type ?: "vertical" | "horizontal"
-    tabIndex ?:number
-    onClick ?:MouseEventHandler
 }
 export const Menu = forwardRef<HTMLUListElement, PropsWithChildren<IMenu>>((
-    {variant="neutral", type="vertical", ...props},
+    {
+        variant="neutral",
+        type="vertical",
+        className,
+        children,
+        ...props
+    },
     ref
 )=>{
-    const variantColors = ColorMap.get(variant);
-
     return (
         <ul
-            id={props.id}
-            tabIndex={props.tabIndex}
+            {...props}
             ref={ref}
             className={clsx(
                 "menu",
                 type,
-                variantColors.bg,
-                variantColors.text,
-                props.className
+                `bg-${variant}`,
+                `text-${getTextColor(variant)}-content`,
+                className
             )}
-            onClick={props.onClick}
         >
-            {props.children}
+            {children}
         </ul>
     );
 });

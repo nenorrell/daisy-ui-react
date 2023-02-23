@@ -1,39 +1,42 @@
-import { FC, ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren } from "react";
+import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 import { Size } from "../../@types/Daisy";
 import { BaselessVariant } from "../../@types/Colors";
-import ColorMap from "../../modules/ColorMap";
 import clsx from "clsx";
-import SizeMap from "../../modules/SizeMap";
 
-interface IBadge {
+interface IBadge extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {
     size ?:Size
-    className ?:string
     variant ?:BaselessVariant
-    onClick ?:MouseEventHandler
     isGhost ?:boolean
     isOutline ?:boolean
 }
-export const Badge :FC<PropsWithChildren<IBadge>> = forwardRef((
-    {variant="neutral", size="md", ...props},
-    ref ?:ForwardedRef<HTMLDivElement>
+export const Badge = forwardRef<HTMLDivElement, IBadge>((
+    {
+        variant="neutral",
+        size="md",
+        className,
+        isGhost,
+        isOutline,
+        children,
+        ...props},
+    ref
 )=>{
-    const variantColors = ColorMap.get(variant);
-    const sizing = SizeMap.get(size);
-
+    ;
     return (
         <div
+            {...props}
             ref={ref}
-            onClick={props.onClick}
             className={clsx(
                 "badge",
-                sizing.badge,
-                variantColors?.badge,
-                props.className,
-                props.isGhost && "badge-ghost",
-                props.isOutline && "badge-outline",
+                {
+                    [`badge-${variant}`]: variant,
+                    [`badge-${size}`]: size
+                },
+                className,
+                isGhost && "badge-ghost",
+                isOutline && "badge-outline",
             )}
         >
-            {props.children}
+            {children}
         </div>
     );
 });

@@ -1,31 +1,37 @@
-import {forwardRef, PropsWithChildren } from "react";
+import {forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 import clsx from "clsx";
 
-export interface IDropdown {
-    id ?:string
-    className ?:string
+export interface IDropdown extends PropsWithChildren<HTMLAttributes<HTMLDivElement>>{
     position ?: "left" | "right" | "bottom" | "top"
     isEnd ?:boolean
     isOpen ?:boolean
     hover ?:boolean
 }
-export const Dropdown = forwardRef<HTMLDivElement, PropsWithChildren<IDropdown>>((
-    props,
+export const Dropdown = forwardRef<HTMLDivElement, IDropdown>((
+    {
+        className,
+        position,
+        isEnd,
+        isOpen,
+        hover,
+        children,
+        ...props
+    },
     ref
 )=>{
     return (
-        <div id={props.id} ref={ref} className={clsx(
+        <div {...props} ref={ref} className={clsx(
             "dropdown",
-            props.position === "left" && "dropdown-left",
-            props.position === "right" && "dropdown-right",
-            props.position === "top" && "dropdown-top",
-            props.position === "bottom" && "dropdown-bottom",
-            props.hover && "dropdown-hover",
-            props.isOpen && "dropdown-open",
-            props.isEnd && "dropdown-end",
-            props.className
+            position === "left" && "dropdown-left",
+            position === "right" && "dropdown-right",
+            position === "top" && "dropdown-top",
+            position === "bottom" && "dropdown-bottom",
+            hover && "dropdown-hover",
+            isOpen && "dropdown-open",
+            isEnd && "dropdown-end",
+            className
         )}>
-            {props.children}
+            {children}
         </div>
     );
 });

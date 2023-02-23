@@ -1,16 +1,20 @@
 import clsx from "clsx";
-import {FC, PropsWithChildren, ReactElement, useEffect, useRef } from "react";
+import {FC, HTMLAttributes, PropsWithChildren, ReactElement, useEffect, useRef } from "react";
 import { nanoid } from "nanoid";
 
-export interface IDrawer{
-    id ?:string
-    className ?:string
+export interface IDrawer extends PropsWithChildren<HTMLAttributes<HTMLDivElement>>{
     openRight ?:boolean
     isMobile ?:boolean
     children :ReactElement[] | ReactElement
 }
 
-export const Drawer :FC<PropsWithChildren<IDrawer>> = (props) =>{
+export const Drawer :FC<IDrawer> = ({
+    openRight,
+    isMobile,
+    className,
+    children,
+    ...props
+}) =>{
     const drawerId = props.id || nanoid();
     const drawerEL = useRef<HTMLDivElement>(null);
 
@@ -26,14 +30,14 @@ export const Drawer :FC<PropsWithChildren<IDrawer>> = (props) =>{
     });
 
     return (
-        <div ref={drawerEL} className={clsx(
+        <div {...props} ref={drawerEL} className={clsx(
             "drawer",
-            props.isMobile && "drawer-mobile",
-            props.openRight && "drawer-end",
-            props.className
+            isMobile && "drawer-mobile",
+            openRight && "drawer-end",
+            className
         )}>
             <input id={drawerId} type="checkbox" className="drawer-toggle" />
-            {props.children}
+            {children}
         </div>
     );
 };

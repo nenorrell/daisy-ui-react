@@ -1,23 +1,26 @@
-import {forwardRef, PropsWithChildren } from "react";
+import {forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 import clsx from "clsx";
 
-export interface IButtonGroup {
-    id ?:string
-    className ?:string
-    /** For responsivene direction, please leverage className */
+/** For responsivene direction, please leverage className */
+export interface IButtonGroup extends PropsWithChildren<HTMLAttributes<HTMLDivElement>>{
     isVertical ?:boolean
 }
-export const ButtonGroup = forwardRef<HTMLDivElement, PropsWithChildren<IButtonGroup>>((
-    props,
+export const ButtonGroup = forwardRef<HTMLDivElement, IButtonGroup>((
+    {
+        isVertical,
+        className,
+        children,
+        ...props
+    },
     ref
 )=>{
     return (
-        <div id={props.id} ref={ref} className={clsx(
+        <div {...props} ref={ref} className={clsx(
             "btn-group",
-            props.isVertical && "btn-group-vertical",
-            props.className
+            isVertical && "btn-group-vertical",
+            className
         )}>
-            {props.children}
+            {children}
         </div>
     );
 });

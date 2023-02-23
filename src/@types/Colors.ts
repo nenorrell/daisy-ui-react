@@ -2,6 +2,7 @@ export type BaseVariant = "base-100"|"base-200"|"base-300";
 export type StatusVariant = "info"|"success"|"error"|"warning"
 export type Variant = "primary"|"secondary"|"accent"|"neutral"|BaseVariant|StatusVariant
 export type BaselessVariant = Exclude<Variant, BaseVariant>
+export type NoBaseOrNeutralVariant = Exclude<BaselessVariant, "nuetral">
 
 export interface DaisyUtilityColor{
     bg: `bg-${Variant}`,
@@ -23,11 +24,5 @@ export interface DaisyUtilityColor{
     ringOffset: `ring-offset-${Variant}`,
 }
 
-export interface VariantColors {
-    bg :`bg-${Variant}`
-    text :`text-${Variant | "base"}-content`
-    focus ?:`${BaselessVariant}-focus`
-    btn ?:`btn-${BaselessVariant}`
-    alert ?:`alert-${StatusVariant}`
-    badge ?:`badge-${BaselessVariant}`
-}
+export type DaisyTextColor = `text-${Variant}-content` | "text-base-content";
+export type DaisyBgColor = `bg-${Variant}` | "text-base-content";

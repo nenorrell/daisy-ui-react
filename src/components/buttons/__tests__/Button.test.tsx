@@ -1,6 +1,4 @@
 import { fireEvent, render } from "@testing-library/react";
-import ColorMap from "../../../modules/ColorMap";
-import SizeMap from "../../../modules/SizeMap";
 import { BaselessVariantOptions, ButtonSizes } from "../../../modules/testUtils";
 import { Button } from "../Button";
 
@@ -10,9 +8,7 @@ describe("Button", ()=>{
             it(`Respects ${variant} variant`, ()=>{
                 const component = render(<Button variant={variant}>testing {variant} variant</Button>);
                 const container = component.container.querySelector("button.btn");
-                const colors = ColorMap.get(variant);
-
-                expect(container).toHaveClass(colors.btn as string);
+                expect(container).toHaveClass(`btn-${variant}`);
                 expect(container).toMatchSnapshot();
             });
         });
@@ -25,9 +21,8 @@ describe("Button", ()=>{
                     <Button size={size}>testing {size} button size</Button>
                 );
                 const container = component.container.querySelector("button.btn");
-                const sizing = SizeMap.get(size);
 
-                expect(container).toHaveClass(sizing.btn as any);
+                expect(container).toHaveClass(`btn-${size}`);
                 expect(container).toMatchSnapshot();
             });
         });

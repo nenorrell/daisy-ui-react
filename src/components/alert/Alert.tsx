@@ -1,27 +1,25 @@
-import { ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren } from "react";
+import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 import { StatusVariant } from "../../@types/Colors";
-import ColorMap from "../../modules/ColorMap";
 import clsx from "clsx";
 
-interface IAlert {
-    className ?:string
+interface IAlert extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {
     variant ?:StatusVariant
-    onClick ?:MouseEventHandler<HTMLDivElement>
 }
-export const Alert = forwardRef((
-    {className, variant, onClick, children}:PropsWithChildren<IAlert>,
-    ref ?:ForwardedRef<HTMLDivElement>
+export const Alert = forwardRef<HTMLDivElement, IAlert>((
+    {
+        variant,
+        className,
+        children,
+        ...props},
+    ref
 )=>{
-    const variantColors = variant ? ColorMap.get(variant) : null;
-
     return (
-        <div ref={ref} className={clsx(
+        <div {...props} ref={ref} className={clsx(
             "alert",
             "shadow-lg",
-            variantColors?.alert,
+            variant && {[`alert-${variant}`]: variant},
             className
         )}
-        onClick={onClick}
         >
             {children}
         </div>

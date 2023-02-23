@@ -1,5 +1,5 @@
 import { fireEvent, render } from "@testing-library/react";
-import ColorMap from "../../../modules/ColorMap";
+import { getTextColor } from "../../../modules/colors";
 import { VariantOptions } from "../../../modules/testUtils";
 import { Avatar } from "../Avatar";
 
@@ -13,9 +13,7 @@ describe("Avatar", ()=>{
                     </Avatar>
                 );
                 const container = component.container.querySelector("div.find-me");
-                const colors = ColorMap.get(variant);
-
-                expect(container).toHaveClass(colors.bg, colors.text);
+                expect(container).toHaveClass(`bg-${variant}`, `text-${getTextColor(variant)}-content`);
                 expect(container).toMatchSnapshot();
             });
         });

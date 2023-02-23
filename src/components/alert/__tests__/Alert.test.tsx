@@ -1,5 +1,4 @@
 import { fireEvent, render } from "@testing-library/react";
-import ColorMap from "../../../modules/ColorMap";
 import { StatusVariantOptions } from "../../../modules/testUtils";
 import { Alert } from "../Alert";
 
@@ -13,9 +12,8 @@ describe("Alert", ()=>{
                     </Alert>
                 );
                 const container = component.container.querySelector("div.alert");
-                const colors = ColorMap.get(variant);
 
-                expect(container).toHaveClass(colors.alert as any);
+                expect(container).toHaveClass(`alert-${variant}`);
                 expect(container).toMatchSnapshot();
             });
         });

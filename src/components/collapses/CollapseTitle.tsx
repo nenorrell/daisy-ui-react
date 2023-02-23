@@ -1,19 +1,24 @@
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
-import { ForwardedRef, forwardRef, MouseEventHandler, PropsWithChildren, ReactNode } from "react";
+import { forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from "react";
 
-export interface ICollapseTitle {
-    className ?:string;
+export interface ICollapseTitle extends PropsWithChildren<HTMLAttributes<HTMLDivElement>>{
     isExpanded ?:boolean
     RightIcon ?:ReactNode
-    onClick ?:MouseEventHandler<HTMLDivElement>
 }
-export const CollapseTitle = forwardRef((
-    props :PropsWithChildren<ICollapseTitle>,
-    ref ?:ForwardedRef<HTMLDivElement>
+export const CollapseTitle = forwardRef<HTMLDivElement, ICollapseTitle>((
+    {
+        isExpanded,
+        RightIcon,
+        className,
+        children,
+        ...props
+    },
+    ref
 ) => {
     return (
         <div
+            {...props}
             ref={ref}
             className={clsx(
                 "collapse-title",
@@ -22,20 +27,19 @@ export const CollapseTitle = forwardRef((
                 "items-center",
                 "justify-center",
                 "px-4",
-                props.className
+                className
             )}
-            onClick={props.onClick}
         >
-            {props.children}
+            {children}
             <div className={clsx(
                 "items-end",
                 "transition",
                 "ease-in-out",
-                !props.isExpanded && "-rotate-90",
+                !isExpanded && "-rotate-90",
             )}>
                 {
-                    props.RightIcon ?
-                        props.RightIcon :
+                    RightIcon ?
+                        RightIcon :
                         <ChevronDownIcon className={"w-4 h-4"} />
                 }
             </div>

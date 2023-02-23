@@ -21,11 +21,16 @@ import { CollapseTitle } from "./components/collapses/CollapseTitle";
 import { CollapseBody } from "./components/collapses/CollapseBody";
 import { ArrowDownIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
 import { ButtonGroup } from "./components/buttons/ButtonGroup";
-import { useState } from "react";
 import { Drawer } from "./components/drawer/Drawer";
 import { DrawerSide } from "./components/drawer/DrawerSide";
 import { DrawerContent } from "./components/drawer/DrawerContent";
 import { DrawerToggle } from "./components/drawer/DrawerToggle";
+import { Checkbox } from "./components/checkbox/Checkbox";
+import { FormControl } from "./components/form/FormControl";
+import { FormLabel } from "./components/form/FormLabel";
+import { FileInput } from "./components/file-input/FileInput";
+import { Range } from "./components/range/Range";
+import { Select } from "./components/select/Select";
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -34,7 +39,6 @@ import { DrawerToggle } from "./components/drawer/DrawerToggle";
 export const App = () => {
     const [isConfirmModalOpen, toggleConfirmModal] = useToggle(false);
     const [isModalOpen, toggleModal] = useToggle(false);
-    const [counter, setCounter] = useState(0);
 
     return (
         <>
@@ -57,7 +61,6 @@ export const App = () => {
 
             <div className="mb-2 text-7xl">Dev sandbox</div>
             <div>
-                <Button onClick={()=>setCounter(counter+1)}>Thang</Button>
                 <Collapse className="w-1/2 m-5" defaultExpand>
                     <CollapseTitle
                         className="bg-base-300 rounded-t-md"
@@ -73,11 +76,6 @@ export const App = () => {
                         <p className="p-4">Hey everyone</p>
                     </CollapseBody>
                 </Collapse>
-
-                {/* <Collapse className="w-1/2 m-5">
-                    <div>Title</div>
-                    <div>Body</div>
-                </Collapse> */}
 
                 <SimpleCollapse LeftIcon={<FontAwesomeIcon icon={faGitlab} className="h-5 w-5" />} headerContent="Testing" variant="info" className="w-1/2 m-5" rounded={true}>
                     <p className="p-4">Hey everyone</p>
@@ -105,7 +103,7 @@ export const App = () => {
                     <span>NN</span>
                 </Avatar>
 
-                <Alert className="w-1/4 m-5" variant="error">
+                <Alert className="w-1/4 m-5" variant="warning">
                     WARNING
                 </Alert>
 
@@ -191,7 +189,7 @@ export const App = () => {
                         </div>
 
                         <div className="col-span-2 m-2">
-                            <Card variant="accent">
+                            <Card variant="base-300">
                                 <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                                 <CardBody>
                                     <CardTitle><h2>Card with actions</h2></CardTitle>
@@ -211,6 +209,64 @@ export const App = () => {
                         <div>🥵</div>
                         <div>🥶</div>
                     </Swap>
+                </div>
+
+                <div className="p-5">
+                    <div className="grid grid-cols-12">
+                        <div className="col-span-3 m-2 text-center">
+                            <FormControl>
+                                <FormLabel title="Hi Mom!!">
+                                    <Checkbox id="some" variant="secondary"/>
+                                </FormLabel>
+                            </FormControl>
+                            <FormControl>
+                                <FormLabel title="Hi Mom!!">
+                                    <Checkbox id="some" variant="secondary"/>
+                                </FormLabel>
+                            </FormControl>
+                            <FormControl>
+                                <FormLabel title="Hi Mom!!">
+                                    <Checkbox id="some" variant="accent"/>
+                                </FormLabel>
+                            </FormControl>
+                            <FormControl>
+                                <FormLabel title="Hi Mom!!">
+                                    <Checkbox id="some" variant="info"/>
+                                </FormLabel>
+                            </FormControl>
+                        </div>
+
+                        <div className="col-span-3 m-2 text-center">
+                            <FileInput variant="primary" />
+                            <FileInput variant="accent" />
+                            <FileInput variant="secondary" />
+                            <FileInput variant="info" />
+                        </div>
+
+                        <div className="col-span-3 m-2 text-center">
+                            <Range min={25} max={100} step={25}/>
+                            <Range min={25} max={100} variant="primary"/>
+                            <Range min={25} max={100} variant="secondary"/>
+                            <Range min={25} max={100} variant="accent"/>
+                            <Range min={25} max={100} defaultValue={75} variant="info"/>
+                            <Range min={25} max={100} defaultValue={75} variant="warning"/>
+                            <Range min={25} max={100} defaultValue={75} variant="success"/>
+                            <Range min={25} max={100} defaultValue={75} variant="error"/>
+                        </div>
+
+                        <div className="col-span-3 m-2 text-center">
+                            <Select defaultValue="" variant="primary">
+                                <option value="" disabled>Please Choose Something</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </Select>
+                            <Select defaultValue="" variant="secondary">
+                                <option value="" disabled>Please Choose Something</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </Select>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

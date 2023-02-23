@@ -1,12 +1,5 @@
 NODE=16
 
-compile: install
-	docker run --user node -i --rm --name compile-daisy \
-	-e NODE_ENV=production \
-	-e PUBLIC_URL="/daisy-ui-static" \
-	-v `pwd`:/usr/src/app \
-	-w /usr/src/app node:${NODE} npm run-script build-ts
-
 install:
 	docker run -i --rm --name install-daisy -v `pwd`:/usr/src/app -w /usr/src/app node:${NODE} npm install ${PCKG}
 
@@ -20,13 +13,6 @@ up:
 	docker-compose up
 
 run: down install up
-
-analyze-bundle:
-	docker run --user node -i --rm --name analyze-daisy -e NODE_ENV=production -v `pwd`:/usr/src/app -w /usr/src/app node:${NODE} npm run-script analyze
-	docker run -i --rm -p "8888:8888" \
-	--name bundle-analyzer -v `pwd`:/usr/src/app \
-	-w /usr/src/app node:${NODE} \
-	./node_modules/.bin/webpack-bundle-analyzer ./ui/stats.json ./ui -h 0.0.0.0
 
 test: install unit-tests run-linting
 test-fast: unit-tests run-linting

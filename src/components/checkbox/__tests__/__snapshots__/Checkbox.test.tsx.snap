@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Sizes Respects lg size 1`] = `
+<input
+  class="checkbox checkbox-lg"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox Sizes Respects md size 1`] = `
+<input
+  class="checkbox checkbox-md"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox Sizes Respects sm size 1`] = `
+<input
+  class="checkbox checkbox-sm"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox Sizes Respects xs size 1`] = `
+<input
+  class="checkbox checkbox-xs"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox Variants Respects accent variant 1`] = `
+<input
+  class="checkbox checkbox-md checkbox-accent"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox Variants Respects error variant 1`] = `
+<input
+  class="checkbox checkbox-md checkbox-error"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox Variants Respects info variant 1`] = `
+<input
+  class="checkbox checkbox-md checkbox-info"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox Variants Respects primary variant 1`] = `
+<input
+  class="checkbox checkbox-md checkbox-primary"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox Variants Respects secondary variant 1`] = `
+<input
+  class="checkbox checkbox-md checkbox-secondary"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox Variants Respects success variant 1`] = `
+<input
+  class="checkbox checkbox-md checkbox-success"
+  type="checkbox"
+/>
+`;
+
+exports[`Checkbox Variants Respects warning variant 1`] = `
+<input
+  class="checkbox checkbox-md checkbox-warning"
+  type="checkbox"
+/>
+`;

@@ -1,6 +1,6 @@
 {
   "name": "daisy-ui-react-components",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "private": false,
   "main": "dist/exports.js",
   "types": "dist/exports.d.ts",
@@ -52,6 +52,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build && mv build/static/js/main*.js build/static/js/main.min.js",
     "build-ts": "tsc --project tsconfig.prod.json",
+    "build-tw-safelist": "node buildTwSafelist.js",
     "test": "react-scripts test --watchAll=false --colors",
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .ts",
@@ -78,7 +79,8 @@
   "dependencies": {
     "@heroicons/react": "^2.0.13",
     "clsx": "^1.2.1",
-    "nanoid": "^3.3.4"
+    "nanoid": "^3.3.4",
+    "tailwind-merge": "^1.9.0"
   },
   "jest": {
     "coveragePathIgnorePatterns": [
