@@ -3,11 +3,13 @@ import { NoBaseOrNeutralVariant } from "../../@types/Colors";
 import { Size } from "../../@types/Daisy";
 import clsx from "clsx";
 
-interface ICheckbox extends PropsWithChildren<InputHTMLAttributes<HTMLInputElement>>{
+interface IRange extends PropsWithChildren<InputHTMLAttributes<HTMLInputElement>>{
+    min :number
+    max :number
     scale ?:Size
     variant ?:NoBaseOrNeutralVariant
 }
-export const Checkbox = forwardRef<HTMLInputElement, ICheckbox>((
+export const Range = forwardRef<HTMLInputElement, IRange>((
     {
         scale="md",
         variant,
@@ -19,15 +21,15 @@ export const Checkbox = forwardRef<HTMLInputElement, ICheckbox>((
     return (
         <input
             {...props}
-            type="checkbox"
+            type="range"
             ref={ref}
             className={clsx(
-                "checkbox",
+                "range",
                 className,
-                {[`checkbox-${scale}`]: scale},
-                {[`checkbox-${variant}`]: variant}
+                {[`range-${scale}`]: scale},
+                {[`range-${variant}`]: variant}
             )} />
     );
 });
 
-Checkbox.displayName = "Checkbox";
+Range.displayName = "Range";

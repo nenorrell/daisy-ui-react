@@ -42,6 +42,7 @@ const badgeClasses = buildClasses([...themeColors, ...statusColors], sizes, "bad
 const checkboxClasses = buildClasses([...themeColors, ...statusColors], sizes, "checkbox");
 const fileInputClasses = buildClasses([...themeColors, ...statusColors], sizes, "file-input");
 const radioClasses = buildClasses([...themeColors, ...statusColors], sizes, "radio");
+const rangeClasses = buildClasses([...themeColors, ...statusColors], sizes, "range");
 
 const builtVariants = [
     ...builtColors,
@@ -57,6 +58,8 @@ const builtVariants = [
     ...fileInputClasses.sizes,
     ...radioClasses.variants,
     ...radioClasses.sizes,
+    ...rangeClasses.variants,
+    ...rangeClasses.sizes,
 ];
 
 async function buildFile(clrs) {

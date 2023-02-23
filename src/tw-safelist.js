@@ -113,3 +113,15 @@
 "radio-sm";
 "radio-md";
 "radio-lg";
+"range-primary";
+"range-secondary";
+"range-accent";
+"range-neutral";
+"range-info";
+"range-warning";
+"range-error";
+"range-success";
+"range-xs";
+"range-sm";
+"range-md";
+"range-lg";
