@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import { Range } from "../Range";
 import { ComponentSizes, NoBaseOrNeutralVariantOptions } from "../../../modules/testUtils";
 
-describe("Checkbox", () => {
+describe("Range", () => {
     describe("Variants", ()=>{
         NoBaseOrNeutralVariantOptions.forEach(variant=>{
             it(`Respects ${variant} variant`, ()=>{
@@ -36,7 +36,7 @@ describe("Checkbox", () => {
         expect(container.firstChild).toHaveAttribute("step", "25");
     });
 
-    it("renders with type checkbox", () => {
+    it("renders with type range", () => {
         const { container } = render(<Range min={0} max={100} />);
         expect(container.firstChild).toHaveAttribute("type", "range");
     });
@@ -46,7 +46,7 @@ describe("Checkbox", () => {
         expect(container.firstChild).toHaveClass("test-class");
     });
 
-    it("renders with the Checkbox displayName", () => {
+    it("renders with the range displayName", () => {
         expect(Range.displayName).toEqual("Range");
     });
 });

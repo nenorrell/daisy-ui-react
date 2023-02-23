@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea Sizes Respects lg size 1`] = `
+<textarea
+  class="textarea textarea-lg"
+/>
+`;
+
+exports[`Textarea Sizes Respects md size 1`] = `
+<textarea
+  class="textarea textarea-md"
+/>
+`;
+
+exports[`Textarea Sizes Respects sm size 1`] = `
+<textarea
+  class="textarea textarea-sm"
+/>
+`;
+
+exports[`Textarea Sizes Respects xs size 1`] = `
+<textarea
+  class="textarea textarea-xs"
+/>
+`;
+
+exports[`Textarea Variants Respects accent variant 1`] = `
+<textarea
+  class="textarea textarea-md textarea-accent"
+/>
+`;
+
+exports[`Textarea Variants Respects error variant 1`] = `
+<textarea
+  class="textarea textarea-md textarea-error"
+/>
+`;
+
+exports[`Textarea Variants Respects info variant 1`] = `
+<textarea
+  class="textarea textarea-md textarea-info"
+/>
+`;
+
+exports[`Textarea Variants Respects primary variant 1`] = `
+<textarea
+  class="textarea textarea-md textarea-primary"
+/>
+`;
+
+exports[`Textarea Variants Respects secondary variant 1`] = `
+<textarea
+  class="textarea textarea-md textarea-secondary"
+/>
+`;
+
+exports[`Textarea Variants Respects success variant 1`] = `
+<textarea
+  class="textarea textarea-md textarea-success"
+/>
+`;
+
+exports[`Textarea Variants Respects warning variant 1`] = `
+<textarea
+  class="textarea textarea-md textarea-warning"
+/>
+`;

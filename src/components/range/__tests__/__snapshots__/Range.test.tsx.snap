@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkbox Sizes Respects lg size 1`] = `
+exports[`Range Sizes Respects lg size 1`] = `
 <input
   class="range range-lg"
   max="100"
@@ -9,7 +9,7 @@ exports[`Checkbox Sizes Respects lg size 1`] = `
 />
 `;
 
-exports[`Checkbox Sizes Respects md size 1`] = `
+exports[`Range Sizes Respects md size 1`] = `
 <input
   class="range range-md"
   max="100"
@@ -18,7 +18,7 @@ exports[`Checkbox Sizes Respects md size 1`] = `
 />
 `;
 
-exports[`Checkbox Sizes Respects sm size 1`] = `
+exports[`Range Sizes Respects sm size 1`] = `
 <input
   class="range range-sm"
   max="100"
@@ -27,7 +27,7 @@ exports[`Checkbox Sizes Respects sm size 1`] = `
 />
 `;
 
-exports[`Checkbox Sizes Respects xs size 1`] = `
+exports[`Range Sizes Respects xs size 1`] = `
 <input
   class="range range-xs"
   max="100"
@@ -36,7 +36,7 @@ exports[`Checkbox Sizes Respects xs size 1`] = `
 />
 `;
 
-exports[`Checkbox Variants Respects accent variant 1`] = `
+exports[`Range Variants Respects accent variant 1`] = `
 <input
   class="range range-md range-accent"
   max="100"
@@ -45,7 +45,7 @@ exports[`Checkbox Variants Respects accent variant 1`] = `
 />
 `;
 
-exports[`Checkbox Variants Respects error variant 1`] = `
+exports[`Range Variants Respects error variant 1`] = `
 <input
   class="range range-md range-error"
   max="100"
@@ -54,7 +54,7 @@ exports[`Checkbox Variants Respects error variant 1`] = `
 />
 `;
 
-exports[`Checkbox Variants Respects info variant 1`] = `
+exports[`Range Variants Respects info variant 1`] = `
 <input
   class="range range-md range-info"
   max="100"
@@ -63,7 +63,7 @@ exports[`Checkbox Variants Respects info variant 1`] = `
 />
 `;
 
-exports[`Checkbox Variants Respects primary variant 1`] = `
+exports[`Range Variants Respects primary variant 1`] = `
 <input
   class="range range-md range-primary"
   max="100"
@@ -72,7 +72,7 @@ exports[`Checkbox Variants Respects primary variant 1`] = `
 />
 `;
 
-exports[`Checkbox Variants Respects secondary variant 1`] = `
+exports[`Range Variants Respects secondary variant 1`] = `
 <input
   class="range range-md range-secondary"
   max="100"
@@ -81,7 +81,7 @@ exports[`Checkbox Variants Respects secondary variant 1`] = `
 />
 `;
 
-exports[`Checkbox Variants Respects success variant 1`] = `
+exports[`Range Variants Respects success variant 1`] = `
 <input
   class="range range-md range-success"
   max="100"
@@ -90,7 +90,7 @@ exports[`Checkbox Variants Respects success variant 1`] = `
 />
 `;
 
-exports[`Checkbox Variants Respects warning variant 1`] = `
+exports[`Range Variants Respects warning variant 1`] = `
 <input
   class="range range-md range-warning"
   max="100"

@@ -1,9 +1,9 @@
-import { forwardRef, InputHTMLAttributes, PropsWithChildren } from "react";
+import { forwardRef, InputHTMLAttributes } from "react";
 import { NoBaseOrNeutralVariant } from "../../@types/Colors";
 import { Size } from "../../@types/Daisy";
 import clsx from "clsx";
 
-interface IRange extends PropsWithChildren<InputHTMLAttributes<HTMLInputElement>>{
+interface IRange extends InputHTMLAttributes<HTMLInputElement>{
     min :number
     max :number
     scale ?:Size

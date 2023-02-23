@@ -29,6 +29,8 @@ import { Checkbox } from "./components/checkbox/Checkbox";
 import { FormControl } from "./components/form/FormControl";
 import { FormLabel } from "./components/form/FormLabel";
 import { FileInput } from "./components/file-input/FileInput";
+import { Range } from "./components/range/Range";
+import { Select } from "./components/select/Select";
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -209,13 +211,63 @@ export const App = () => {
                     </Swap>
                 </div>
 
-                <FormControl>
-                    <FormLabel title="Hi Mom!!" htmlFor="some">
-                        <Checkbox id="some" variant="secondary"/>
-                    </FormLabel>
-                </FormControl>
+                <div className="p-5">
+                    <div className="grid grid-cols-12">
+                        <div className="col-span-3 m-2 text-center">
+                            <FormControl>
+                                <FormLabel title="Hi Mom!!">
+                                    <Checkbox id="some" variant="secondary"/>
+                                </FormLabel>
+                            </FormControl>
+                            <FormControl>
+                                <FormLabel title="Hi Mom!!">
+                                    <Checkbox id="some" variant="secondary"/>
+                                </FormLabel>
+                            </FormControl>
+                            <FormControl>
+                                <FormLabel title="Hi Mom!!">
+                                    <Checkbox id="some" variant="accent"/>
+                                </FormLabel>
+                            </FormControl>
+                            <FormControl>
+                                <FormLabel title="Hi Mom!!">
+                                    <Checkbox id="some" variant="info"/>
+                                </FormLabel>
+                            </FormControl>
+                        </div>
 
-                <FileInput variant="primary"/>
+                        <div className="col-span-3 m-2 text-center">
+                            <FileInput variant="primary" />
+                            <FileInput variant="accent" />
+                            <FileInput variant="secondary" />
+                            <FileInput variant="info" />
+                        </div>
+
+                        <div className="col-span-3 m-2 text-center">
+                            <Range min={25} max={100} step={25}/>
+                            <Range min={25} max={100} variant="primary"/>
+                            <Range min={25} max={100} variant="secondary"/>
+                            <Range min={25} max={100} variant="accent"/>
+                            <Range min={25} max={100} defaultValue={75} variant="info"/>
+                            <Range min={25} max={100} defaultValue={75} variant="warning"/>
+                            <Range min={25} max={100} defaultValue={75} variant="success"/>
+                            <Range min={25} max={100} defaultValue={75} variant="error"/>
+                        </div>
+
+                        <div className="col-span-3 m-2 text-center">
+                            <Select defaultValue="" variant="primary">
+                                <option value="" disabled>Please Choose Something</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </Select>
+                            <Select defaultValue="" variant="secondary">
+                                <option value="" disabled>Please Choose Something</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </Select>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     );

@@ -3,13 +3,13 @@ import { NoBaseOrNeutralVariant } from "../../@types/Colors";
 import { Size } from "../../@types/Daisy";
 import clsx from "clsx";
 
-interface IFileInput extends InputHTMLAttributes<HTMLInputElement>{
+interface ITextInput extends InputHTMLAttributes<HTMLInputElement>{
     isBordered ?:boolean
     isGhost ?:boolean
     scale ?:Size
     variant ?:NoBaseOrNeutralVariant
 }
-export const FileInput = forwardRef<HTMLInputElement, IFileInput>((
+export const TextInput = forwardRef<HTMLInputElement, ITextInput>((
     {
         isBordered,
         isGhost,
@@ -23,17 +23,17 @@ export const FileInput = forwardRef<HTMLInputElement, IFileInput>((
     return (
         <input
             {...props}
-            type="file"
+            type="text"
             ref={ref}
             className={clsx(
-                "file-input",
+                "input",
                 className,
-                {[`file-input-${scale}`]: scale},
-                {[`file-input-${variant}`]: variant},
-                isBordered && "file-input-bordered",
-                isGhost && "file-input-ghost"
+                isBordered && "input-bordered",
+                isGhost && "input-ghost",
+                {[`input-${scale}`]: scale},
+                {[`input-${variant}`]: variant}
             )} />
     );
 });
 
-FileInput.displayName = "FileInput";
+TextInput.displayName = "TextInput";

@@ -39,10 +39,14 @@ const buildClasses = (colors, sizes, prefix)=>{
 const buttonClasses = buildClasses([...themeColors, ...statusColors], buttonSizes, "btn");
 const alertClasses = buildClasses(statusColors, sizes, "alert");
 const badgeClasses = buildClasses([...themeColors, ...statusColors], sizes, "badge");
-const checkboxClasses = buildClasses([...themeColors, ...statusColors], sizes, "checkbox");
-const fileInputClasses = buildClasses([...themeColors, ...statusColors], sizes, "file-input");
-const radioClasses = buildClasses([...themeColors, ...statusColors], sizes, "radio");
-const rangeClasses = buildClasses([...themeColors, ...statusColors], sizes, "range");
+const checkboxClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...statusColors], sizes, "checkbox");
+const fileInputClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...statusColors], sizes, "file-input");
+const radioClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...statusColors], sizes, "radio");
+const rangeClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...statusColors], sizes, "range");
+const selectClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...statusColors], sizes, "select");
+const inputClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...statusColors], sizes, "input");
+const textareaClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...statusColors], sizes, "textarea");
+const toggleClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...statusColors], sizes, "toggle");
 
 const builtVariants = [
     ...builtColors,
@@ -60,6 +64,14 @@ const builtVariants = [
     ...radioClasses.sizes,
     ...rangeClasses.variants,
     ...rangeClasses.sizes,
+    ...selectClasses.variants,
+    ...selectClasses.sizes,
+    ...inputClasses.variants,
+    ...inputClasses.sizes,
+    ...textareaClasses.variants,
+    ...textareaClasses.sizes,
+    ...toggleClasses.variants,
+    ...toggleClasses.sizes,
 ];
 
 async function buildFile(clrs) {

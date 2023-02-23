@@ -1,13 +1,13 @@
-import { forwardRef, InputHTMLAttributes } from "react";
+import { forwardRef, InputHTMLAttributes, PropsWithChildren } from "react";
 import { NoBaseOrNeutralVariant } from "../../@types/Colors";
 import { Size } from "../../@types/Daisy";
 import clsx from "clsx";
 
-interface IRadio extends InputHTMLAttributes<HTMLInputElement>{
+interface IToggle extends PropsWithChildren<InputHTMLAttributes<HTMLInputElement>>{
     scale ?:Size
     variant ?:NoBaseOrNeutralVariant
 }
-export const Radio = forwardRef<HTMLInputElement, IRadio>((
+export const Toggle = forwardRef<HTMLInputElement, IToggle>((
     {
         scale="md",
         variant,
@@ -19,15 +19,15 @@ export const Radio = forwardRef<HTMLInputElement, IRadio>((
     return (
         <input
             {...props}
-            type="radio"
+            type="checkbox"
             ref={ref}
             className={clsx(
-                "radio",
+                "toggle",
                 className,
-                {[`radio-${scale}`]: scale},
-                {[`radio-${variant}`]: variant}
+                {[`toggle-${scale}`]: scale},
+                {[`toggle-${variant}`]: variant}
             )} />
     );
 });
 
-Radio.displayName = "Radio";
+Toggle.displayName = "Toggle";

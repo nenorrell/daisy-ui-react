@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Sizes Respects lg size 1`] = `
+<select
+  class="select select-lg"
+>
+  <option
+    disabled=""
+    selected=""
+    value=""
+  >
+    Please Choose Something
+  </option>
+  <option
+    value="yes"
+  >
+    Yes
+  </option>
+  <option
+    value="no"
+  >
+    No
+  </option>
+</select>
+`;
+
+exports[`Select Sizes Respects md size 1`] = `
+<select
+  class="select select-md"
+>
+  <option
+    disabled=""
+    selected=""
+    value=""
+  >
+    Please Choose Something
+  </option>
+  <option
+    value="yes"
+  >
+    Yes
+  </option>
+  <option
+    value="no"
+  >
+    No
+  </option>
+</select>
+`;
+
+exports[`Select Sizes Respects sm size 1`] = `
+<select
+  class="select select-sm"
+>
+  <option
+    disabled=""
+    selected=""
+    value=""
+  >
+    Please Choose Something
+  </option>
+  <option
+    value="yes"
+  >
+    Yes
+  </option>
+  <option
+    value="no"
+  >
+    No
+  </option>
+</select>
+`;
+
+exports[`Select Sizes Respects xs size 1`] = `
+<select
+  class="select select-xs"
+>
+  <option
+    disabled=""
+    selected=""
+    value=""
+  >
+    Please Choose Something
+  </option>
+  <option
+    value="yes"
+  >
+    Yes
+  </option>
+  <option
+    value="no"
+  >
+    No
+  </option>
+</select>
+`;
+
+exports[`Select Variants Respects accent variant 1`] = `
+<select
+  class="select select-md select-accent"
+>
+  <option
+    disabled=""
+    selected=""
+    value=""
+  >
+    Please Choose Something
+  </option>
+  <option
+    value="yes"
+  >
+    Yes
+  </option>
+  <option
+    value="no"
+  >
+    No
+  </option>
+</select>
+`;
+
+exports[`Select Variants Respects error variant 1`] = `
+<select
+  class="select select-md select-error"
+>
+  <option
+    disabled=""
+    selected=""
+    value=""
+  >
+    Please Choose Something
+  </option>
+  <option
+    value="yes"
+  >
+    Yes
+  </option>
+  <option
+    value="no"
+  >
+    No
+  </option>
+</select>
+`;
+
+exports[`Select Variants Respects info variant 1`] = `
+<select
+  class="select select-md select-info"
+>
+  <option
+    disabled=""
+    selected=""
+    value=""
+  >
+    Please Choose Something
+  </option>
+  <option
+    value="yes"
+  >
+    Yes
+  </option>
+  <option
+    value="no"
+  >
+    No
+  </option>
+</select>
+`;
+
+exports[`Select Variants Respects primary variant 1`] = `
+<select
+  class="select select-md select-primary"
+>
+  <option
+    disabled=""
+    selected=""
+    value=""
+  >
+    Please Choose Something
+  </option>
+  <option
+    value="yes"
+  >
+    Yes
+  </option>
+  <option
+    value="no"
+  >
+    No
+  </option>
+</select>
+`;
+
+exports[`Select Variants Respects secondary variant 1`] = `
+<select
+  class="select select-md select-secondary"
+>
+  <option
+    disabled=""
+    selected=""
+    value=""
+  >
+    Please Choose Something
+  </option>
+  <option
+    value="yes"
+  >
+    Yes
+  </option>
+  <option
+    value="no"
+  >
+    No
+  </option>
+</select>
+`;
+
+exports[`Select Variants Respects success variant 1`] = `
+<select
+  class="select select-md select-success"
+>
+  <option
+    disabled=""
+    selected=""
+    value=""
+  >
+    Please Choose Something
+  </option>
+  <option
+    value="yes"
+  >
+    Yes
+  </option>
+  <option
+    value="no"
+  >
+    No
+  </option>
+</select>
+`;
+
+exports[`Select Variants Respects warning variant 1`] = `
+<select
+  class="select select-md select-warning"
+>
+  <option
+    disabled=""
+    selected=""
+    value=""
+  >
+    Please Choose Something
+  </option>
+  <option
+    value="yes"
+  >
+    Yes
+  </option>
+  <option
+    value="no"
+  >
+    No
+  </option>
+</select>
+`;
