@@ -3,7 +3,7 @@ import { NoBaseOrNeutralVariant } from "../../@types/Colors";
 import { Size } from "../../@types/Daisy";
 import clsx from "clsx";
 
-interface IFileInput extends InputHTMLAttributes<HTMLInputElement>{
+interface IFileInput extends Omit<InputHTMLAttributes<HTMLInputElement>, "type">{
     isBordered ?:boolean
     isGhost ?:boolean
     scale ?:Size

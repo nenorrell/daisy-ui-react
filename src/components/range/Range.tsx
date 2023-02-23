@@ -3,7 +3,7 @@ import { NoBaseOrNeutralVariant } from "../../@types/Colors";
 import { Size } from "../../@types/Daisy";
 import clsx from "clsx";
 
-interface IRange extends InputHTMLAttributes<HTMLInputElement>{
+interface IRange extends Omit<InputHTMLAttributes<HTMLInputElement>, "type">{
     min :number
     max :number
     scale ?:Size

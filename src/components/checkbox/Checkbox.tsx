@@ -1,9 +1,9 @@
-import { forwardRef, InputHTMLAttributes, PropsWithChildren } from "react";
+import { forwardRef, InputHTMLAttributes } from "react";
 import { NoBaseOrNeutralVariant } from "../../@types/Colors";
 import { Size } from "../../@types/Daisy";
 import clsx from "clsx";
 
-interface ICheckbox extends PropsWithChildren<InputHTMLAttributes<HTMLInputElement>>{
+interface ICheckbox extends Omit<InputHTMLAttributes<HTMLInputElement>, "type">{
     scale ?:Size
     variant ?:NoBaseOrNeutralVariant
 }

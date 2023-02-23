@@ -3,7 +3,7 @@ import { NoBaseOrNeutralVariant } from "../../@types/Colors";
 import { Size } from "../../@types/Daisy";
 import clsx from "clsx";
 
-interface IRadio extends InputHTMLAttributes<HTMLInputElement>{
+interface IRadio extends Omit<InputHTMLAttributes<HTMLInputElement>, "type">{
     scale ?:Size
     variant ?:NoBaseOrNeutralVariant
 }

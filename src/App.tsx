@@ -216,7 +216,7 @@ export const App = () => {
                         <div className="col-span-3 m-2 text-center">
                             <FormControl>
                                 <FormLabel title="Hi Mom!!">
-                                    <Checkbox id="some" variant="secondary"/>
+                                    <Checkbox id="some" variant="secondary" defaultChecked/>
                                 </FormLabel>
                             </FormControl>
                             <FormControl>
