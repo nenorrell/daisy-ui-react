@@ -54,6 +54,16 @@ describe("Menu component", () => {
         expect(container.firstChild).toHaveClass("custom-class");
     });
 
+    it("should respect isTitle prop", () => {
+        const { container } = render(<MenuItem isTitle>
+            <span className="find-me">Test</span>
+        </MenuItem>);
+
+        const el = container.querySelector("li");
+        expect(el).toBeInTheDocument();
+        expect(el).toHaveClass("menu-title");
+    });
+
     describe("Children handling", ()=>{
         it("should render children when a JSX element is passed in", () => {
             const { container } = render(<MenuItem><span className="find-me">Test</span></MenuItem>);
@@ -63,25 +73,6 @@ describe("Menu component", () => {
         it("should render children when just a string is passed in", () => {
             const { container } = render(<MenuItem>Test</MenuItem>);
             expect(container.firstChild?.firstChild?.textContent).toEqual("Test");
-        });
-
-        it("should pass isTitle prop to child", () => {
-            const { container } = render(<MenuItem isTitle>
-                <span className="find-me">Test</span>
-            </MenuItem>);
-
-            const el = container.querySelector("span.find-me");
-            expect(el).toBeInTheDocument();
-            expect(el).toHaveClass("menu-title");
-        });
-
-        it("should pass isTitle prop to child when just a string is passed in", () => {
-            const { container } = render(<MenuItem isTitle>
-                Test
-            </MenuItem>);
-
-            const el = container.firstChild?.firstChild;
-            expect(el).toHaveClass("menu-title");
         });
 
         it("should pass isActive prop to child", () => {

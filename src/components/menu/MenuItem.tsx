@@ -24,7 +24,6 @@ export const MenuItem = forwardRef<HTMLLIElement, IMenuItem>((
 )=>{
     let child :React.ReactElement | string = children;
     const childClasses = clsx(
-        isTitle && "menu-title",
         isActive && "active",
     );
 
@@ -47,7 +46,8 @@ export const MenuItem = forwardRef<HTMLLIElement, IMenuItem>((
             className,
             isBordered && "bordered",
             isDisabled && "disabled",
-            hover && "hover-bordered"
+            hover && "hover-bordered",
+            isTitle && "menu-title"
         )}>{child}</li>
     );
 });
