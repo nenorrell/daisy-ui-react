@@ -2,7 +2,7 @@
 
 exports[`Menu component Variants Respects accent variant 1`] = `
 <ul
-  class="menu vertical bg-accent text-accent-content"
+  class="menu menu-vertical bg-accent text-accent-content"
 >
   <li>
     Testing variant 
@@ -13,7 +13,7 @@ exports[`Menu component Variants Respects accent variant 1`] = `
 
 exports[`Menu component Variants Respects base-100 variant 1`] = `
 <ul
-  class="menu vertical bg-base-100 text-base-content"
+  class="menu menu-vertical bg-base-100 text-base-content"
 >
   <li>
     Testing variant 
@@ -24,7 +24,7 @@ exports[`Menu component Variants Respects base-100 variant 1`] = `
 
 exports[`Menu component Variants Respects base-200 variant 1`] = `
 <ul
-  class="menu vertical bg-base-200 text-base-content"
+  class="menu menu-vertical bg-base-200 text-base-content"
 >
   <li>
     Testing variant 
@@ -35,7 +35,7 @@ exports[`Menu component Variants Respects base-200 variant 1`] = `
 
 exports[`Menu component Variants Respects base-300 variant 1`] = `
 <ul
-  class="menu vertical bg-base-300 text-base-content"
+  class="menu menu-vertical bg-base-300 text-base-content"
 >
   <li>
     Testing variant 
@@ -46,7 +46,7 @@ exports[`Menu component Variants Respects base-300 variant 1`] = `
 
 exports[`Menu component Variants Respects error variant 1`] = `
 <ul
-  class="menu vertical bg-error text-error-content"
+  class="menu menu-vertical bg-error text-error-content"
 >
   <li>
     Testing variant 
@@ -57,7 +57,7 @@ exports[`Menu component Variants Respects error variant 1`] = `
 
 exports[`Menu component Variants Respects error variant 2`] = `
 <ul
-  class="menu vertical bg-error text-error-content"
+  class="menu menu-vertical bg-error text-error-content"
 >
   <li>
     Testing variant 
@@ -68,7 +68,7 @@ exports[`Menu component Variants Respects error variant 2`] = `
 
 exports[`Menu component Variants Respects info variant 1`] = `
 <ul
-  class="menu vertical bg-info text-info-content"
+  class="menu menu-vertical bg-info text-info-content"
 >
   <li>
     Testing variant 
@@ -79,7 +79,7 @@ exports[`Menu component Variants Respects info variant 1`] = `
 
 exports[`Menu component Variants Respects info variant 2`] = `
 <ul
-  class="menu vertical bg-info text-info-content"
+  class="menu menu-vertical bg-info text-info-content"
 >
   <li>
     Testing variant 
@@ -90,7 +90,7 @@ exports[`Menu component Variants Respects info variant 2`] = `
 
 exports[`Menu component Variants Respects neutral variant 1`] = `
 <ul
-  class="menu vertical bg-neutral text-neutral-content"
+  class="menu menu-vertical bg-neutral text-neutral-content"
 >
   <li>
     Testing variant 
@@ -101,7 +101,7 @@ exports[`Menu component Variants Respects neutral variant 1`] = `
 
 exports[`Menu component Variants Respects primary variant 1`] = `
 <ul
-  class="menu vertical bg-primary text-primary-content"
+  class="menu menu-vertical bg-primary text-primary-content"
 >
   <li>
     Testing variant 
@@ -112,7 +112,7 @@ exports[`Menu component Variants Respects primary variant 1`] = `
 
 exports[`Menu component Variants Respects secondary variant 1`] = `
 <ul
-  class="menu vertical bg-secondary text-secondary-content"
+  class="menu menu-vertical bg-secondary text-secondary-content"
 >
   <li>
     Testing variant 
@@ -123,7 +123,7 @@ exports[`Menu component Variants Respects secondary variant 1`] = `
 
 exports[`Menu component Variants Respects success variant 1`] = `
 <ul
-  class="menu vertical bg-success text-success-content"
+  class="menu menu-vertical bg-success text-success-content"
 >
   <li>
     Testing variant 
@@ -134,7 +134,7 @@ exports[`Menu component Variants Respects success variant 1`] = `
 
 exports[`Menu component Variants Respects success variant 2`] = `
 <ul
-  class="menu vertical bg-success text-success-content"
+  class="menu menu-vertical bg-success text-success-content"
 >
   <li>
     Testing variant 
@@ -145,7 +145,7 @@ exports[`Menu component Variants Respects success variant 2`] = `
 
 exports[`Menu component Variants Respects warning variant 1`] = `
 <ul
-  class="menu vertical bg-warning text-warning-content"
+  class="menu menu-vertical bg-warning text-warning-content"
 >
   <li>
     Testing variant 
@@ -156,7 +156,7 @@ exports[`Menu component Variants Respects warning variant 1`] = `
 
 exports[`Menu component Variants Respects warning variant 2`] = `
 <ul
-  class="menu vertical bg-warning text-warning-content"
+  class="menu menu-vertical bg-warning text-warning-content"
 >
   <li>
     Testing variant 

@@ -39,7 +39,12 @@ describe("Menu component", () => {
 
     it("should have the correct type", () => {
         const { container } = render(<Menu type="horizontal"><li>Test</li></Menu>);
-        expect(container.firstChild).toHaveClass("horizontal");
+        expect(container.firstChild).toHaveClass("menu-horizontal");
+    });
+
+    it("should respect isCompact prop", () => {
+        const { container } = render(<Menu isCompact><li>Test</li></Menu>);
+        expect(container.firstChild).toHaveClass("menu-compact");
     });
 
     it("should have the correct tabIndex", () => {
