@@ -1,9 +1,9 @@
-import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
+import { forwardRef, SelectHTMLAttributes, PropsWithChildren } from "react";
 import { NoBaseOrNeutralVariant } from "../../@types/Colors";
 import { Size } from "../../@types/Daisy";
 import clsx from "clsx";
 
-interface ISelect extends PropsWithChildren<HTMLAttributes<HTMLSelectElement>>{
+interface ISelect extends PropsWithChildren<SelectHTMLAttributes<HTMLSelectElement>>{
     isBordered ?:boolean
     isGhost ?:boolean
     scale ?:Size
