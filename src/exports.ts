@@ -18,6 +18,9 @@ export {MenuItem} from "./components/menu/MenuItem";
 export {Dropdown} from "./components/dropdown/Dropdown";
 export {DropdownMenu} from "./components/dropdown/DropdownMenu";
 
+export { Progress } from "./components/progress/Progress";
+export { RadialProgress } from "./components/progress/RadialProgress";
+
 export {CardActions} from "./components/card/CardActions";
 export {CardBody} from "./components/card/CardBody";
 export {CardTitle} from "./components/card/CardTitle";

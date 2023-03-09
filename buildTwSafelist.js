@@ -32,7 +32,7 @@ const builtColors = colorVariants.reduce((acc, variant) => {
 const buildClasses = (colors, sizes, prefix)=>{
     return {
         variants: colors.map(variant => `"${prefix}-${variant}";`),
-        sizes: sizes.map(variant => `"${prefix}-${variant}";`)
+        sizes: sizes ? sizes.map(variant => `"${prefix}-${variant}";`) : null
     };
 };
 
@@ -47,6 +47,7 @@ const selectClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...
 const inputClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...statusColors], sizes, "input");
 const textareaClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...statusColors], sizes, "textarea");
 const toggleClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...statusColors], sizes, "toggle");
+const progressClasses = buildClasses([...themeColors.filter(c=>c!=="neutral"), ...statusColors], null, "progress");
 
 const builtVariants = [
     ...builtColors,
@@ -72,6 +73,7 @@ const builtVariants = [
     ...textareaClasses.sizes,
     ...toggleClasses.variants,
     ...toggleClasses.sizes,
+    ...progressClasses.variants,
 ];
 
 async function buildFile(clrs) {

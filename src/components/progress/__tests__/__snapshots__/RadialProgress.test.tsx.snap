@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadialProgress Variants Respects accent variant with fill 1`] = `
+<div
+  class="radial-progress bg-accent text-accent-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects accent variant without fill 1`] = `
+<div
+  class="radial-progress text-accent"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects base-100 variant with fill 1`] = `
+<div
+  class="radial-progress bg-base-100 text-base-100-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects base-100 variant without fill 1`] = `
+<div
+  class="radial-progress text-base-100"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects base-200 variant with fill 1`] = `
+<div
+  class="radial-progress bg-base-200 text-base-200-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects base-200 variant without fill 1`] = `
+<div
+  class="radial-progress text-base-200"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects base-300 variant with fill 1`] = `
+<div
+  class="radial-progress bg-base-300 text-base-300-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects base-300 variant without fill 1`] = `
+<div
+  class="radial-progress text-base-300"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects error variant with fill 1`] = `
+<div
+  class="radial-progress bg-error text-error-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects error variant with fill 2`] = `
+<div
+  class="radial-progress bg-error text-error-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects error variant without fill 1`] = `
+<div
+  class="radial-progress text-error"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects error variant without fill 2`] = `
+<div
+  class="radial-progress text-error"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects info variant with fill 1`] = `
+<div
+  class="radial-progress bg-info text-info-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects info variant with fill 2`] = `
+<div
+  class="radial-progress bg-info text-info-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects info variant without fill 1`] = `
+<div
+  class="radial-progress text-info"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects info variant without fill 2`] = `
+<div
+  class="radial-progress text-info"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects neutral variant with fill 1`] = `
+<div
+  class="radial-progress bg-neutral text-neutral-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects neutral variant without fill 1`] = `
+<div
+  class="radial-progress text-neutral"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects primary variant with fill 1`] = `
+<div
+  class="radial-progress bg-primary text-primary-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects primary variant without fill 1`] = `
+<div
+  class="radial-progress text-primary"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects secondary variant with fill 1`] = `
+<div
+  class="radial-progress bg-secondary text-secondary-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects secondary variant without fill 1`] = `
+<div
+  class="radial-progress text-secondary"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects success variant with fill 1`] = `
+<div
+  class="radial-progress bg-success text-success-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects success variant with fill 2`] = `
+<div
+  class="radial-progress bg-success text-success-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects success variant without fill 1`] = `
+<div
+  class="radial-progress text-success"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects success variant without fill 2`] = `
+<div
+  class="radial-progress text-success"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects warning variant with fill 1`] = `
+<div
+  class="radial-progress bg-warning text-warning-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects warning variant with fill 2`] = `
+<div
+  class="radial-progress bg-warning text-warning-content"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects warning variant without fill 1`] = `
+<div
+  class="radial-progress text-warning"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;
+
+exports[`RadialProgress Variants Respects warning variant without fill 2`] = `
+<div
+  class="radial-progress text-warning"
+  style="--value: 25;"
+>
+  25%
+</div>
+`;

@@ -9,3 +9,20 @@ export type WithRef<I, R=any> = I & {ref ?:React.ForwardedRef<R>}
 export interface IMap<K, V> extends Map<K, V> {
     get(key :K) :V;
 }
+
+export type CSSUnit =
+  | "em"
+  | "ex"
+  | "ch"
+  | "rem"
+  | "vw"
+  | "vh"
+  | "vmin"
+  | "vmax"
+  | "cm"
+  | "mm"
+  | "in"
+  | "px"
+  | "pt"
+  | "pc"
+  | "%";

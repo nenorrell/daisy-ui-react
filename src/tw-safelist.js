@@ -165,3 +165,10 @@
 "toggle-sm";
 "toggle-md";
 "toggle-lg";
+"progress-primary";
+"progress-secondary";
+"progress-accent";
+"progress-info";
+"progress-warning";
+"progress-error";
+"progress-success";

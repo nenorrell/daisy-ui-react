@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Progress Variants Respects accent variant 1`] = `
+<progress
+  class="progress progress-accent"
+  max="100"
+  value="25"
+/>
+`;
+
+exports[`Progress Variants Respects error variant 1`] = `
+<progress
+  class="progress progress-error"
+  max="100"
+  value="25"
+/>
+`;
+
+exports[`Progress Variants Respects info variant 1`] = `
+<progress
+  class="progress progress-info"
+  max="100"
+  value="25"
+/>
+`;
+
+exports[`Progress Variants Respects primary variant 1`] = `
+<progress
+  class="progress progress-primary"
+  max="100"
+  value="25"
+/>
+`;
+
+exports[`Progress Variants Respects secondary variant 1`] = `
+<progress
+  class="progress progress-secondary"
+  max="100"
+  value="25"
+/>
+`;
+
+exports[`Progress Variants Respects success variant 1`] = `
+<progress
+  class="progress progress-success"
+  max="100"
+  value="25"
+/>
+`;
+
+exports[`Progress Variants Respects warning variant 1`] = `
+<progress
+  class="progress progress-warning"
+  max="100"
+  value="25"
+/>
+`;

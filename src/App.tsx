@@ -31,6 +31,8 @@ import { FormLabel } from "./components/form/FormLabel";
 import { FileInput } from "./components/file-input/FileInput";
 import { Range } from "./components/range/Range";
 import { Select } from "./components/select/Select";
+import { Progress } from "./components/progress/Progress";
+import { RadialProgress } from "./components/progress/RadialProgress";
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -265,6 +267,13 @@ export const App = () => {
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                             </Select>
+                        </div>
+
+                        <div className="col-span-3 m-2 text-center">
+                            <Progress value={40} max={100} />
+                            <Progress variant="accent" value={40} max={100} />
+                            <RadialProgress value={40} variant={"primary"} fill>
+                            </RadialProgress>
                         </div>
                     </div>
                 </div>
