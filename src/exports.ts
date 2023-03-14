@@ -1,3 +1,7 @@
+export { Hero } from "./components/hero/Hero";
+export { HeroContent } from "./components/hero/HeroContent";
+export { HeroOverlay } from "./components/hero/HeroOverlay";
+
 export { Badge } from "./components/badge/Badge";
 export { Button } from "./components/buttons/Button";
 export { Avatar } from "./components/avatar/Avatar";
