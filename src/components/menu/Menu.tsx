@@ -25,7 +25,7 @@ export const Menu = forwardRef<HTMLUListElement, PropsWithChildren<IMenu>>((
             ref={ref}
             className={clsx(
                 "menu",
-                `menu-${type}`,
+                type === "vertical" ? "menu-vertical" : "menu-horizontal",
                 `bg-${variant}`,
                 `text-${getTextColor(variant)}-content`,
                 isCompact && "menu-compact",
