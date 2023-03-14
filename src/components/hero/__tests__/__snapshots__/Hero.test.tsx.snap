@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero component Variants Respects accent variant 1`] = `
+<div
+  class="hero bg-accent text-accent-content"
+>
+  Hero 
+  accent
+</div>
+`;
+
+exports[`Hero component Variants Respects base-100 variant 1`] = `
+<div
+  class="hero bg-base-100 text-base-content"
+>
+  Hero 
+  base-100
+</div>
+`;
+
+exports[`Hero component Variants Respects base-200 variant 1`] = `
+<div
+  class="hero bg-base-200 text-base-content"
+>
+  Hero 
+  base-200
+</div>
+`;
+
+exports[`Hero component Variants Respects base-300 variant 1`] = `
+<div
+  class="hero bg-base-300 text-base-content"
+>
+  Hero 
+  base-300
+</div>
+`;
+
+exports[`Hero component Variants Respects error variant 1`] = `
+<div
+  class="hero bg-error text-error-content"
+>
+  Hero 
+  error
+</div>
+`;
+
+exports[`Hero component Variants Respects error variant 2`] = `
+<div
+  class="hero bg-error text-error-content"
+>
+  Hero 
+  error
+</div>
+`;
+
+exports[`Hero component Variants Respects info variant 1`] = `
+<div
+  class="hero bg-info text-info-content"
+>
+  Hero 
+  info
+</div>
+`;
+
+exports[`Hero component Variants Respects info variant 2`] = `
+<div
+  class="hero bg-info text-info-content"
+>
+  Hero 
+  info
+</div>
+`;
+
+exports[`Hero component Variants Respects neutral variant 1`] = `
+<div
+  class="hero bg-neutral text-neutral-content"
+>
+  Hero 
+  neutral
+</div>
+`;
+
+exports[`Hero component Variants Respects primary variant 1`] = `
+<div
+  class="hero bg-primary text-primary-content"
+>
+  Hero 
+  primary
+</div>
+`;
+
+exports[`Hero component Variants Respects secondary variant 1`] = `
+<div
+  class="hero bg-secondary text-secondary-content"
+>
+  Hero 
+  secondary
+</div>
+`;
+
+exports[`Hero component Variants Respects success variant 1`] = `
+<div
+  class="hero bg-success text-success-content"
+>
+  Hero 
+  success
+</div>
+`;
+
+exports[`Hero component Variants Respects success variant 2`] = `
+<div
+  class="hero bg-success text-success-content"
+>
+  Hero 
+  success
+</div>
+`;
+
+exports[`Hero component Variants Respects warning variant 1`] = `
+<div
+  class="hero bg-warning text-warning-content"
+>
+  Hero 
+  warning
+</div>
+`;
+
+exports[`Hero component Variants Respects warning variant 2`] = `
+<div
+  class="hero bg-warning text-warning-content"
+>
+  Hero 
+  warning
+</div>
+`;

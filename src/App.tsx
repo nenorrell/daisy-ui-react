@@ -33,6 +33,9 @@ import { Range } from "./components/range/Range";
 import { Select } from "./components/select/Select";
 import { Progress } from "./components/progress/Progress";
 import { RadialProgress } from "./components/progress/RadialProgress";
+import { HeroContent } from "./components/hero/HeroContent";
+import { Hero } from "./components/hero/Hero";
+import { HeroOverlay } from "./components/hero/HeroOverlay";
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -274,6 +277,29 @@ export const App = () => {
                             <Progress variant="accent" value={40} max={100} />
                             <RadialProgress value={40} variant={"primary"} fill>
                             </RadialProgress>
+                        </div>
+
+                        <div className="col-span-3 m-2 text-center">
+                            <div className="hero min-h-screen bg-base-300">
+                                <div className="hero-content text-center">
+                                    <div className="max-w-md">
+                                        <h1 className="text-5xl font-bold">Hello there</h1>
+                                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                                        <button className="btn btn-primary">Get Started</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-span-3 m-2 text-center">
+                            <Hero className="min-h-screen bg-[url(https://www.celebritycruises.com/blog/content/uploads/2022/01/most-beautiful-mountains-in-the-world-kirkjufell-iceland-1024x580.jpg)]">
+                                <HeroOverlay className="bg-opacity-60" ></HeroOverlay>
+                                <HeroContent>
+                                    <div className="max-w-md">
+                                        <h1 className="text-5xl font-bold">Hello there</h1>
+                                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                                    </div>
+                                </HeroContent>
+                            </Hero>
                         </div>
                     </div>
                 </div>

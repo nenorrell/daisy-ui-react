@@ -1,7 +1,6 @@
 import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 import { Variant } from "../../@types/Colors";
 import clsx from "clsx";
-import { twMerge } from "tailwind-merge";
 import { getTextColor } from "../../modules/colors";
 
 interface ICard extends PropsWithChildren<HTMLAttributes<HTMLDivElement>>{
@@ -25,7 +24,7 @@ export const Card = forwardRef<HTMLDivElement, ICard>((
     ref
 )=>{
     return (
-        <div {...props} ref={ref} className={twMerge(clsx(
+        <div {...props} ref={ref} className={clsx(
             "card",
             {
                 [`bg-${variant}`]: variant,
@@ -35,7 +34,7 @@ export const Card = forwardRef<HTMLDivElement, ICard>((
             isSide && "card-side",
             imageFull && "image-full",
             className
-        ))}>
+        )}>
             {children}
         </div>
     );
